@@ -1,0 +1,104 @@
+mostro Aggiustatore Rapido SPIARALE
+mostro Arcidemone Demoneterno
+mostro Assalitore Notturno
+mostro Braccio Dx del Proibito
+mostro Braccio Sx del Proibito
+mostro Cavaliere dell'Armageddon
+mostro Ciberstein
+mostro Dinomight Kavaliere, il Vero Dracocombattente
+mostro Dinowrestler Pankratopo
+mostro Drago Bianco Vivernaesplosiva
+mostro Drago Metallico Oscuro Occhi Rossi
+mostro Drago Nero Crolloserpente
+mostro Eva
+mostro Exodia il Proibito
+mostro Gamba Dx del Proibito
+mostro Gamba Sx del Proibito
+mostro Genex Alleato Uomo Uccello
+mostro Giara Trasformante
+mostro Grepher Oscuro
+mostro Mistosauro
+mostro Pericolo!? Jackalope?
+mostro Pericolo!? Tsuchinoko?
+mostro Salamagna Gazzella
+mostro Spaccacielo Fantasma
+mostro Tempest, Drago Sovrano delle Tempeste
+mostro Velociroid Terrortrottola
+mostro Vero Re Lithosagym, il Disastro
+mostro Zoodiaco Topostocco
+magia Assaltatrice del Cielo Mecha - Droni Calabrone
+magia Assaltatrice del Cielo Mecha Moduli - Multiruolo
+magia Assaltatrice del Cielo Mobilitazione - Ingaggiare!
+magia Attacco a Catena
+magia Campo Spezza-Mezzo Magico
+magia Capro Espiatorio
+magia Carta dell'Oblio
+magia Circolo Salamagna
+magia Conto alla Rovescia
+magia Controlla Mente
+magia Diagramma Draconico
+magia Distruggi-Carte
+magia Draco Confronto
+magia Estrazione Squarcio
+magia Formazione di Fuoco - Tenki
+magia Fusione Istantanea
+magia Luce di Sekka
+magia Mostro Resuscitato
+magia Nel Vuoto
+magia Portale dei Sei
+magia Propulsore Demoneterno
+magia Ragionando
+magia Raigeki
+magia Resort SPIARALE
+magia Riccastro Goblin
+magia Richiamato dalla Tomba
+magia Rinforzi dell'Esercito
+magia Rotazione del Set
+magia Sarcofago d'Oro
+magia Sepoltura Sciocca
+magia Spaccatura Dimensionale
+magia Spolverino dell'Arpia
+magia Terraformare
+magia Truccastella Luce del Palcoscenico
+magia Un Eroe Sopravvive
+magia Un Giorno di Pace
+magia Uno per Uno
+magia Vento Divino della Valle delle Nebbie
+trappola Esplosione Magica
+trappola Macro Cosmo
+trappola Metaverso
+trappola Muro della Luce Rivelatrice
+trappola Ordine Imperiale
+trappola Riavvio Rosso
+trappola Risucchia Abilità
+Pendulum/Effetto/Mostro Servitore di Endymion
+Fusione Cavaliere-Gemma Diamante Maestro
+XYZ Beatrice, la Signora Eterna
+XYZ Daigusto Emeral
+XYZ Salamagna Stallonmiraggio
+Synchro PSI-Strutturasignore Omega
+Synchro T.G. Iper Bibliotecario
+Synchro Trishula, Drago della Barriera di Ghiaccio
+Link Drago Assaltatore
+Link Ragazzi-Birichini Miao-Miao-Mu
+Rituale Cyber Angelo Benten
+
+mostro Malicious-EROE del Destino
+mostro Pericolo! Nessie!
+magia Teletrasporto di Emergenza
+Pendulum/Effetto/Mostro Artistamico Teschiocrobata Giullare
+
+mostro Eva libero->limitato
+mostro 	Pericolo! Nessie! limitato->semilimitato
+magia Formazione di Fuoco - Tenki libero->limitato
+magia Raffica Zoodiaco limitato->bandito
+magia Teletrasporto di Emergenza limitato->semilimitato
+Pendulum/Effetto/Mostro Artistamico Teschiocrobata Giullare limitato->semilimitato
+Pendulum/Effetto/Mostro	Mago Doppia Iride semilimitato->libero
+Link Ragazzi-Birichini Miao-Miao-Mu libero->limitata
+
+
+
+
+
+
