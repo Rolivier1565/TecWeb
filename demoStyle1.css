@@ -6,7 +6,9 @@
   padding: 0;
 }
 html, body{
+  background: url("images/drago_bianco_occhi_blu_alt_mirr.png") left no-repeat, url("images/magoNero.png") right no-repeat;
   background-color: #000;
+  background-attachment: fixed;
   font-size: 100%;
   font-family: sans-serif;
 }
@@ -14,25 +16,11 @@ body{
   display: grid;
   grid-template-columns: 1fr 1024px 1fr;
   grid-template-areas:
-  ". b ."
-  "a d c"
-  "a e c"
-  "a f c"
-  "g g g";
-}
-#dbob{
-  grid-area: a;
-  background-image: url("images/drago_bianco_occhi_blu_alt_mirr.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-#mn{
-  grid-area: c;
-  background-image: url("images/magoNero.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  ". header ."
+  ". menu ."
+  ". breadcrumb ."
+  ". content ."
+  "footer footer footer";
 }
 
 
@@ -41,7 +29,7 @@ body{
   impostazioni di stile header
 */
 header{
-  grid-area: b;
+  grid-area: header;
   color: #F38121;
   background-color: #1D1F21;
   text-align: center;
@@ -66,20 +54,18 @@ header h2{
   impostazoni di stile navigazione
 */
 #menu{
-  grid-area: d;
+  grid-area: menu;
   background-color: #1D1F21;
   padding-top: 2em;
   padding-bottom: 2em;
   text-align: center;
 }
-.nested{
-  display: none;
-}
+
+
 #menu li{
-  display: inline;
-  padding: 0.5em 1em 0.5em 1em;
-  margin-left: 1em;
-  margin-right: 1em;
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 0.2em 1em;
   font-size: 1.2em;
   background-color: #F38121;
   border: 2px solid #000;
@@ -87,7 +73,8 @@ header h2{
 }
 #menu li:hover{
   background-color: #FFF;
-  padding: 0.7em 1.2em 0.7em 1.2em;
+  padding: 0.7em 1.2em;
+  margin: 0 0.8em;
 }
 #menu a{
   color: #000;
@@ -98,13 +85,34 @@ header h2{
   text-decoration: none;
 }
 
+.nested{
+	margin-top: 1.2em;
+	display:none;
+	position:absolute;
+}
+
+.nested a{
+	display:inline;
+	padding:0.2em;
+	margin:0.3em;
+  background-color: #F38121;
+  border: 2px solid #000;
+  border-radius: 25px;
+  font-size:0.8em;
+}
+
+
+.nestHead:hover .nested{
+	display:block;
+}
+
 
 
 /*
   impostazioni di stile breadcrumb
 */
 #breadcrumb{
-  grid-area: e;
+  grid-area: breadcrumb;
   padding:0.2em 0em 0.2em 0.2em;
   font-size: 1em;
   color: #000;
@@ -117,7 +125,7 @@ header h2{
   impostazoni di stile contenuto
 */
 #content{
-  grid-area: f;
+  grid-area: content;
   color: #FFF;
   background-color: #1D1F21;
   padding: 2em;
@@ -130,7 +138,7 @@ header h2{
   impostazioni di stile footer
 */
 footer{
-  grid-area: g;
+  grid-area: footer;
   color: #FFF;
   background-color: #000;
   background-image: url("images/logo.png");
