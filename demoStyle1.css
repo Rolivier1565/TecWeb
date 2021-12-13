@@ -192,8 +192,27 @@ footer p{
   pagina banlist
 */
 
+#banlistTitle{
+  text-align: center;
+  font-family: "Hanalei Fill";
+  font-size: 2em;
+  padding-bottom: 1em;
+}
+
+#banlistTable{
+  padding-top: 1em;
+  text-align: center;
+  list-style-type: none;
+  font-size: 1.2em;
+}
+
+#banlistTable a{
+  color: #F38121;
+}
+
 caption{
   margin: auto;
+  font-family: "Hanalei Fill";
   font-size: 1.7em;
   padding-top: 2em;
   padding-bottom: 0.5em;
@@ -205,6 +224,7 @@ caption{
   border-collapse: collapse;
   text-align: center;
   color: #F38121;
+  padding-bottom: 1em;
 }
 
 .bannate th{  
