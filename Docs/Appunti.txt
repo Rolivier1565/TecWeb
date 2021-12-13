@@ -5,3 +5,5 @@ Come fare il menù a tendina accessibile - Da risolvere
 Cosa mettere nel footer - Riproporre i link - Conclusione "torna su"
 
 Nota il logo senza alt
+
+tabella banlist e non php? conclusione tabella banlist per velocità caricamenti e poco aggiornata (2 volte anno)
