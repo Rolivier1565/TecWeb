@@ -158,10 +158,6 @@ footer dd{
   font-size: 1em;
   padding-top:0.5em;
 }
-#up{
-  display: block;
-  text-align: right;
-}
 footer a:visited{
   color:#F38121;
 }
@@ -171,6 +167,16 @@ footer a{
 footer p{
   display: inline;
   font-style:italic;
+}
+.up{
+  display: block;
+  text-align: right;
+}
+.up a{
+  color: #FFF;
+}
+.up a:visited{
+  color:#F38121;
 }
 .valid{
   vertical-align: middle;
@@ -186,22 +192,76 @@ footer p{
   pagina banlist
 */
 
-#bannate{
+caption{
   margin: auto;
-  border-collapse: collapse;
-  border: 1px solid #F38121;
-  text-align: center;
+  font-size: 1.7em;
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+  color: #FFF;
 }
 
-#bannate th{  
+.bannate{
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+  color: #F38121;
+}
+
+.bannate th{  
   background-color: #F38121;
   color: #000;
-  font-size: 1.2em;
+  font-size: 1.5em;
   padding: 0.3em;
 }
 
-#bannate td{
-  border: 1px solid #F38121;
+.bannate td{
+  border: 1px solid #FFF;
   text-align: center;
+  font-size: 1.2em;
   padding: 0.3em 0.5em;
+}
+
+.mostro{
+  background-color: #884111;
+  color: #FFF;
+}
+
+.magia{
+  background-color: #166030;
+  color: #FFF;
+}
+
+.trappola{
+  background-color: #91227C;
+  color: #FFF;
+}
+
+.fusione{
+  background-color: #6B29AE;
+  color: #FFF;
+}
+
+.link{
+  background-color: #0E2F90;
+  color: #FFF;
+}
+
+.pendulum{
+  background: linear-gradient(#884111, #166030);
+  color: #FFF;
+}
+
+.xyz{
+  background-color: #000;
+  color: #FFF;
+}
+
+.rituale{
+  background-color: #2757A5;
+  color: #FFF;
+}
+
+.synchro{
+  background-color: #DBDBDE;
+  color: #000;
 }
