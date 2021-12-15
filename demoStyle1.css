@@ -169,14 +169,36 @@ footer p{
   font-style:italic;
 }
 .up{
-  display: block;
-  text-align: right;
+  position: relative;
+  left: 80%;
+  display: inline-block;
+  margin-right: 10%;
+  padding: 0.5em 1em;
+  margin: 1em 0.1em 0.2em 0.1em;
+  font-size: 1em;
+  background-color: #F38121;
+  border: 2px solid #000;
+  border-radius: 25px;
 }
+
+.up:hover{
+  position: relative;
+  left: 80%;
+  display: inline-block;
+  margin-right: 10%;
+  padding: 0.6em 1.1em;
+  margin: 0.9em 0 0.1em 0;
+  font-size: 1em;
+  background-color: #FFF;
+  border: 2px solid #000;
+  border-radius: 25px;
+}
+
 .up a{
-  color: #FFF;
+  color: #000;
 }
 .up a:visited{
-  color:#F38121;
+  color:#000;
 }
 .valid{
   vertical-align: middle;
@@ -204,10 +226,38 @@ footer p{
   text-align: center;
   list-style-type: none;
   font-size: 1.2em;
+  display:flex;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+
+#banlistTable li{
+	flex: 1 1 auto;
+}
+
+#banlistTable a:visited{
+	color: #000;
 }
 
 #banlistTable a{
-  color: #F38121;
+
+	padding:0.4em;
+	margin:0.3em;
+	color: #000;
+  background-color: #F38121;
+  border: 2px solid #000;
+  border-radius: 25px;
+  font-size:0.8em;
+}
+
+#banlistTable a:hover{
+	padding:0.5em;
+	margin:0.2em;
+  background-color: #FFF;
+  border: 2px solid #000;
+  border-radius: 25px;
+  font-size:0.8em;
 }
 
 caption{
