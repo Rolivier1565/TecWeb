@@ -132,6 +132,13 @@ header h2{
   font-size: 1em;
 }
 
+#content .up{
+	position: relative;
+  left: 80%;
+  display: inline-block;
+  margin-right: 10%;
+}
+
 
 /*
   impostazioni di stile footer
@@ -168,11 +175,12 @@ footer p{
   display: inline;
   font-style:italic;
 }
+
+
 .up{
-  position: relative;
-  left: 80%;
-  display: inline-block;
-  margin-right: 10%;
+	display: inline-block;
+	position: relative;
+	left: 40%;
   padding: 0.5em 1em;
   margin: 1em 0.1em 0.2em 0.1em;
   font-size: 1em;
@@ -182,10 +190,6 @@ footer p{
 }
 
 .up:hover{
-  position: relative;
-  left: 80%;
-  display: inline-block;
-  margin-right: 10%;
   padding: 0.6em 1.1em;
   margin: 0.9em 0 0.1em 0;
   font-size: 1em;
