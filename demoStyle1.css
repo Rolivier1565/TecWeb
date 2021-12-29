@@ -224,7 +224,6 @@ caption{
   border-collapse: collapse;
   text-align: center;
   color: #F38121;
-  padding-bottom: 1em;
 }
 
 .bannate th{  
@@ -285,3 +284,21 @@ caption{
   background-color: #DBDBDE;
   color: #000;
 }
+
+/*
+  home
+*/
+
+#content img{
+  width: 20%;
+}
+
+#content p{
+  float: right;
+  width:  75%;
+}
+
+.serie{
+  color: #F38121;
+}
+
