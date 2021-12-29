@@ -61,6 +61,12 @@ header h2{
   text-align: center;
 }
 
+#disBut{
+	font-size: 1em;
+	background-color: #F38121;
+	border:none;
+}
+
 
 #menu li{
   display: inline-block;
@@ -76,6 +82,11 @@ header h2{
   padding: 0.7em 1.2em;
   margin: 0 0.8em;
 }
+
+#menu li:hover #disBut{
+  background-color: #FFF;
+}
+
 #menu a{
   color: #000;
   text-decoration: none;
@@ -101,10 +112,6 @@ header h2{
   font-size:0.8em;
 }
 
-
-.nestHead:hover .nested{
-	display:block;
-}
 
 
 
