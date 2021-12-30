@@ -189,7 +189,7 @@ footer p{
 }
 
 /*
-  pagina banlist
+  pagina banlist - inizio
 */
 
 #banlistTitle{
@@ -227,7 +227,7 @@ caption{
   padding-bottom: 1em;
 }
 
-.bannate th{  
+.bannate th{
   background-color: #F38121;
   color: #000;
   font-size: 1.5em;
@@ -285,3 +285,102 @@ caption{
   background-color: #DBDBDE;
   color: #000;
 }
+/*
+  pagina banlist - fine
+*/
+
+/*
+  pagina approfondimento main deck - inzio
+*/
+  #evocazioni{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "subt1 subt1"
+    "evocn tevocn"
+    "tevocp evocp"
+    "evoct tevoct";
+  }
+  #amdtitle{
+    text-align: center;
+    font-size: 2em;
+    padding: 1em 0em 0.7em 0em;
+  }
+  #subt1{
+    grid-area: subt1;
+    text-align: center;
+    font-size: 1.7em;
+    padding: 0em 0em 1em 0em;
+  }
+  #evocNormale{
+    grid-area: evocn;
+  }
+  #tevocn{
+    grid-area: tevocn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    padding-bottom: 0.7em;
+  }
+  #tevocp{
+    grid-area: tevocp;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    padding-bottom: 0.7em;
+  }
+  #evocPosizionamento{
+      grid-area: evocp;
+  }
+  #evocTributo{
+      grid-area: evoct;
+  }
+  #tevoct{
+    grid-area: tevoct;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    padding-bottom: 0.7em;
+  }
+  #phases{
+    display: block;
+    max-width: 80%;
+    margin: auto;
+    padding: 1em 0em 1em 0em;
+  }
+  .amdTextP{
+    font-size: 1.3em;
+    padding: 1em 0em 0.7em 0em;
+  }
+  .amdSubT{
+    text-align: center;
+    font-size: 1.7em;
+    padding-bottom:1em 0em 1em 0em;
+  }
+  #magieParticolari dt, #trappoleParticolari dt{
+    color: #000;
+    background-color: #F38121;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+  }
+  #magieParticolari dd, #trappoleParticolari dd{
+     border: 1px solid #F38121;
+	   border-top: none;
+     margin-bottom:1em;
+     padding: 0.5em 0.5em 1em 0.5em;
+     text-align: center;
+  }
+  .iconeMagia, .iconeTrappola{
+    display: block;
+    margin: auto;
+    padding-bottom: 0.5em;
+  }
+/*
+  pagina approfondimento main deck - fine
+*/
