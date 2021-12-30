@@ -289,16 +289,62 @@ caption{
   home
 */
 
-#content img{
-  width: 20%;
+#manga{
+ display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-areas:
+  "titlem ."
+  "textm imagem";
 }
 
-#content p{
-  float: right;
-  width:  75%;
+#imagem{
+  grid-area: imagem;
 }
 
-.serie{
-  color: #F38121;
+#textm{
+  grid-area: textm;
 }
 
+#titlem{
+  grid-area: titlem;
+}
+
+#anime{
+ display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-areas:
+  "titlea ."
+  "imagea texta";
+}
+
+#imagea{
+  grid-area: imagea;
+}
+
+#texta{
+  grid-area: texta;
+}
+
+#titlea{
+  grid-area: titlea;
+}
+
+#videogiochi{
+ display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-areas:
+  "titlev ."
+  "textv imagev";
+}
+
+#imagev{
+  grid-area: imagev;
+}
+
+#textv{
+  grid-area: textv;
+}
+
+#titlem{
+  grid-area: titlev;
+}
