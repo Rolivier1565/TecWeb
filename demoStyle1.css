@@ -289,62 +289,55 @@ caption{
   home
 */
 
+#content a{
+  color: #F38121;
+}
+
+.flexhome{
+  display: flex;
+  flex-direction: column;
+}
+
 #manga{
- display: grid;
-  grid-template-columns: 75% 25%;
-  grid-template-areas:
-  "titlem ."
-  "textm imagem";
+  margin: 1em;
 }
 
-#imagem{
-  grid-area: imagem;
+#manga img{
+  float:  left;
+  width: 20%;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
-#textm{
-  grid-area: textm;
+#manga p{
+  float: right;
+  width: 75%;
+  margin-top: 1em;
 }
 
-#titlem{
-  grid-area: titlem;
+#anime img{
+  float:  right;
+  width: 20%;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
-#anime{
- display: grid;
-  grid-template-columns: 25% 75%;
-  grid-template-areas:
-  "titlea ."
-  "imagea texta";
+#anime p{
+  float: left;
+  width: 75%;
+  margin-top: 1em;
 }
 
-#imagea{
-  grid-area: imagea;
+#videogiochi img{
+  float:  left;
+  width: 20%;
+  margin-right: 2em;
+  margin-top: 1em;
 }
 
-#texta{
-  grid-area: texta;
-}
-
-#titlea{
-  grid-area: titlea;
-}
-
-#videogiochi{
- display: grid;
-  grid-template-columns: 75% 25%;
-  grid-template-areas:
-  "titlev ."
-  "textv imagev";
-}
-
-#imagev{
-  grid-area: imagev;
-}
-
-#textv{
-  grid-area: textv;
-}
-
-#titlem{
-  grid-area: titlev;
+#videogiochi p{
+  float: right;
+  width: 75%;
+  margin-top: 1em;
 }
