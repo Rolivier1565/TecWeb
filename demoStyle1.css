@@ -24,7 +24,6 @@ body{
 }
 
 
-
 /*
   impostazioni di stile header
 */
@@ -284,4 +283,46 @@ caption{
 .synchro{
   background-color: #DBDBDE;
   color: #000;
+}
+
+/*
+pagina regole base
+*/
+
+.immagine
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 50%
+}
+
+#content
+{
+    font-size: 1.2em;
+}
+
+#content h1, #content h2, #content h3
+{
+    font-family: "Hanalei Fill";
+    text-align: center;
+    margin: 1em;
+    color: #F38121;
+}
+
+#content ul{
+    margin-top: 1em;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 1em;
+    list-style-type: circle;
+}
+
+#content ol{
+    margin-top: 1em;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 1em;
 }
