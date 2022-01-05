@@ -1,9 +1,11 @@
+
 function displayRegole(){
-	var temp=document.getElementsByClassName("nested");
-	if(temp[0].style.display=="block"){
-		temp[0].style.display="none";
+	var head=document.getElementsByClassName("nested");
+	if(head[0].style.display=="block"){
+		head[0].style.display="none";
+		
 	}
 	else{
-		temp[0].style.display="block";
+		head[0].style.display="block";
 	}
 }
