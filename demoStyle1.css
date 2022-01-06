@@ -346,10 +346,14 @@ caption{
     padding-bottom: 0.7em;
   }
   #phases{
-    display: block;
-    max-width: 80%;
-    margin: auto;
-    padding: 1em 0em 1em 0em;
+    float:left;
+    padding: 0em 2em 1em 1em;
+  }
+  ol{
+    font-size: 1.2em;
+  }
+  ol li {
+    padding-bottom: 0.5em;
   }
   .amdTextP{
     font-size: 1.3em;
@@ -358,7 +362,7 @@ caption{
   .amdSubT{
     text-align: center;
     font-size: 1.7em;
-    padding-bottom:1em 0em 1em 0em;
+    padding:1em 0em 1em 0em;
   }
   #magieParticolari dt, #trappoleParticolari dt{
     color: #000;
@@ -383,4 +387,144 @@ caption{
   }
 /*
   pagina approfondimento main deck - fine
+*/
+  #aedtitle{
+    text-align: center;
+    font-size: 2em;
+    padding: 1em 0em 0.7em 0em;
+  }
+  #extradeck{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    ". subt ."
+    "fusione testoFusione polimerizzazione"
+    ". subt1 ."
+    "testoXyz testoXyz xyz"
+    ". subt2 ."
+    "synchro testoSynchro tuner"
+    ". subt3 ."
+    "link testoLink testoLink"
+    ". subt4 ."
+    "pendulum testoPendulum testoPendulum";
+  }
+
+  #subt{
+    grid-area: subt;
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 1em 0em;
+  }
+  #fusione{
+    grid-area: fusione;
+    width: 90%;
+  }
+  #testoFusione{
+    grid-area: testoFusione;
+    font-size: 1.3em;
+    padding: 1em 0.2em 0.7em 0em;
+  }
+  #polimerizzazione{
+    grid-area: polimerizzazione;
+    width: 90%;
+  }
+
+
+  #subt1{
+    grid-area: subt1;
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 0.5em 0em;
+  }
+  #testoXyz{
+    grid-area: testoXyz;
+    font-size: 1.3em;
+    padding: 1em 0.2em 0.7em 0em;
+  }
+  #xyz{
+    grid-area: xyz;
+    width: 90%;
+  }
+
+
+  #subt2{
+    grid-area: subt2;
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 0.5em 0em;
+  }
+  #synchro{
+    grid-area: synchro;
+    width: 90%;
+  }
+  #testoSynchro{
+    grid-area: testoSynchro;
+    font-size: 1.3em;
+    padding: 1em 0.2em 0.7em 0em;
+  }
+  #tuner{
+    grid-area: tuner;
+    width: 90%;
+  }
+
+
+  #subt3{
+    grid-area: subt3;
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 0.5em 0em;
+  }
+  #link{
+    grid-area: link;
+    width: 90%;
+  }
+  #testoLink{
+    grid-area: testoLink;
+    font-size: 1.3em;
+    padding: 1em 0em 0.7em 0em;
+  }
+
+
+  #subt4{
+    grid-area: subt4;
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 0.5em 0em;
+  }
+  #pendulum{
+    grid-area: pendulum;
+    width: 90%;
+  }
+  #testoPendulum{
+    grid-area: testoPendulum;
+    font-size: 1.3em;
+    padding: 1em 0em 0.7em 0em;
+  }
+  #spellSpeed{
+    list-style: disc;
+    font-size: 1.3em;
+  }
+  .aedTextP{
+    font-size: 1.3em;
+    padding: 1em 0em 0.7em 0em;
+  }
+  .aedSubT{
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 0.5em 0em;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  pagina approfondimento extra deck- fine
 */
