@@ -298,6 +298,15 @@ caption{
   flex-direction: column;
 }
 
+.flexhome p{
+  align-self: flex-end;
+}
+
+.flexhome h3{
+  color: #F38121;
+  margin-left: 2em;
+}
+
 #manga{
   margin: 1em;
 }
@@ -312,32 +321,34 @@ caption{
 #manga p{
   float: right;
   width: 75%;
-  margin-top: 1em;
+  margin-top: 4em;
+  margin-right: 1em;
 }
 
 #anime img{
   float:  right;
   width: 20%;
-  margin-left: 1em;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  margin: 1em 1em 1em 1em;
 }
 
 #anime p{
   float: left;
   width: 75%;
-  margin-top: 1em;
+  margin-top: 4em;
+  margin-left: 1em;
 }
 
 #videogiochi img{
   float:  left;
   width: 20%;
-  margin-right: 2em;
+  margin-right: 1em;
   margin-top: 1em;
+  margin-left: 1em;
 }
 
 #videogiochi p{
   float: right;
   width: 75%;
-  margin-top: 1em;
+  margin-top: 4em;
+  margin-right: 1em;
 }
