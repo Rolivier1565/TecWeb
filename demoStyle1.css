@@ -1,4 +1,14 @@
 /*
+  animazioni
+*/
+
+@keyframes fadein{
+	from {opacity: 0};
+	to {opacity: 1};
+}
+
+
+/*
   impostazioni di stile generali
 */
 *{
@@ -61,31 +71,28 @@ header h2{
   text-align: center;
 }
 
-#disBut{
-	font-size: 1em;
-	background-color: #F38121;
-	border:none;
-}
+
 
 
 #menu li{
   display: inline-block;
-  padding: 0.5em 1em;
+}
+
+#menu li a, #disBut, #currentLink{
+	padding: 0.5em 1em;
   margin: 0.2em 1em;
   font-size: 1.2em;
   background-color: #F38121;
   border: 2px solid #000;
   border-radius: 25px;
 }
-#menu li:hover{
+
+#menu li a:hover, #disBut:hover{
   background-color: #FFF;
   padding: 0.7em 1.2em;
   margin: 0 0.8em;
 }
 
-#menu li:hover #disBut{
-  background-color: #FFF;
-}
 
 #menu a{
   color: #000;
@@ -96,20 +103,33 @@ header h2{
   text-decoration: none;
 }
 
-.nested{
-	margin-top: 1.2em;
+#menu .nested{
+	background-color:#1D1F21;
+	border: 1px solid white;
+	border-top:none;
 	display:none;
-	position:absolute;
+	position: absolute;
+	animation-name: fadein;
+	animation-duration: 1s;
 }
 
-.nested a{
-	display:inline;
-	padding:0.2em;
+#menu .nested li{
+	display: block;
+}
+
+#menu .nested a{
+	display: block;
+	padding:0.2em 0.4em;
 	margin:0.3em;
-  background-color: #F38121;
-  border: 2px solid #000;
-  border-radius: 25px;
-  font-size:0.8em;
+    font-size:1em;
+	animation-name: fadein;
+	animation-duration: 1s;
+}
+
+#menu .nested a:hover{
+	background-color: #FFF;
+  padding: 0.2em 0.4em;
+  margin: 0.3em;
 }
 
 
@@ -205,11 +225,11 @@ footer p{
   border-radius: 25px;
 }
 
-.up a{
+.up{
   color: #000;
   text-decoration: none;
 }
-.up a:visited{
+.up:visited{
   color:#000;
 }
 .valid{
