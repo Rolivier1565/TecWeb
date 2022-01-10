@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function(){
+	var str="<button id=\"disBut\" aria-label=\"Mostra pagine regole\" title=\"Mostra pagine regole\" onclick=\"displayRegole()\" href=\"demoIndex1.html\">Regole ▼</button>";
+	var obj=document.getElementById('disBut');
+	if (obj.outerHTML){
+		obj.outerHTML=str;
+	}
+});
+
 
 function displayRegole(){
 	var head=document.getElementsByClassName("nested");
@@ -8,6 +16,34 @@ function displayRegole(){
 	else{
 		head[0].style.display="block";
 	}
+}
+
+function modT(trgt, val){
+	if (trgt==1){
+		if (val>0){
+			var temp=parseInt((document.getElementById("T1")).innerHTML);
+			temp+=val;
+			document.getElementById("T1").textContent=temp;
+		}
+		else if (parseInt((document.getElementById("T1")).innerHTML)!=0){
+			var temp=parseInt((document.getElementById("T1")).innerHTML);
+			temp+=val;
+			document.getElementById("T1").textContent=temp;
+		}		
+	}
+	else{
+		if (val>0){
+			var temp=parseInt((document.getElementById("T2")).innerHTML);
+			temp+=val;
+			document.getElementById("T2").textContent=temp;
+		}
+		else if (parseInt((document.getElementById("T2")).innerHTML)!=0){
+			var temp=parseInt((document.getElementById("T2")).innerHTML);
+			temp+=val;
+			document.getElementById("T2").textContent=temp;
+		}		
+	}
+		
 }
 
 function setLP(){
@@ -182,4 +218,24 @@ function subLP(){
 			}, 1010);
 		}
 	}
+}
+
+function rst(){
+	document.getElementById("LP1").textContent=8000;
+	document.getElementById("LP2").textContent=8000;
+	document.getElementById("T1").textContent=0;
+	document.getElementById("T2").textContent=0;
+}
+
+function d2(){
+	var roll=Math.floor((Math.random()*2)+1);
+	if (roll==1)
+		document.getElementById("d2").textContent='Testa';
+	else
+		document.getElementById("d2").textContent='Croce';
+}
+
+function d6(){
+	var roll=Math.floor((Math.random()*6)+1);
+	document.getElementById("d6").textContent=roll;
 }

@@ -24,7 +24,7 @@
         <li class="nestHead" >  <button id="disBut" aria-label="Mostra pagine regole" title="Mostra pagine regole" onclick="displayRegole()">Regole ▼</button>
 										<ul class="nested">
 											<li><a href="">Regole base</a></li>
-											<li><a href="">La mia prima parita</a></li>
+											<li><a href="">La mia prima partita</a></li>
 											<li><a href="">Regole syx</a></li>
 											<li><a href="">Fusioni boh</a></li>
 										</ul>
@@ -37,12 +37,30 @@
 		</nav>
 
 		<nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en"><a href="demoIndex1.html">Home</a> &gt; &gt; Strumenti</span></p>
+            <p>Ti trovi in: <span lang="en"><a href="demoIndex1.html">Home</a></span> &gt; &gt; Strumenti</p>
 		</nav>
 		
 		<div id="content">
-			<div><span lang="en">Life Points</span> Giocatore 1:<span id="LP1"> N/A </span></div>
-			<div><span lang="en">Life Points</span> Giocatore 2:<span id="LP2"> N/A </span></div>
+			<div id="P1"><h2>Giocatore 1</h2>
+				<div lang="en">Life Points:<span id="LP1" lang="it">8000</span></div>
+				<div><span lang="en">Token</span>
+					<button class="adSubBut" onclick="modT(1, -1)">-</button>
+					<span id="T1">0</span>
+					<button class="adSubBut" onclick="modT(1, 1)">+</button>
+				</div>
+			</div>
+			<div id="P2"><h2>Giocatore 2</h2>
+				<div lang="en">Life Points:<span id="LP2" lang="it">8000</span></div>
+				<div><span lang="en">Token</span>
+					<button class="adSubBut" onclick="modT(2, -1)">-</button>
+					<span id="T2">0</span>
+					<button class="adSubBut" onclick="modT(2, 1)">+</button>
+				</div>
+			</div>
+			<div id="dadi">
+				<button onclick="d2()">Lancia una moneta</button><span id="d2"></span>
+				<button onclick="d6()">Lancia un dado</button><span id="d6">1</span>
+			</div>
 			<div id="trgt" role="radiogroup" aria-label="Quale o quali giocatori modificare">Modifico:
 				<input type="radio" id="P1" name="bersaglio" value="1">
 				<label for="P1">Giocatore 1</label>
@@ -51,18 +69,16 @@
 				<input type="radio" id="P12" name="bersaglio" value="3">
 				<label for="P1">Entrambi</label>
 			</div>
-			<div id="set">Imposta <span lang="en">Life Points</span>
-			<input type="number" id="imposta" name="imposta" min="1">
-			<button id="setBut" onclick="setLP()">Imposta</button>
+				<div id="set">Imposta <span lang="en">Life Points</span>
+				<input type="number" id="imposta" name="imposta" min="1">
+				<button id="setBut" onclick="setLP()">Imposta</button>
 			</div>
 			<div id="mod">Cambia <span lang="en">Life Points</span>
-			<input type="number" id="cambia" name="cambia" min="1">
-			<button id="addBut" onclick="addLP()">+</button>
-			<button id="subBut" onclick="subLP()">-</button>
+				<input type="number" id="cambia" name="cambia" min="1">
+				<button class="adSubBut" onclick="addLP()">+</button>
+				<button class="adSubBut" onclick="subLP()">-</button>
 			</div>
-			<div>
-				
-			</div>
+			<div><button id="rstBut" onclick="rst()">Ripristina valori di base</button></div>
 		</div>
 		
 		
