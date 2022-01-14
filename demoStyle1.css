@@ -11,6 +11,7 @@
 /*
   impostazioni di stile generali
 */
+
 *{
   margin: 0;
   padding: 0;
@@ -32,7 +33,6 @@ body{
   ". content ."
   "footer footer footer";
 }
-
 
 /*
   impostazioni di stile header
@@ -70,9 +70,6 @@ header h2{
   text-align: center;
 }
 
-
-
-
 #menu li{
   display: inline-block;
 }
@@ -92,11 +89,11 @@ header h2{
   margin: 0 0.8em;
 }
 
-
 #menu a{
   color: #000;
   text-decoration: none;
 }
+
 #menu a:visited{
   color: #003B54;
   text-decoration: none;
@@ -132,11 +129,11 @@ header h2{
 }
 
 
-
-
 /*
   impostazioni di stile breadcrumb
 */
+
+
 #breadcrumb{
   grid-area: breadcrumb;
   padding:0.2em 0em 0.2em 0.2em;
@@ -146,10 +143,11 @@ header h2{
 }
 
 
-
 /*
   impostazoni di stile contenuto
 */
+
+
 #content{
   grid-area: content;
   color: #FFF;
@@ -169,6 +167,8 @@ header h2{
 /*
   impostazioni di stile footer
 */
+
+
 footer{
   grid-area: footer;
   color: #FFF;
@@ -179,29 +179,32 @@ footer{
   background-size: 15%;
   text-align: center;
   border-top: 1px solid #F38121;
-
 }
+
 footer dt{
   font-size: 1.3em;
   padding-top: 2em;
   padding-bottom: 0.5em;
   font-weight: bold;
 }
+
 footer dd{
   font-size: 1em;
   padding-top:0.5em;
 }
+
 footer a:visited{
   color:#F38121;
 }
+
 footer a{
   color:#FFF;
 }
+
 footer p{
   display: inline;
   font-style:italic;
 }
-
 
 .up{
 	display: inline-block;
@@ -228,21 +231,24 @@ footer p{
   color: #000;
   text-decoration: none;
 }
+
 .up:visited{
   color:#000;
 }
+
 .valid{
   vertical-align: middle;
   margin-left: 8em;
 	margin-right: 8em;
 	margin-bottom: 0.7em;
 }
+
 #valid{
   padding:4em 0em 0.2em 0em;
 }
 
 /*
-  pagina banlist
+  pagina banlist - inizio
 */
 
 #banlistTitle{
@@ -272,7 +278,6 @@ footer p{
 }
 
 #banlistTable a{
-
 	padding:0.4em;
 	margin:0.3em;
 	color: #000;
@@ -367,6 +372,245 @@ caption{
   background-color: #DBDBDE;
   color: #000;
 }
+
+
+/*
+  pagina banlist - fine
+*/
+
+
+/*
+  pagina approfondimento main deck - inzio
+*/
+
+
+  #evocazioni{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "subt1 subt1"
+    "evocn tevocn"
+    "tevocp evocp"
+    "evoct tevoct";
+  }
+  #amdtitle{
+    text-align: center;
+    font-size: 2em;
+    padding: 1em 0em 0.7em 0em;
+  }
+  #subt1{
+    grid-area: subt1;
+    text-align: center;
+    font-size: 1.7em;
+    padding: 0em 0em 1em 0em;
+  }
+  #evocNormale{
+    grid-area: evocn;
+  }
+  #tevocn{
+    grid-area: tevocn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    padding-bottom: 0.7em;
+  }
+  #tevocp{
+    grid-area: tevocp;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    padding-bottom: 0.7em;
+  }
+  #evocPosizionamento{
+      grid-area: evocp;
+  }
+  #evocTributo{
+      grid-area: evoct;
+  }
+  #tevoct{
+    grid-area: tevoct;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    padding-bottom: 0.7em;
+  }
+  #phases{
+    float:left;
+    padding: 0em 2em 1em 1em;
+  }
+  ol{
+    font-size: 1.2em;
+  }
+  ol li {
+    padding-bottom: 0.5em;
+  }
+  .amdTextP{
+    font-size: 1.3em;
+    padding: 1em 0em 0.7em 0em;
+  }
+  .amdSubT{
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 1em 0em;
+  }
+  #magieParticolari dt, #trappoleParticolari dt{
+    color: #000;
+    background-color: #F38121;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+  }
+  #magieParticolari dd, #trappoleParticolari dd{
+     border: 1px solid #F38121;
+	   border-top: none;
+     margin-bottom:1em;
+     padding: 0.5em 0.5em 1em 0.5em;
+     text-align: center;
+  }
+  .iconeMagia, .iconeTrappola{
+    display: block;
+    margin: auto;
+    padding-bottom: 0.5em;
+  }
+/*
+  pagina approfondimento main deck - fine
+*/
+  #aedtitle{
+    text-align: center;
+    font-size: 2em;
+    padding: 1em 0em 0.7em 0em;
+  }
+  #extradeck{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    ". subt ."
+    "fusione testoFusione polimerizzazione"
+    ". subt1 ."
+    "testoXyz testoXyz xyz"
+    ". subt2 ."
+    "synchro testoSynchro tuner"
+    ". subt3 ."
+    "link testoLink testoLink"
+    ". subt4 ."
+    "pendulum testoPendulum testoPendulum";
+  }
+
+  #subt{
+    grid-area: subt;
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 1em 0em;
+  }
+  #fusione{
+    grid-area: fusione;
+    width: 90%;
+  }
+  #testoFusione{
+    grid-area: testoFusione;
+    font-size: 1.3em;
+    padding: 1em 0.2em 0.7em 0em;
+  }
+  #polimerizzazione{
+    grid-area: polimerizzazione;
+    width: 90%;
+  }
+
+
+  #subt1{
+    grid-area: subt1;
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 0.5em 0em;
+  }
+  #testoXyz{
+    grid-area: testoXyz;
+    font-size: 1.3em;
+    padding: 1em 0.2em 0.7em 0em;
+  }
+  #xyz{
+    grid-area: xyz;
+    width: 90%;
+  }
+
+
+  #subt2{
+    grid-area: subt2;
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 0.5em 0em;
+  }
+  #synchro{
+    grid-area: synchro;
+    width: 90%;
+  }
+  #testoSynchro{
+    grid-area: testoSynchro;
+    font-size: 1.3em;
+    padding: 1em 0.2em 0.7em 0em;
+  }
+  #tuner{
+    grid-area: tuner;
+    width: 90%;
+  }
+
+
+  #subt3{
+    grid-area: subt3;
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 0.5em 0em;
+  }
+  #link{
+    grid-area: link;
+    width: 90%;
+  }
+  #testoLink{
+    grid-area: testoLink;
+    font-size: 1.3em;
+    padding: 1em 0em 0.7em 0em;
+  }
+
+
+  #subt4{
+    grid-area: subt4;
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 0.5em 0em;
+  }
+  #pendulum{
+    grid-area: pendulum;
+    width: 90%;
+  }
+  #testoPendulum{
+    grid-area: testoPendulum;
+    font-size: 1.3em;
+    padding: 1em 0em 0.7em 0em;
+  }
+  #spellSpeed{
+    list-style: disc;
+    font-size: 1.3em;
+  }
+  .aedTextP{
+    font-size: 1.3em;
+    padding: 1em 0em 0.7em 0em;
+  }
+  .aedSubT{
+    text-align: center;
+    font-size: 1.7em;
+    padding:1em 0em 0.5em 0em;
+  }
+
+
+/*
+  pagina approfondimento extra deck- fine
+*/
+
 
 /*
 pagina regole base
