@@ -1,6 +1,17 @@
 /*
+  animazioni
+*/
+
+@keyframes fadein{
+	from {opacity: 0};
+	to {opacity: 1};
+}
+
+
+/*
   impostazioni di stile generali
 */
+
 *{
   margin: 0;
   padding: 0;
@@ -22,8 +33,6 @@ body{
   ". content ."
   "footer footer footer";
 }
-
-
 
 /*
   impostazioni di stile header
@@ -61,56 +70,70 @@ header h2{
   text-align: center;
 }
 
-
 #menu li{
   display: inline-block;
-  padding: 0.5em 1em;
+}
+
+#menu li a, #disBut, #currentLink{
+	padding: 0.5em 1em;
   margin: 0.2em 1em;
   font-size: 1.2em;
   background-color: #F38121;
   border: 2px solid #000;
   border-radius: 25px;
 }
-#menu li:hover{
+
+#menu li a:hover, #disBut:hover{
   background-color: #FFF;
   padding: 0.7em 1.2em;
   margin: 0 0.8em;
 }
+
 #menu a{
   color: #000;
   text-decoration: none;
 }
+
 #menu a:visited{
   color: #003B54;
   text-decoration: none;
 }
 
-.nested{
-	margin-top: 1.2em;
+#menu .nested{
+	background-color:#1D1F21;
+	border: 1px solid white;
+	border-top:none;
 	display:none;
-	position:absolute;
+	position: absolute;
+	animation-name: fadein;
+	animation-duration: 1s;
 }
 
-.nested a{
-	display:inline;
-	padding:0.2em;
+#menu .nested li{
+	display: block;
+}
+
+#menu .nested a{
+	display: block;
+	padding:0.2em 0.4em;
 	margin:0.3em;
-  background-color: #F38121;
-  border: 2px solid #000;
-  border-radius: 25px;
-  font-size:0.8em;
+    font-size:1em;
+	animation-name: fadein;
+	animation-duration: 1s;
 }
 
-
-.nestHead:hover .nested{
-	display:block;
+#menu .nested a:hover{
+	background-color: #FFF;
+  padding: 0.2em 0.4em;
+  margin: 0.3em;
 }
-
 
 
 /*
   impostazioni di stile breadcrumb
 */
+
+
 #breadcrumb{
   grid-area: breadcrumb;
   padding:0.2em 0em 0.2em 0.2em;
@@ -120,10 +143,11 @@ header h2{
 }
 
 
-
 /*
   impostazoni di stile contenuto
 */
+
+
 #content{
   grid-area: content;
   color: #FFF;
@@ -132,10 +156,19 @@ header h2{
   font-size: 1em;
 }
 
+#content .up{
+	position: relative;
+  left: 80%;
+  display: inline-block;
+  margin-right: 10%;
+}
+
 
 /*
   impostazioni di stile footer
 */
+
+
 footer{
   grid-area: footer;
   color: #FFF;
@@ -146,44 +179,70 @@ footer{
   background-size: 15%;
   text-align: center;
   border-top: 1px solid #F38121;
-
 }
+
 footer dt{
   font-size: 1.3em;
   padding-top: 2em;
   padding-bottom: 0.5em;
   font-weight: bold;
 }
+
 footer dd{
   font-size: 1em;
   padding-top:0.5em;
 }
+
 footer a:visited{
   color:#F38121;
 }
+
 footer a{
   color:#FFF;
 }
+
 footer p{
   display: inline;
   font-style:italic;
 }
+
 .up{
-  display: block;
-  text-align: right;
+	display: inline-block;
+	position: relative;
+	left: 40%;
+  padding: 0.5em 1em;
+  margin: 1em 0.1em 0.2em 0.1em;
+  font-size: 1em;
+  background-color: #F38121;
+  border: 2px solid #000;
+  border-radius: 25px;
 }
-.up a{
-  color: #FFF;
+
+.up:hover{
+  padding: 0.6em 1.1em;
+  margin: 0.9em 0 0.1em 0;
+  font-size: 1em;
+  background-color: #FFF;
+  border: 2px solid #000;
+  border-radius: 25px;
 }
-.up a:visited{
-  color:#F38121;
+
+.up{
+  color: #000;
+  text-decoration: none;
 }
+
+.up:visited{
+  color:#000;
+}
+
 .valid{
   vertical-align: middle;
   margin-left: 8em;
 	margin-right: 8em;
 	margin-bottom: 0.7em;
 }
+
 #valid{
   padding:4em 0em 0.2em 0em;
 }
@@ -204,10 +263,38 @@ footer p{
   text-align: center;
   list-style-type: none;
   font-size: 1.2em;
+  display:flex;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+
+#banlistTable li{
+	flex: 1 1 auto;
+}
+
+#banlistTable a:visited{
+	color: #000;
 }
 
 #banlistTable a{
-  color: #F38121;
+	padding:0.4em;
+	margin:0.3em;
+	color: #000;
+  text-decoration: none;
+  background-color: #F38121;
+  border: 2px solid #000;
+  border-radius: 25px;
+  font-size:0.8em;
+}
+
+#banlistTable a:hover{
+	padding:0.5em;
+	margin:0.2em;
+  background-color: #FFF;
+  border: 2px solid #000;
+  border-radius: 25px;
+  font-size:0.8em;
 }
 
 caption{
@@ -285,13 +372,18 @@ caption{
   background-color: #DBDBDE;
   color: #000;
 }
+
+
 /*
   pagina banlist - fine
 */
 
+
 /*
   pagina approfondimento main deck - inzio
 */
+
+
   #evocazioni{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -515,16 +607,50 @@ caption{
   }
 
 
-
-
-
-
-
-
-
-
-
-
 /*
   pagina approfondimento extra deck- fine
 */
+
+
+/*
+pagina regole base
+*/
+
+.immagine
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 50%
+}
+
+#content
+{
+    font-size: 1.2em;
+}
+
+#content h1, #content h2, #content h3
+{
+    font-family: "Hanalei Fill";
+    text-align: center;
+    margin: 1em;
+    color: #F38121;
+}
+
+#content ul{
+    margin-top: 1em;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 1em;
+    list-style-type: circle;
+}
+
+#content ol{
+    margin-top: 1em;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 1em;
+}
+

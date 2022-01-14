@@ -1,0 +1,117 @@
+mostro Alanera-Gofu L'ombra Vaga
+mostro Alanera-Stream il Mantello
+mostro Bestia Fantasma Meccanica O-Leone
+mostro Blaster, Drago degli Inferi
+mostro Bulbo Luminoso
+mostro Codafavola-Neve
+mostro Cyber Giara
+mostro Dente di Leone
+mostro Destrudo il Fremito del Drago Perduto
+mostro Djinn Dispensatore di Rituali
+mostro Drago Blocco
+mostro Drago della Vittoria
+mostro Giara di Fibra
+mostro Golem Tritatutto
+mostro Grappolo di Amarillidi di Fenice
+mostro Il Tiranno Nettuno
+mostro Jet Synchron
+mostro Loto del Samsara
+mostro Maestro della Mente
+mostro Maestro Pace, il Vero Dracouccisore Re
+mostro Mangia-Livello
+mostro Maxx "C"
+mostro Orrore Arpa Orcusestra
+mostro Pesce Cyborg Distruttore
+mostro Piano Generale SPIARALE
+mostro Redox, Drago Sovrano dei Macigni
+mostro Scambiarana
+mostro Scienziato Magico
+mostro Tidal, Drago Sovrano delle Cascate
+mostro Viverna Eclisse
+mostro Yata-Garasu
+
+Magia	Anfora dell'Avidità	 
+Magia	Bomba Fumogena del Ladro	 
+Magia	Cambiare Idea	 
+Magia	Carica Anime	 
+Magia	Carità Graziosa	 
+Magia	Carta del Ritorno Sicuro	 
+Magia	Colosseo Kaiser	 
+Magia	Confisca	 
+Magia	Due di Meno	 
+Magia	Fusione Brillante	 
+Magia	Fusione Dimensionale	 
+Magia	Gioco del Coniglio	 
+Magia	La Sentinella Potente	 
+Magia	Libro di Magia del Giudizio	 
+Magia	Metamorfosi	 
+Magia	Miraggio d'Incubo	 
+Magia	Ondata Gelida	 
+Magia	Pugnale a Farfalla - Elma	 
+Magia	Quell'Erba Sembra Più Verde	 
+Magia	Raffica Zoodiaco	Limitate -> Proibite
+Magia	Ritorno Totale	 
+Magia	Scelta Dolorosa	 
+Magia	Sepoltura Prematura	 
+Magia	Sterminatore	 
+Magia	Strappa Possesso	 
+Magia	Tempesta Potente	 
+Magia	Ultimo Desiderio
+
+Trappola	Oppressione Reale	 
+Trappola	Pulsante di Auto-Distruzione	 
+Trappola	Ritorno dall'Altra Dimensione	 
+Trappola	Sesto Senso	 
+Trappola	Sigillo del Tempo	 
+Trappola	Trappola Botola	 
+Trappola	Ultima Offerta	 
+Trappola	Ultimo Turno	 
+Trappola	Vacuità della Vanità (Aggiornato da: Vuoto della Vanità)
+
+Pendulum/Effetto/Mostro	Artistamagus Fuocopeluche	 
+Pendulum/Effetto/Mostro	Artistamico Scimmiatastiera
+Pendulum/Effetto/Mostro Maestospettro Unicorno - Kirin
+Pendulum/Effetto/Mostro Stregone Astrografo
+Pendulum/Effetto/Mostro Tigre della Lucelunare
+
+Fusione Colosso Drago del Tuono
+Fusione Entità Maggiore Norden
+Fusione Re Supremo Drago Veleno Affamato
+
+XYZ Catena Lavalval
+XYZ Entità Esterna Azathot
+XYZ Invocatore Sciabola-X-M
+XYZ Numero 16: Maestro Shock
+XYZ Numero 42: Tomahawk Galattico
+XYZ Numero 86: Campione Eroico - Rhongomyniad
+XYZ Numero 95: Drago Materia Oscura Occhi Galattici
+XYZ Numero S0: ZEXAL Utopico
+XYZ Tellcavaliere Tolomeo
+XYZ Trasportatore Zenmaity a Molla
+XYZ Vero Re di Tutte le Calamità
+XYZ Zoodiaco Asciatoro
+XYZ Zoodiaco Dridente
+
+Synchro Antico Drago Fatato
+Synchro Denglong, Primo degli Yang Zing
+Synchro Ib la Giudice Calice del Mondo
+Synchro Mago delle Tempeste
+
+Link Cavaliere dell'Incubo Goblin
+Link Cavaliere dell'Incubo Sirena
+Link Drago Gumblar Topologico
+Link Guardrago Agarpain
+Link Guardrago Elpy
+Link Linkroce
+Link Pesanmetalfosi Electrumite
+Link Stregona Evocatrice
+Link Trasportatore Unione
+
+
+
+
+
+
+
+
+
