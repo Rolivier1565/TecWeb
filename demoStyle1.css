@@ -492,6 +492,10 @@ caption{
 /*
   pagina approfondimento main deck - fine
 */
+
+/*
+  pagina approfondimento extra deck - inzio
+*/
   #aedtitle{
     text-align: center;
     font-size: 2em;
@@ -625,7 +629,7 @@ caption{
 
 
 /*
-pagina regole base
+pagina regole base - inizio
 */
 
 .immagine
@@ -665,4 +669,6 @@ pagina regole base
     margin-left: 5%;
     margin-bottom: 1em;
 }
-
+/*
+pagina regole base - fine
+*/
