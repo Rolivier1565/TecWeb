@@ -113,6 +113,18 @@ header h2{
 	display: block;
 }
 
+#currentNestLink{
+	display: block;
+	padding:0.2em 0.4em;
+	margin:0.3em;
+    font-size:1em;
+	animation-name: fadein;
+	animation-duration: 1s;
+	background-color: #F38121;
+	border: 2px solid #000;
+	border-radius: 25px;
+}
+
 #menu .nested a{
 	display: block;
 	padding:0.2em 0.4em;
