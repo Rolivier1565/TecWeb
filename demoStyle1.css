@@ -672,3 +672,27 @@ pagina regole base - inizio
 /*
 pagina regole base - fine
 */
+
+
+
+/*
+pagina esempi - inizo
+*/
+.esImg{
+  display: block;
+	margin: auto;
+	width:65%;
+	padding: 1em 0em 1em 0em;
+}
+.imgList{
+	display: block;
+	margin: auto;
+	width:50%;
+	padding: 0.5em 0em 0.5em 0em;
+}
+.listEsempi{
+	list-style: lower-alpha;
+}
+/*
+pagina esempi - fine
+*/
