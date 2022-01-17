@@ -262,6 +262,84 @@ footer p{
 }
 
 /*
+  home
+*/
+
+#content a{
+  color: #F38121;
+}
+
+.flexhome{
+  display: flex;
+  flex-direction: column;
+}
+
+.flexhome p{
+  align-self: flex-end;
+}
+
+.flexhome h3{
+  color: #F38121;
+  margin-left: 2em;
+}
+
+#gioco img{
+  float:  right;
+  width: 30%;
+}
+
+#gioco p{
+  float: left;
+  width: 65%;
+}
+
+#gioco{
+  margin: 1em;
+}
+
+#manga img{
+  float:  left;
+  width: 20%;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+#manga p{
+  float: right;
+  width: 75%;
+  margin-top: 4em;
+  margin-right: 1em;
+}
+
+#anime img{
+  float:  right;
+  width: 20%;
+  margin: 1em 1em 1em 1em;
+}
+
+#anime p{
+  float: left;
+  width: 75%;
+  margin-top: 4em;
+  margin-left: 1em;
+}
+
+#videogiochi img{
+  float:  left;
+  width: 20%;
+  margin-right: 1em;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+#videogiochi p{
+  float: right;
+  width: 75%;
+  margin-top: 4em;
+  margin-right: 1em;
+}
+
+/*
   pagina banlist - inizio
 */
 
@@ -702,6 +780,7 @@ pagina strumenti
 	width:3em;
 	margin-left:0.2em;
 }
+
 #d6{
 	margin-right:0.2em;
 	margin-left:0.2em;
