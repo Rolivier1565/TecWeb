@@ -95,8 +95,9 @@ header h2{
 }
 
 #menu a:visited{
-  color: #003B54;
+  color: #000066;
   text-decoration: none;
+  background-color: #F39151;
 }
 
 #menu .nested{
@@ -107,6 +108,7 @@ header h2{
 	position: absolute;
 	animation-name: fadein;
 	animation-duration: 1s;
+	margin-left: 1em;
 }
 
 #menu .nested li{
@@ -128,7 +130,7 @@ header h2{
 #menu .nested a{
 	display: block;
 	padding:0.2em 0.4em;
-	margin:0.3em;
+	margin:0.3em 0.7em;
     font-size:1em;
 	animation-name: fadein;
 	animation-duration: 1s;
@@ -137,7 +139,7 @@ header h2{
 #menu .nested a:hover{
 	background-color: #FFF;
   padding: 0.2em 0.4em;
-  margin: 0.3em;
+  margin: 0.3em 0.7em;
 }
 
 
@@ -642,10 +644,6 @@ pagina regole base - inizio
     width: 50%
 }
 
-#content
-{
-    font-size: 1.2em;
-}
 
 #content h1, #content h2, #content h3
 {
@@ -672,3 +670,39 @@ pagina regole base - inizio
 /*
 pagina regole base - fine
 */
+
+/*
+pagina strumenti
+*/
+
+.contenitore{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.instrBtn{
+  background-color: #F38121;
+  border: 2px solid #000;
+  border-radius: 25px;
+  padding: 0.2em 0.3em;
+}
+
+.instrBtn:hover{
+	background-color: #FFF;
+}
+
+.instrBtn.smlBtn{
+	font-size:1.2em;
+	font-family: monospace;
+	padding: 0 0.2em;
+}
+
+#d2{
+	width:3em;
+	margin-left:0.2em;
+}
+#d6{
+	margin-right:0.2em;
+	margin-left:0.2em;
+}
