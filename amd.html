@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Main deck - Yu-Gi-Basics</title>
+		<meta name="keywords" content="Regole, Yu-Gi-Oh, Main deck" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<link rel="stylesheet" href="demoStyle1.css" />
+		<link rel="stylesheet" media="screen and (max-width:1500px), only screen and (max-width:1500px)" href="demoStyleMini.css" />
+		<link rel="shortcut icon" href="images/logo.ico" />
+		<script type="text/javascript" src="js/automagia.js"></script>
+	</head>
+
+	<body>
+		<header id="top">
+			<h1 lang="en">Yu-Gi-Basics</h1>
+			<h2><span lang="en">Yu-Gi-Oh</span> per principianti</h2>
+		</header>
+		<nav id="menu">
+			<ul>
+				<li lang="en"> <a href="home.html"> Home </a></li>
+				<li class="nestHead" >  <a id="disBut" href="">Regole ▼</a>
+										<ul class="nested">
+											<li><a href="regolebase.html">Regole base</a></li>
+											<li id="currentNestLink" lang="en">Main Deck</li>
+											<li lang="en"><a href="aed.html">Extra Deck</a></li>
+											<li><a href="esempi.html">Esempi</a></li>
+										</ul>
+				</li>
+				<li lang="en"><a href="banlist.html">Banlist</a></li>
+				<li lang="en"><a href="forum.html">Forum</a></li>
+				<li><a href="strumenti.html">Strumenti</a></li>
+			</ul>
+		</nav>
+
+		<nav id="breadcrumb">
+            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; Regole &gt; &gt; Approfondimento <span lang="en">main deck</span></p>
+		</nav>
+    <div id="content">
+      <h1 id="amdtitle">APPROFONDIMENTO CARTE</h1>
+      <p class="amdTextP">In questo blocco di regole andremo ad analizzare nel dettaglio i funzionamenti e le caratteristiche delle diverse carte
+        presenti nel gioco. Seguiremo quest’ordine: partiremo dalle carte presenti nel tuo <span lang="en">main deck</span> e procederemo verso le carte
+        presenti nel tuo <span lang="en">extra deck</span>. Di fondamentale importanza aver letto la sezione delle regole che precede questa! (la trovi <a href="regoleBase.html">qui</a>).
+        Se sei pronto a cominciare direi che puoi iniziare la lettura!
+			</p>
+			<div id="evocazioni">
+      	<h2 id="subt1">Come Utilizzare i Mostri</h2>
+				<img id="evocNormale" src="images/evocNormale.PNG" alt=""/>
+      	<p id="tevocn">Ad ogni turno hai o un’evocazione normale o un posizionamento. Questa azione ti permette di utilizzare uno dei mostri che
+        	hai nella tua mano. Per effettuare un’evocazione normale si mette un mostro in posizione di attacco scoperto sul terreno
+        	(puoi evocare normalmente soltanto mostri di livello 4 o inferiore).
+				</p>
+				<p id="tevocp"> Se invece si vuole giocare in maniera difensiva si può
+        	posizionare un mostro coperto in posizione di difesa (posizionamento).
+				</p>
+				<img id="evocPosizionamento" src="images/evocPosizionamento.PNG" alt=""/>
+				<img id="evocTributo" src="images/evocTributo.PNG" alt="" />
+				<p id=tevoct>Se volessimo evocare un mostro di livello più alto
+        	dovremmo fare un’evocazione tramite tributo, ovvero sacrificare un mostro presente sul nostro terreno per evocare un mostro
+        	di livello 5 o 6 oppure sacrificare due mostri sul terreno per evocare un mostro superiore al livello 6. Ovviamente durante
+        	un turno è possibile effettuare una sola di queste 3 azioni: evocare normalmente, posizionare o evocare tramite tributo.
+				</p>
+		</div>
+		<p class="amdTextP">Alcuni mostri con effetto o carte magia o carte trappola permettono di effettuare delle evocazioni speciali!
+        Non c’è limite al numero di evocazioni speciali che si possono compiere durante un turno. Inoltre, l’azione di evocazione
+        normale è comunque disponibile anche se decidiamo di evocare specialmente. Si può scegliere se evocare specialmente in
+        posizione di attacco o di difesa, ma in entrambi i casi la carta va messa scoperta sul terreno (fanno eccezione gli effetti
+        dov’è specificata la posizione in cui il mostro verrà evocato specialmente).
+      </p>
+
+      <h2 class="amdSubT">Le Carte Magia & Trappola</h2>
+      <p class="amdTextP">I mostri non ti basteranno per vincere i duelli, sarà necessario utilizzare gli effetti delle magie e delle trappole.
+        Le carte magia sono utilizzabili durante il tuo turno. È sufficiente posizionarle in una delle zone magia & trappola del
+        terreno. Una volta applicato l’effetto la carta magia va scartata nel cimitero (vedi eccezioni magie continue). Le carte
+        trappola sono più lente rispetto alle carte magia, in quanto devono rimanere almeno un turno coperte sul terreno prima di
+        poter essere utilizzate, hanno però il vantaggio che possono essere utilizzate anche durante il turno dell’avversario.
+        Questa abilità rende le trappole ideali per mettere i bastoni tra le ruote degli avversari!
+      </p>
+
+      <h2 class="amdSubT">Le Carte Magia Particolari</h2>
+      <p class="amdTextP">Sotto il nome della carta magia potrebbe essere presente un simbolo che dà alla carta magia alcune qualità. Le carte magia
+        infatti possono essere: equipaggiamento, continue, terreno, rapide.
+			</p>
+
+
+
+			<dl id="magieParticolari">
+				<dt>Carte Magia Equipaggiamento</dt>
+				<dd>
+					<img class="iconeMagia" alt="" src="images/magiaEquipaggiamento.PNG" />
+					<p>Le carte magia equipaggiamento vengono assegnate ad un
+	        mostro e rimangono nella zona magia & trappola fino a quando il mostro non lascia il terreno. In questo modo il mostro
+	        equipaggiato gode di un potenziamento che può durare più di un turno.
+					</p>
+				</dd>
+
+				<dt>Carte Magia Continue</dt>
+				<dd>
+					<img class="iconeMagia" alt="" src="images/magiaContinua.PNG" />
+					<p>Le carte magia continue sono contraddistinte dal
+         simbolo dell’infinito, quando una di queste magie viene attivata il suo effetto perdura fino a quando la carta rimane sul
+         terreno.
+					</p>
+				</dd>
+
+				<dt>Carte Magia Terreno</dt>
+				<dd>
+					<img class="iconeMagia" alt="" src="images/magiaTerreno.PNG" />
+					<p>Le carte magia terreno sono contraddistinte dal simbolo della rosa dei venti, quando ne attivi
+        una va messa in quella zona. Ogni giocatore ha una zona terreno e la magia rimane in quella zona e applica i suoi effetti
+        fino a  quando non lascia il terreno. Le magie terreno differiscono dalle continue in quanto i loro effetti vengono applicati
+        ad entrambi i giocatori. Inoltre se un giocatore vuole attivare un'altra magia terreno anche se la sua zona terreno è occupata
+				lo può fare scartando la carta che occupa la zona magie terreno.
+					</p>
+				</dd>
+
+				<dt>Carte Magia Rapide</dt>
+				<dd>
+					<img class="iconeMagia" alt="" src="images/magiaRapida.PNG" />
+					<p>Le carte magia rapide sono contraddistinte dal simbolo del fulmine,
+			 possono essere giocate in qualsiasi fase del tuo turno e se vengono posizionate coperte possono essere utilizzate anche durante il
+			 turno del tuo avversario (come se fossero trappole).
+					</p>
+				</dd>
+			</dl>
+
+      <h2 class="amdSubT">Le Carte Trappola Particolari</h2>
+      <p class="amdTextP">Come per le carte magia anche le carte trappola possono avere comportamenti particolari, esistono infatti carte trappola
+        continue e carte contro-trappola.
+			</p>
+			<dl id="trappoleParticolari">
+				<dt>Carte Trappola Continue</dt>
+				<dd>
+					<img class="iconeTrappola" alt="" src="images/trappolaContinua.PNG" />
+					<p>Le carte continue funzionano come le magie continue, quando vengono attivate rimango sul
+         terreno e continuano ad applicare il loro effetto fino a quando non vengono distrutte.
+					</p>
+				</dd>
+
+				<dt>Carte Contro-Trappola</dt>
+				<dd>
+					<img class="iconeTrappola" alt="" src="images/controTrappola.PNG" />
+					<p> Le carte contro-trappola sono
+         contraddistinte da una freccia, queste carte riescono ad annullare gli effetti delle carte avversarie, risultano perciò
+         molto utili per fermare le combo degli avversari!
+					</p>
+				</dd>
+			</dl>
+
+      <h2 class="amdSubT">La Struttura del turno di Gioco</h2>
+      <p class="amdTextP">Durante ogni tuo turno di gioco attraverserai delle diverse fasi. Durante queste fasi si possono fare e possono accadere
+        diverse cose. In questa sezione andremo a vedere nel dettaglio ogni fase. Le fasi di ogni turno sono sei: <span lang="en">draw phase,
+        standby phase, main phase 1, battle phase (<span lang="it">ed eventuale</span> damage step), main phase 2</span> ed <span lang="en">end phase</span>.
+			</p>
+			<img id="phases" src="images/phases.PNG" alt="una rappresentazione grafica delle fasi di gioco" />
+			<ol>
+				<li>Durante la tua <span lang="en">draw phase</span> andrai a pescare una carta dal tuo <span lang="en">main deck</span>, in questa fase
+				potrebbero essere applicati degli effetti di alcune carte che potrebbero alterare la tua pescata. Inoltre il primo giocatore che
+				inizia la partita dovrà saltare questa fase.
+				</li>
+				<li>La <span lang="en">standby phase</span> è una fase intermedia tra la <span lang="en">draw phase</span>
+				e la <span lang="en">main phase 1</span>. In questa fase di passaggio si applicano solamente gli effetti che la nominano.
+				</li>
+	 			<li>Durante la tua <span lang="en">main phase 1</span> puoi: effettuare la tua evocazione normale o posizionamento, effettuare
+        quante evocazioni speciali desideri, attivare effetti di carte magia o trappola (non serve seguire l’ordine in cui queste
+        azioni sono elencate).
+				</li>
+				<li>Durante la tua <span lang="en">battle phase</span> andrai a dichiarare eventuali attacchi verso il tuo avversario, ogni qual
+        volta si procede ad effettuare il calcolo dei danni si parla di <span lang="en">damage step</span>. Alcune carte hanno effetti che si applicano durante
+        il <span lang="en">damage step</span> quindi è opportuno ricordarsi che è una fase che si verifica solamente in caso di un attacco
+				durante la <span lang="en">battle phase</span>. Ovviamente il giocatore che inizierà la partita dovrà saltare la <span lang="en">battle phase</span>
+				del suo primo turno.
+				</li>
+				<li>Nella <span lang="en">main phase 2</span> puoi eseguire le stesse azioni della <span lang="en">main phase 1</span>
+				preparandoti magari per difenderti contro il futuro turno dell’avversario. Ovviamente se non hai fatto la tua evocazione normale
+				durante la <span lang="en">main phase 1</span> lo puoi fare adesso.
+				</li>
+				<li>Durante la <span lang="en">end phase</span> stai passando il tuo
+				turno all’avversario, si applicano eventuali effetti che citano questa <span lang="en">phase</span> e poi il tuo avversario procede con la propria <span lang="en">draw phase</span>
+				. Inoltre se hai più di 6 carte scarti tutte le carte in eccesso.
+				</li>
+			</ol>
+
+    </div>
+    <footer>
+			<dl>
+				<dt>Contatti:</dt>
+				<dd>tel: 5559683061</dd>
+				<dd>email: yugibasics@konami.com</dd>
+				<dt>Social:</dt>
+				<dd><a href="">Instagram</a></dd>
+				<dd><a href="">Youtubbo</a></dd>
+			</dl>
+			<p class="up"><a href="#top">Torna su</a></p>
+			<div id="valid">
+				<img src="images/htmlValid.png" alt="HTML5 Valido"  class="valid"/>
+				<p>Tutti i diritti sono riservati a NOI</p>
+				<img src="images/vcss-blue_1.gif" alt="CSS Valido"  class="valid"/>
+			</div>
+		</footer>
+	</body>
+
+</html>

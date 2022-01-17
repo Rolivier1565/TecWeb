@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 	<head>
@@ -8,9 +7,9 @@
 		<meta name="description" content="" />
 		<meta name="author" content="" />
 		<link rel="stylesheet" href="demoStyle1.css" />
-		<link rel="stylesheet" media="screen and (max-width:1500px), only screen and (max-width:1500px)" href="demoStylemini.css" />
-		<link rel="stylesheet" media="screen and (max-width:1220px), only screen and (max-width:1220px)" href="demoStylemini1.css" />
+		<link rel="stylesheet" media="screen and (max-width:1500px), only screen and (max-width:1500px)" href="demoStyleMini.css" />
 		<link rel="shortcut icon" href="images/logo.ico" />
+		<script type="text/javascript" src="js/automagia.js"></script>
 	</head>
 
 	<body>
@@ -20,24 +19,23 @@
 		</header>
 		<nav id="menu">
 			<ul>
-				<li lang="en"> <a href="demoIndex1.html"> Home </a></li>
-        <li class="nestHead">  <a href="regole.html">Regole </a>▼
-										<div class="nested">
-											<a href="">regole base</a>
-											<a href="">la mia prima parita</a>
-											<a href="">regole syx</a>
-											<a href="">fusioni boh</a>
-										</div>
+				<li lang="en"> <a href="home.html"> Home </a></li>
+				<li class="nestHead" >  <a id="disBut" href="">Regole ▼</a>
+										<ul class="nested">
+											<li><a href="regolebase.html">Regole base</a></li>
+											<li lang="en"><a href="amd.html">Main Deck</a></li>
+											<li lang="en"><a href="aed.html">Extra Deck</a></li>
+											<li><a href="esempi.html">Esempi</a></li>
+										</ul>
 				</li>
-				<li lang="en" id="currentLink">Banlist</li>
+				<li id="currentLink" lang="en">Banlist</li>
 				<li lang="en"><a href="forum.html" >Forum</a></li>
-				<li lang="en"><a href="news.html">News</a></li>
-				<li><a href="negozio.html">Negozio</a></li>
+				<li><a href="strumenti.html">Strumenti</a></li>
 			</ul>
 		</nav>
 
 		<nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en"><a href="demoIndex1.html">Home</a> &gt; &gt; Banlist</span></p>
+            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en">Banlist</span></p>
 		</nav>
 
 		<div id="content">
@@ -46,10 +44,10 @@
 				Di seguito presentiamo l'elenco delle carte proibite, limitate e semi-limitate in vigore dal 01 ottobre 2021. Il termine <strong>proibite</strong> indica le carte che non si possono più usare in un <span lang="en">deck</span>, <strong>limitate</strong> indica la possibilità di avere al massimo una copia di quella carta mentre le <strong>semi-limitate</strong> sono giocabili fino a due copie. E' inoltre presente la tabella dove sono segnati i cambi di stato, cioè quelle carte che hanno cambiato la loro condizione di utilizzo. Per saperne di più guarda <a href="regole">regole sezione carte</a>.
 			</p>
 			<ul id="banlistTable">
-				<li><a href="#uno">proibite</a></li>
-				<li><a href="#due">limitate</a></li>
-				<li><a href="#tre">semi-limitate</a></li>
-				<li><a href="#quattro">cambiamenti</a></li>
+				<li><a href="#uno">Proibite</a></li>
+				<li><a href="#due">Limitate</a></li>
+				<li><a href="#tre">Semi-limitate</a></li>
+				<li><a href="#quattro">Cambiamenti</a></li>
 			</ul>
 			<table id="uno" class="bannate" title="Nella tabella vengono riportate le carte che non possono essere utilizzate nel proprio mazzo di gioco. Ogni riga descrive il tipo di carta e il nome">
 				<caption>Carte proibite</caption>
@@ -466,7 +464,7 @@
 						</tr>
 					</tbody>
 			</table>
-			<p class="up"><a href="#top">Torna su</a></p>
+			<a class="up" href="#top">Torna su</a>
 			<table id="due" class="bannate" title="Nella tabella vengono riportate le carte che possono usate nel proprio mazzo con numero massimo di coppie uguale a 1. Ogni riga descrive il tipo di carta e il nome">
 				<caption>Carte limitate</caption>
 					<thead>
@@ -814,7 +812,7 @@
 						</tr>
 					</tbody>
 			</table>
-			<p class="up"><a href="#top">Torna su</a></p>
+			<a class="up" href="#top">Torna su</a>
 			<table id="tre" class="bannate" title="Nella tabella vengono riportate le carte che possono usate nel proprio mazzo con numero massimo di coppie uguale a 2. Ogni riga descrive il tipo di carta e il nome">
 				<caption>Carte semi-limitate</caption>
 					<thead>
@@ -842,7 +840,7 @@
 						</tr>
 					</tbody>
 			</table>
-			<p class="up"><a href="#top">Torna su</a></p>
+			<a class="up" href="#top">Torna su</a>
 			<table id="quattro" class="bannate" title="Nella tabella vengono riportate le carte che sono state soggette a cambiamenti di recente. Ogni riga descrive il tipo di carta, il nome e il cambiamento">
 				<caption>Carte con cambio stato</caption>
 					<thead>
@@ -906,7 +904,7 @@
 				<dd><a href="">Instagram</a></dd>
 				<dd><a href="">Youtubbo</a></dd>
 			</dl>
-			<p class="up"><a href="#top">Torna su</a></p>
+			<a class="up" href="#top">Torna su</a>
 			<div id="valid">
 				<img src="images/htmlValid.png" alt="HTML5 Valido"  class="valid"/>
 				<p>Tutti i diritti sono riservati a NOI</p>
