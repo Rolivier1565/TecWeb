@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-	var str="<button id=\"disBut\" aria-label=\"Mostra pagine regole\" title=\"Mostra pagine regole\" onclick=\"displayRegole()\" href=\"demoIndex1.html\">Regole ▼</button>";
+	var str="<button id=\"disBut\" aria-label=\"Mostra pagine regole\" title=\"Mostra pagine regole\" onclick=\"displayRegole()\">Regole ▼</button>";
 	var obj=document.getElementById('disBut');
 	if (obj.outerHTML){
 		obj.outerHTML=str;
