@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-	var str="<button id=\"disBut\" aria-label=\"Mostra pagine regole\" title=\"Mostra pagine regole\" onclick=\"displayRegole()\" href=\"demoIndex1.html\">Regole ▼</button>";
+	var str="<button id=\"disBut\" aria-label=\"Mostra pagine regole\" title=\"Mostra pagine regole\" onclick=\"displayRegole()\">Regole ▼</button>";
 	var obj=document.getElementById('disBut');
 	if (obj.outerHTML){
 		obj.outerHTML=str;
@@ -51,52 +51,72 @@ function setLP(trgt){
 		var val;
 		if(trgt==2){
 			temp=document.getElementById("LP2");
-			val=document.getElementById("imposta2").value || 0;
+			val=document.getElementById("imposta2").value;
+			if ((val=="")||(val<0))
+				document.getElementById("setErr2").textContent="Il valore inserito non è un numero positivo"
+			else{
+				temp.textContent=val;	
+				document.getElementById("setErr2").textContent="";		
+			}				
 		}
 		else{
-			val=document.getElementById("imposta1").value || 0;
+			val=document.getElementById("imposta1").value;
 			temp=document.getElementById("LP1");
+			if ((val=="")||(val<0))
+				document.getElementById("setErr1").textContent="Il valore inserito non è un numero positivo";
+			else{
+				temp.textContent=val;
+				document.getElementById("setErr1").textContent="";
+			}
 		}
-		//addCheck per value
-		temp.textContent=val;
 }
 
 function addLP(trgt){
 		if(trgt==2){
 			var val=parseInt(document.getElementById("cambia2").value || 0);
-			var temp=document.getElementById("LP2");
-			var initval=parseInt(temp.innerHTML);
-			var finalval=val+initval;
-			var incdelay=1000/val;		//calcola ogni quanto aggiornare il contatore
-			var addam=parseInt(val/250);
-			if (addam<1){addam=1;}
-			var countUp=setInterval(function() {
-				initval+=addam;
-				temp.textContent=initval;
-			}, incdelay);
-			var stopCount=setInterval(function(){
-				clearInterval(countUp); 
-				temp.textContent=finalval; //imposta valore finale
-				clearInterval(stopCount);
-			}, 1010);
+			if ((val=="")||(val<0))
+				document.getElementById("modErr2").textContent="Il valore inserito non è un numero positivo";
+			else{
+				document.getElementById("modErr2").textContent="";
+				var temp=document.getElementById("LP2");
+				var initval=parseInt(temp.innerHTML);
+				var finalval=val+initval;
+				var incdelay=1000/val;		//calcola ogni quanto aggiornare il contatore
+				var addam=parseInt(val/250);
+				if (addam<1){addam=1;}
+				var countUp=setInterval(function() {
+					initval+=addam;
+					temp.textContent=initval;
+				}, incdelay);
+				var stopCount=setInterval(function(){
+					clearInterval(countUp); 
+					temp.textContent=finalval; //imposta valore finale
+					clearInterval(stopCount);
+				}, 1010);
+			}
 		}
 		else{
 			var val=parseInt(document.getElementById("cambia1").value || 0);
-			var temp=document.getElementById("LP1");
-			var initval=parseInt(temp.innerHTML);
-			var finalval=val+initval;
-			var incdelay=1000/val;		//calcola ogni quanto aggiornare il contatore
-			var addam=parseInt(val/250);
-			if (addam<1){addam=1;}
-			var countUp=setInterval(function() {
-				initval+=addam;
-				temp.textContent=initval;
-			}, incdelay);
-			var stopCount=setInterval(function(){
+			if ((val=="")||(val<0))
+				document.getElementById("modErr1").textContent="Il valore inserito non è un numero positivo";
+			else{
+				document.getElementById("modErr1").textContent="";
+				var temp=document.getElementById("LP1");
+				var initval=parseInt(temp.innerHTML);
+				var finalval=val+initval;
+				var incdelay=1000/val;		//calcola ogni quanto aggiornare il contatore
+				var addam=parseInt(val/250);
+				if (addam<1){addam=1;}
+				var countUp=setInterval(function() {
+					initval+=addam;
+					temp.textContent=initval;
+				}, incdelay);
+				var stopCount=setInterval(function(){
 				clearInterval(countUp); 
 				temp.textContent=finalval; //imposta valore finale
 				clearInterval(stopCount);
-			}, 1010);
+				}, 1010);
+			}
 		}
 }
 
@@ -157,6 +177,7 @@ function rst(){
 
 function d2(){
 	var roll=Math.floor((Math.random()*2)+1);
+	document.getElementById("d2").textContent="";
 	if (roll==1)
 		document.getElementById("d2").textContent='Testa';
 	else
@@ -165,5 +186,6 @@ function d2(){
 
 function d6(){
 	var roll=Math.floor((Math.random()*6)+1);
+	document.getElementById("d6").textContent="";
 	document.getElementById("d6").textContent=roll;
 }

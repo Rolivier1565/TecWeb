@@ -58,10 +58,10 @@ header h2{
   margin-top: 0.5em;
 }
 
-
 /*
   impostazoni di stile navigazione
 */
+
 #menu{
   grid-area: menu;
   background-color: #1D1F21;
@@ -755,19 +755,52 @@ pagina strumenti
 
 .contenitore{
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.invisNav{
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	position:absolute;
+	text-indent:-9999em;
+}
+
+.player{
+	display:block;
+	flex-basis: 48%;
+	text-align: center;
+	border: 5px solid #F38121;
+	padding-bottom: 1em;
+	background-color: #2B2D2F;
+}
+
+.player > p, .tknSctn{
+	margin-top: 0.3em;
+}
+
+.errBox{
+	color: red;	
+}
+
+.commonBtns{
+	margin-top: 2em;
 }
 
 .instrBtn{
-  background-color: #F38121;
-  border: 2px solid #000;
-  border-radius: 25px;
-  padding: 0.2em 0.3em;
+	background-color: #F38121;
+	border: 2px solid #000;
+	border-radius: 25px;
+	padding: 0.2em 0.3em;
 }
 
 .instrBtn:hover{
 	background-color: #FFF;
+}
+
+.instrBtn:active{
+	color: #D27603;
 }
 
 .instrBtn.smlBtn{
@@ -777,6 +810,8 @@ pagina strumenti
 }
 
 #d2{
+	font-size:1.2em;
+	font-family: monospace;
 	width:3em;
 	margin-left:0.2em;
 }
