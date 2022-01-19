@@ -39,45 +39,73 @@
 		</nav>
 		
 		<div id="content">
-			<div class="contenitore">	
+			<div class="contenitore">
+				<h2>Strumenti</h2>
+				<p>
+					Qui puoi trovare una selezione di strumenti che possono aiutarti nelle tue partitde di <span lang="en">Yu-Gi-Oh</span>. 
+					Hai la possibilità di tracciare i <span lang="en">Life Points</span> e i <span lang="en">token</span> di due giocatori, inoltre puoi simulare il lancio di un dado o una moneta.
+				</p>
+				<nav class="invisNav">
+					<a href="#P1">Vai a: giocatore 1</a>
+					<a href="#P2">Vai a: giocatore 2</a>
+					<a href="#navAnchorDice">Vai a: simulatori dadi</a>
+				</nav>
 				<div class="player" id="P1"><h2 tabindex="0">Giocatore 1</h2>
 					<div tabindex="0" lang="en">Life Points:<span id="LP1" lang="it">8000</span></div>
 					<p>Cambia <span lang="en">Life Points</span></p>
 					<div>
+						<span class="errBox" id="modErr1" aria-live="assertive"></span>
 						<input aria-label="Quantità Life Points da cambiare" type="number" id="cambia1" name="cambia1" min="1">
 						<button aria-label="Rimuovi Life Points" class="instrBtn smlBtn" onclick="subLP(1)">-</button>
 						<button aria-label="Aggiungi Life Points" class="instrBtn smlBtn" onclick="addLP(1)">+</button>
 					</div>
 					<p>Imposta <span lang="en">Life Points</span></p>
 					<div>
+						<span class="errBox" id="setErr1" aria-live="assertive"></span>
 						<input aria-label="Quantità Life Points da impostare" type="number" id="imposta1" name="imposta1">
 						<button class="instrBtn" onclick="setLP(1)">Imposta</button>
 					</div>
-					<div class="tknSctn"><span tabindex="0" lang="en">Token:<span id="T1">0</span></span>
+					<div class="tknSctn"><span tabindex="0" lang="en">Token:<span id="T1" aria-live="assertive">0</span></span>
 						<button aria-label="Rimuovi token" class="instrBtn smlBtn" onclick="modT(1, -1)">-</button>
 						<button aria-label="Aggiungi token" class="instrBtn smlBtn" onclick="modT(1, 1)">+</button>
 					</div>
+					<nav class="invisNav">
+						<a href="#P1">Torna a: giocatore 1</a>
+						<a href="#P2">Vai a: giocatore 2</a>
+						<a href="#navAnchorDice">Vai a: simulatori dadi</a>
+					</nav>
 				</div>
 				<div class="player" id="P2"><h2 tabindex="0">Giocatore 2</h2>
 					<div tabindex="0" lang="en">Life Points:<span id="LP2" lang="it">8000</span></div>
 					<p>Cambia <span lang="en">Life Points</span></p>
 					<div>
+						<span class="errBox" id="modErr2" aria-live="assertive"></span>
 						<input aria-label="Quantità Life Points da cambiare" type="number" id="cambia2" name="cambia2" min="1">
 						<button  aria-label="Rimuovi Life Points" class="instrBtn smlBtn" onclick="subLP(2)">-</button>
 						<button  aria-label="Aggiungi Life Points" class="instrBtn smlBtn" onclick="addLP(2)">+</button>
 					</div>
 					<p>Imposta <span lang="en">Life Points</span></p>
 					<div>
+						<span class="errBox" id="setErr2" aria-live="assertive"></span>
 						<input aria-label="Quantità Life Points da impostare" type="number" id="imposta2" name="imposta2">
 						<button class="instrBtn" onclick="setLP(2)">Imposta</button>
 					</div>
-					<div class="tknSctn"><span tabindex="0" lang="en">Token:<span id="T2">0</span></span>
+					<div class="tknSctn"><span tabindex="0" lang="en">Token:<span aria-live="assertive" id="T2">0</span></span>
 						<button aria-label="Rimuovi token" class="instrBtn smlBtn" onclick="modT(2, -1)">-</button>
 						<button aria-label="Aggiungi token" class="instrBtn smlBtn" onclick="modT(2, 1)">+</button>
 					</div>
+					<nav class="invisNav">
+						<a href="#P1">Torna a: giocatore 1</a>
+						<a href="#P2">Torna a: giocatore 2</a>
+						<a href="#navAnchorDice">Vai a: simulatori dadi</a>
+					</nav>
 				</div>
-				<div class="commonBtns"><button class="instrBtn" onclick="d2()">Lancia una moneta</button><span tabindex="0" id="d2">Testa</span></div>
-				<div class="commonBtns"><button class="instrBtn" onclick="d6()">Lancia un dado</button><span tabindex="0" id="d6">1</span></div>
+				<div class="commonBtns" id="navAnchorDice"><button class="instrBtn" onclick="d2()">Lancia una moneta</button><span tabindex="0" id="d2" aria-live="assertive">Testa</span></div>
+				<div class="commonBtns"><button class="instrBtn" onclick="d6()">Lancia un dado</button><span tabindex="0" id="d6" aria-live="assertive">1</span></div>
+				<nav class="invisNav">
+					<a href="#P1">Torna a: giocatore 1</a>
+					<a href="#P2">Torna a: giocatore 2</a>
+				</nav>
 				<div class="commonBtns"><button class="instrBtn" onclick="rst()">Ripristina valori di base</button></div>
 			</div>
 		</div>

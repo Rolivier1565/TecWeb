@@ -1471,6 +1471,14 @@ pagina strumenti
 	justify-content: space-around;
 }
 
+.invisNav{
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	position:absolute;
+	text-indent:-9999em;
+}
+
 .player{
 	display:block;
 	flex-basis: 48%;
@@ -1482,6 +1490,10 @@ pagina strumenti
 
 .player > p, .tknSctn{
 	margin-top: 0.3em;
+}
+
+.errBox{
+	color: red;	
 }
 
 .commonBtns{
