@@ -69,8 +69,6 @@ function setLP(trgt){
 				document.getElementById("setErr1").textContent="";
 			}
 		}
-		//addCheck per value
-		
 }
 
 function addLP(trgt){
