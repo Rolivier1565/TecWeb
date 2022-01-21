@@ -61,9 +61,9 @@ class DBAccess{
   }
   
 	public function checkUser($usr, $psw){
-		$query="SELECT EXISTS(SELECT 1 idr FROM Registrati WHERE idr='$usr' AND password='$psw')";
+		$query="SELECT * FROM Registrati WHERE idr='$usr' AND password='$psw'";
 		$queryResult = mysqli_query($this->connection, $query) or die("Errore in getCommentsPost" . mysqli_error($this->connection));
-		return $queryResult;
+		return mysqli_num_rows($queryResult);
 	}
 }
 ?>
