@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
-
-
-
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Strumenti - Yu-Gi-Basics</title>
+		<title>Login - Yu-Gi-Basics</title>
 		<meta name="keywords" content="Banlist, proibite, limitate, semi-limitate, cambiamenti, Yu-Gi-Basics" />
 		<meta name="description" content="" />
 		<meta name="author" content="" />
@@ -14,9 +11,6 @@
 		<link rel="shortcut icon" href="images/logo.ico" />
 		<script type="text/javascript" src="js/automagia.js"></script>
 	</head>
-	
-
-
 	<body>
 		<header id="top">
 			<h1 lang="en">Yu-Gi-Basics</h1>
@@ -25,7 +19,7 @@
 		<nav id="menu">
 			<ul>
 				<li lang="en"> <a href="home.html"> Home </a></li>
-				<li class="nestHead" >  <a id="disBut" href="">Regole ▼</a>
+				<li class="nestHead"><a id="disBut" href="regoleindex.html">Regole ▼</a>
 										<ul id="nested" class="close">
 											<li><a href="regolebase.html">Regole base</a></li>
 											<li lang="en"><a href="amd.html">Main Deck</a></li>
@@ -33,16 +27,23 @@
 											<li><a href="esempi.html">Esempi</a></li>
 										</ul>
 				</li>
-				<li id="currentLink" lang="en">Banlist</li>
+				<li lang="en"><a href="banlist.html">Banlist</a></li>
 				<li lang="en"><a href="forum.html" >Forum</a></li>
 				<li><a href="strumenti.html">Strumenti</a></li>
 			</ul>
 		</nav>
 
 		<nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; </p>
+            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.html">Forum</a></span> &gt; &gt; <span lang="en">Login</span></p>
 		</nav>
 		
+		<div id="content">
+			<errorMsg/>
+			<form action="login.php" method="post">
+				<span lang="en">Username</span>: <input type="text" name="username">
+				<span lang="en">Password</span>: <input type="text" name="password">
+			<input type="submit">
+		</div>
 		
 		<footer>
 			<dl>
@@ -51,7 +52,7 @@
 				<dd>email: yugibasics@konami.com</dd>
 				<dt>Social:</dt>
 				<dd><a href="">Instagram</a></dd>
-				<dd><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Youtube</a></dd>
+				<dd><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">Youtube</a></dd>
 			</dl>
 			<a class="up" href="#top">Torna su</a>
 			<div id="valid">
