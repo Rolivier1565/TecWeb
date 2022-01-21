@@ -3,8 +3,8 @@
 */
 
 @keyframes fadein{
-	from {opacity: 0};
-	to {opacity: 1};
+	from {opacity: 0}
+	to {opacity: 1}
 }
 
 
@@ -58,10 +58,10 @@ header h2{
   margin-top: 0.5em;
 }
 
-
 /*
   impostazoni di stile navigazione
 */
+
 #menu{
   grid-area: menu;
   background-color: #1D1F21;
@@ -95,21 +95,30 @@ header h2{
 }
 
 #menu a:visited{
-  color: #003B54;
+  color: #000066;
   text-decoration: none;
+  background-color: #F39151;
 }
 
-#menu .nested{
+#menu #nested{
 	background-color:#1D1F21;
 	border: 1px solid white;
 	border-top:none;
-	display:none;
 	position: absolute;
+	margin-left: 1em;
+}
+
+.close{
+	display:none;
+}
+
+.open{
+	display:block;
 	animation-name: fadein;
 	animation-duration: 1s;
 }
 
-#menu .nested li{
+#menu #nested li{
 	display: block;
 }
 
@@ -125,19 +134,19 @@ header h2{
 	border-radius: 25px;
 }
 
-#menu .nested a{
+#menu #nested a{
 	display: block;
 	padding:0.2em 0.4em;
-	margin:0.3em;
+	margin:0.3em 0.7em;
     font-size:1em;
 	animation-name: fadein;
 	animation-duration: 1s;
 }
 
-#menu .nested a:hover{
+#menu #nested a:hover{
 	background-color: #FFF;
   padding: 0.2em 0.4em;
-  margin: 0.3em;
+  margin: 0.3em 0.7em;
 }
 
 
@@ -257,6 +266,84 @@ footer p{
 
 #valid{
   padding:4em 0em 0.2em 0em;
+}
+
+/*
+  home
+*/
+
+#content a{
+  color: #F38121;
+}
+
+.flexhome{
+  display: flex;
+  flex-direction: column;
+}
+
+.flexhome p{
+  align-self: flex-end;
+}
+
+.flexhome h3{
+  color: #F38121;
+  margin-left: 2em;
+}
+
+#gioco img{
+  float:  right;
+  width: 30%;
+}
+
+#gioco p{
+  float: left;
+  width: 65%;
+}
+
+#gioco{
+  margin: 1em;
+}
+
+#manga img{
+  float:  left;
+  width: 20%;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+#manga p{
+  float: right;
+  width: 75%;
+  margin-top: 4em;
+  margin-right: 1em;
+}
+
+#anime img{
+  float:  right;
+  width: 20%;
+  margin: 1em 1em 1em 1em;
+}
+
+#anime p{
+  float: left;
+  width: 75%;
+  margin-top: 4em;
+  margin-left: 1em;
+}
+
+#videogiochi img{
+  float:  left;
+  width: 20%;
+  margin-right: 1em;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+#videogiochi p{
+  float: right;
+  width: 75%;
+  margin-top: 4em;
+  margin-right: 1em;
 }
 
 /*
@@ -575,7 +662,6 @@ caption{
     width: 90%;
   }
 
-
   #subt3{
     grid-area: subt3;
     text-align: center;
@@ -642,10 +728,6 @@ pagina regole base - inizio
     width: 50%
 }
 
-#content
-{
-    font-size: 1.2em;
-}
 
 #content h1, #content h2, #content h3
 {
@@ -674,7 +756,6 @@ pagina regole base - fine
 */
 
 
-
 /*
 pagina esempi - inizo
 */
@@ -696,3 +777,98 @@ pagina esempi - inizo
 /*
 pagina esempi - fine
 */
+
+/*
+pagina strumenti
+*/
+
+.contenitoreStrumenti{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.invisNav{
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	position:absolute;
+	text-indent:-9999em;
+}
+
+.player{
+	display:block;
+	flex-basis: 48%;
+	text-align: center;
+	border: 5px solid #F38121;
+	padding-bottom: 1em;
+	background-color: #2B2D2F;
+}
+
+.player > p, .tknSctn{
+	margin-top: 0.3em;
+}
+
+.errBox{
+	color: red;
+}
+
+.commonBtns{
+	margin-top: 2em;
+}
+
+.instrBtn{
+	background-color: #F38121;
+	border: 2px solid #000;
+	border-radius: 25px;
+	padding: 0.2em 0.3em;
+}
+
+.instrBtn:hover{
+	background-color: #FFF;
+}
+
+.instrBtn:active{
+	color: #D27603;
+}
+
+.instrBtn.smlBtn{
+	font-size:1.2em;
+	font-family: monospace;
+	padding: 0 0.2em;
+}
+
+#d2{
+	font-size:1.2em;
+	font-family: monospace;
+	width:3em;
+	margin-left:0.2em;
+}
+
+#d6{
+	margin-right:0.2em;
+	margin-left:0.2em;
+}
+
+/*
+	pagine di errore
+*/
+
+.contenitoreErrori{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contenitoreErrori > h2{
+	flex-basis:100%;
+}
+
+.contenitoreErrori > p{
+	flex-basis:50%;
+}
+
+#noDb{
+	min-height: 400px;
+	text-indent: -9999em;
+	background: url("images/bucoNero.jpg") no-repeat center;
+}
