@@ -59,11 +59,57 @@ class DBAccess{
           return $result;
     }
   }
-  
+
 	public function checkUser($usr, $psw){
 		$query="SELECT * FROM Registrati WHERE idr='$usr' AND password='$psw'";
-		$queryResult = mysqli_query($this->connection, $query) or die("Errore in getCommentsPost" . mysqli_error($this->connection));
-		return mysqli_num_rows($queryResult);
+		$queryResult = mysqli_query($this->connection, $query) or die("Errore in checkUser" . mysqli_error($this->connection));
+    $aux = mysqli_num_rows($queryResult);
+    $queryResult->free();
+		return $aux;
 	}
+
+  public function checkLike($usr, $idm){
+    $query="SELECT * FROM Piace WHERE idr='$usr' AND idm=$idm";
+    $queryResult = mysqli_query($this->connection, $query) or die("Errore in checkLike" . mysqli_error($this->connection));
+    $aux = mysqli_num_rows($queryResult);
+    $queryResult->free();
+		return $aux;
+  }
+
+  public function deleteLike($usr,$idm){
+    $query="DELETE FROM Piace WHERE idr='$usr' AND idm=$idm";
+    mysqli_query($this->connection, $query) or die("Errore in deleteLike1" . mysqli_error($this->connection));
+    $query="UPDATE Messaggi SET mipiace=mipiace-1 WHERE idm='$idm'";
+    mysqli_query($this->connection, $query) or die("Errore in deleteLike2" . mysqli_error($this->connection));
+  }
+
+  public function insertLike($usr,$idm){
+    $query="INSERT INTO Piace (idr,idm) VALUES (". "'" . $usr ."'" . ", $idm);";
+    mysqli_query($this->connection, $query) or die("Errore in insertLike1" . mysqli_error($this->connection));
+    $query="UPDATE Messaggi SET mipiace=mipiace+1 WHERE idm='$idm'";
+    mysqli_query($this->connection, $query) or die("Errore in insertLike2" . mysqli_error($this->connection));
+  }
+
+  public function checkReport($usr, $idm){
+    $query="SELECT * FROM Report WHERE idr='$usr' AND idm=$idm";
+    $queryResult = mysqli_query($this->connection, $query) or die("Errore in checkLike" . mysqli_error($this->connection));
+    $aux = mysqli_num_rows($queryResult);
+    $queryResult->free();
+		return $aux;
+  }
+
+  public function deleteReport($usr,$idm){
+    $query="DELETE FROM Report WHERE idr='$usr' AND idm=$idm";
+    mysqli_query($this->connection, $query) or die("Errore in deleteLike1" . mysqli_error($this->connection));
+    $query="UPDATE Messaggi SET report=report-1 WHERE idm='$idm'";
+    mysqli_query($this->connection, $query) or die("Errore in deleteLike2" . mysqli_error($this->connection));
+  }
+
+  public function insertReport($usr,$idm){
+    $query="INSERT INTO Report (idr,idm) VALUES (". "'" . $usr ."'" . ", $idm);";
+    mysqli_query($this->connection, $query) or die("Errore in insertLike1" . mysqli_error($this->connection));
+    $query="UPDATE Messaggi SET report=report+1 WHERE idm='$idm'";
+    mysqli_query($this->connection, $query) or die("Errore in insertLike2" . mysqli_error($this->connection));
+  }
 }
 ?>

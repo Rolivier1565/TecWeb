@@ -14,7 +14,7 @@
     if($post!=null){
       foreach ($post as $singlePost) {
         $listaPost.='<h3>'. $singlePost['idr'] . '</h3>' .'<span>'. $singlePost['data'] .'</span>'. '<span>'. $singlePost['ora'].'</span>'. '<span>' . $singlePost['argomento'] . '</span>';
-        $listaPost.='<p>'. $singlePost['descrizione'] . '</p>' . '<button type="button" onclick="likehandler()">Mi Piace</button><span>(' . $singlePost['mipiace'] . ')</span>'. '<span> Report ' . $singlePost['report'] . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input type="submit" name="commenti" value="commenti"></form>';
+        $listaPost.='<p>'. $singlePost['descrizione'] . '</p>' . '<button type="button" onclick="like('. $singlePost['idm'] . ')" >Mi Piace</button><span id="'. $singlePost['idm'] .'">' . $singlePost['mipiace'] . '</span>'. '<button type="button" onclick="report('. $singlePost['idm'] . ')">Report</button>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input type="submit" name="commenti" value="commenti"></form>';
       }
     }else{
       $listaPost="<p> Non ci sono post da vedere...riprova più tardi.</p>";
