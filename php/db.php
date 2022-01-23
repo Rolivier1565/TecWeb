@@ -60,12 +60,18 @@ class DBAccess{
     }
   }
 
-	public function checkUser($usr, $psw){
+	public function checkLogin($usr, $psw){
 		$query="SELECT * FROM Registrati WHERE idr='$usr' AND password='$psw'";
 		$queryResult = mysqli_query($this->connection, $query) or die("Errore in checkUser" . mysqli_error($this->connection));
     $aux = mysqli_num_rows($queryResult);
     $queryResult->free();
 		return $aux;
+	}
+	
+	public function chechForUser($usr){
+		$query="SELECT * FROM Registrati WHERE idr='$usr'";
+		$queryResult = mysqli_num_rows(mysqli_query($this->connection, $query) or die("Errore in checkUser" . mysqli_error($this->connection)));
+		return $queryResult;
 	}
 
   public function checkLike($usr, $idm){

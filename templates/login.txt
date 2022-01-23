@@ -34,14 +34,14 @@
 		</nav>
 
 		<nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.html">Forum</a></span> &gt; &gt; <span lang="en">Login</span></p>
+            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.php">Forum</a></span> &gt; &gt; <span lang="en">Login</span></p>
 		</nav>
 		
 		<div id="content">
 			<errorMsg/>
 			<form action="login.php" method="post">
-				<span lang="en">Username</span>: <input type="text" name="username">
-				<span lang="en">Password</span>: <input type="text" name="password">
+				<span lang="en">Username</span>: <input type="text" name="username" required>
+				<span lang="en">Password</span>: <input type="text" name="password" required>
 			<input type="submit">
 		</div>
 		

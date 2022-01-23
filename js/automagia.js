@@ -17,6 +17,8 @@ function displayRegole(){
 	}
 }
 
+//parte di strumentistica - da spostare
+
 function modT(trgt, val){
 	if (trgt==1){
 		if (val>0){

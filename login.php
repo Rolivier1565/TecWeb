@@ -9,11 +9,6 @@
 		return $input;
 	}
 	
-	function checkUser($usr, $psw){
-		$query="SELECT EXISTS(SELECT 1 idr FROM Registrati WHERE idr='$usr' AND password='$psw')";
-		$queryResult = mysqli_query($this->connection, $query) or die("Errore in getCommentsPost" . mysqli_error($this->connection));
-		return $queryResult;
-	}
 	
 	/*Workflow
 		Controlla se siamo stati chiamati col post	ok
@@ -25,14 +20,14 @@
 		Crea pagina
 	*/
 	$errMsg=$usr=$psw="";
-	$paginaHTML=file_get_contents("login.html");
+	$paginaHTML=file_get_contents("templates/login.txt");
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$connessione = new DBAccess();
 		$connessioneOK= $connessione->openDBConnection();
 		if ($connessioneOK){
 			$usr=inputTrim($_POST["username"]);
 			$psw=inputTrim($_POST["password"]);
-			if($connessione->checkUser($usr, $psw)){
+			if($connessione->checkLogin($usr, $psw)){
 				session_start();
 				$_SESSION["usrid"]=$usr;
 				header("Location: areaRiservata.php",TRUE,301);
