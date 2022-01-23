@@ -3,8 +3,8 @@
 */
 
 @keyframes fadein{
-	from {opacity: 0}
-	to {opacity: 1}
+	from {opacity: 0};
+	to {opacity: 1};
 }
 
 
@@ -58,9 +58,23 @@ header h2{
   margin-top: 0.5em;
 }
 
+
 /*
   impostazoni di stile navigazione
 */
+.close{
+    display: none;
+}
+
+.open{
+    display:block;
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+
+.burger{
+    display: block;
+}
 
 #menu{
   grid-area: menu;
@@ -72,6 +86,10 @@ header h2{
 
 #menu li{
   display: inline-block;
+}
+
+#mobilebar{
+    display: none;
 }
 
 #menu li a, #disBut, #currentLink{
@@ -105,17 +123,9 @@ header h2{
 	border: 1px solid white;
 	border-top:none;
 	position: absolute;
-	margin-left: 1em;
-}
-
-.close{
-	display:none;
-}
-
-.open{
-	display:block;
 	animation-name: fadein;
 	animation-duration: 1s;
+	margin-left: 1em;
 }
 
 #menu #nested li{
@@ -588,6 +598,7 @@ caption{
     font-size: 2em;
     padding: 1em 0em 0.7em 0em;
   }
+
   #extradeck{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -661,6 +672,7 @@ caption{
     grid-area: tuner;
     width: 90%;
   }
+
 
   #subt3{
     grid-area: subt3;
@@ -742,7 +754,6 @@ pagina regole base - inizio
     margin-right: 5%;
     margin-left: 5%;
     margin-bottom: 1em;
-    list-style-type: circle;
 }
 
 #content ol{
@@ -754,7 +765,6 @@ pagina regole base - inizio
 /*
 pagina regole base - fine
 */
-
 
 /*
 pagina esempi - inizo
@@ -870,5 +880,5 @@ pagina strumenti
 #noDb{
 	min-height: 400px;
 	text-indent: -9999em;
-	background: url("images/bucoNero.jpg") no-repeat center;
+    background: url("images/bucoNero.jpg") no-repeat center;
 }
