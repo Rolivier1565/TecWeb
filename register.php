@@ -8,26 +8,19 @@
 		$input=htmlspecialchars($input);
 		return $input;
 	}
-	
-	
-	/*Workflow
-		Controlla se siamo stati chiamati col post	ok
-			+Controlla se il server c'è				ok
-				+Controlla che siano giusti i dati di login	ok
-					+Redirect ad area Personale		ok
-					-Imposta messaggio di login sbagliato
-				-Redirect a pagina di errore
-		Crea pagina
-	*/
-	$errMsg=$usr=$psw="";
-	$paginaHTML=file_get_contents("templates/login.txt");
+
+  session_start();
+  $paginaHTML=file_get_contents("templates/register.txt");
+  $errMsg=$usr=$psw=$mail="";
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$connessione = new DBAccess();
 		$connessioneOK= $connessione->openDBConnection();
 		if ($connessioneOK){
 			$usr=inputTrim($_POST["username"]);
 			$psw=inputTrim($_POST["password"]);
-			if($connessione->checkLogin($usr, $psw)){
+			$mail=inputTrim($_POST["email"]);
+			if(!$connessione->checkForUser($usr)){
+				$connessione->insertUser($usr, $psw, $mail);
 				$connessione=$connessione->closeConnection();
 				session_start();
 				$_SESSION["usrid"]=$usr;
@@ -35,7 +28,8 @@
 				die();
 			}
 			else{
-				$errMsg=file_get_contents("templates/errorMsg.txt");
+				$connessione=$connessione->closeConnection();
+				$errMsg=file_get_contents("templates/userTaken.txt");
 			}
 		}
 		else{
@@ -44,4 +38,5 @@
 	}
   //Crea pagina
   echo str_replace("<errorMsg/>",$errMsg, $paginaHTML);
+  
   ?>

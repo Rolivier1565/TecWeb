@@ -23,7 +23,22 @@ class DBAccess{
   }
 
   public function getPostList(){
-    $query="SELECT Registrati.idr, Scrive.data, Scrive.ora, Messaggi.descrizione, Messaggi.argomento, Messaggi.mipiace, Messaggi.report, Messaggi.idm FROM Registrati, Scrive, Messaggi WHERE Registrati.idr=Scrive.idr AND Scrive.idm=Messaggi.idm";
+    $query="SELECT Registrati.idr, Scrive.data, Scrive.ora, Messaggi.descrizione, Messaggi.argomento, Messaggi.mipiace, Messaggi.report, Messaggi.idm FROM Registrati, Scrive, Messaggi WHERE Registrati.idr=Scrive.idr AND Scrive.idm=Messaggi.idm ORDER BY Scrive.idm DESC";
+    $queryResult = mysqli_query($this->connection, $query) or die("Errore in getPostList" . mysqli_error($this->connection));
+    if(mysqli_num_rows($queryResult)==0){
+      return null;
+    }else{
+      $result = array();
+      while($row = mysqli_fetch_assoc($queryResult)){
+        array_push($result, $row);
+      }
+      $queryResult->free();
+      return $result;
+    }
+  }
+  
+  public function getLikedPosts($usr){
+	  $query="SELECT idm FROM Piace WHERE idr='$usr' ORDER BY idm";
     $queryResult = mysqli_query($this->connection, $query) or die("Errore in getPostList" . mysqli_error($this->connection));
     if(mysqli_num_rows($queryResult)==0){
       return null;
@@ -68,10 +83,22 @@ class DBAccess{
 		return $aux;
 	}
 	
-	public function chechForUser($usr){
-		$query="SELECT * FROM Registrati WHERE idr='$usr'";
-		$queryResult = mysqli_num_rows(mysqli_query($this->connection, $query) or die("Errore in checkUser" . mysqli_error($this->connection)));
-		return $queryResult;
+	public function checkForUser($usr){
+		$query="SELECT idr FROM Registrati WHERE idr='$usr'";
+		$queryResult = mysqli_query($this->connection, $query) or die("Errore in checkUser" . mysqli_error($this->connection));
+		if ($queryResult==FALSE){
+			$queryResult->free();
+			return FALSE;
+		}
+		else{
+			$queryResult->free();
+			return TRUE;
+		}
+	}
+	
+	public function insertUser($usr, $psw, $mail){
+		$query="INSERT INTO Registrati (idr,password,mail,accesso) VALUES ('$usr','$psw','$mail',1);";
+		mysqli_query($this->connection, $query) or die("Errore in insertLike1" . mysqli_error($this->connection));
 	}
 
   public function checkLike($usr, $idm){
