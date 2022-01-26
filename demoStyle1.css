@@ -872,3 +872,37 @@ pagina strumenti
 	text-indent: -9999em;
 	background: url("images/bucoNero.jpg") no-repeat center;
 }
+
+
+/*
+	STILE FORUM - inizio
+*/
+
+.notactv{
+	border:none;
+	background-color: inherit;
+	width: 50px;
+ 	height: 50px;
+ 	background-image: url('images/heart.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center center;
+}
+
+.actv{
+	border:none;
+	background-color: inherit;
+	width: 50px;
+ 	height: 50px;
+ 	background-image: url('images/heart_active.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center center;
+}
+
+
+
+
+
+
+/*
+	STILE FORUM -fusione
+*/

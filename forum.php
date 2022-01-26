@@ -22,7 +22,7 @@
 			         else{
 				             $listaPost.=' class="notactv"';
 			         }
-			         $listaPost.= 'id="Button'. $singlePost['idm'] .'" type="button" onclick="like('. $singlePost['idm'] . ')" >Mi Piace</button><span id="Like'. $singlePost['idm'] .'">' . $singlePost['mipiace'] . '</span>';
+			         $listaPost.= 'id="Button'. $singlePost['idm'] .'" type="button" onclick="like('. $singlePost['idm'] . ')" ></button><span id="Like'. $singlePost['idm'] .'">' . $singlePost['mipiace'] . '</span>';
                $listaPost.='<button';
                if ($connessione->checkReport($_SESSION['usrid'], $singlePost['idm'])){
                      $listaPost.=' class="repactv"';
