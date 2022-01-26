@@ -1,4 +1,5 @@
 function like(idm) {
+var idcount ="Like"+idm;
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function(){
   if (this.readyState == 4 && this.status == 200){
@@ -7,17 +8,15 @@ xmlhttp.onreadystatechange = function(){
     switch(response){
       case "true":
         //TODO : modifca bottone
-        var aux = parseInt((document.getElementById(idm)).innerHTML);
+        var aux = parseInt((document.getElementById(idcount)).innerHTML);
         aux --;
-        document.getElementById(idm).textContent=aux;
-		document.getElementById(idm).className="notactv"
+        document.getElementById(idcount).textContent=aux;
         break;
       case "false":
         //TODO : Modifica bottone
-        var aux = parseInt((document.getElementById(idm)).innerHTML);
+        var aux = parseInt((document.getElementById(idcount)).innerHTML);
         aux ++;
-        document.getElementById(idm).textContent=aux;
-		document.getElementById(idm).className="actv"
+        document.getElementById(idcount).textContent=aux;
         break;
       case "NL":
         break;
