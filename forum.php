@@ -22,7 +22,14 @@
 			         else{
 				             $listaPost.=' class="notactv"';
 			         }
-			         $listaPost.= ' type="button" onclick="like('. $singlePost['idm'] . ')" >Mi Piace</button><span id="Like'. $singlePost['idm'] .'">' . $singlePost['mipiace'] . '</span>'. '<button type="button" onclick="report('. $singlePost['idm'] . ')">Report</button>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. 		$singlePost['idm'] .'"><input type="submit" name="commenti" value="commenti"></form>';
+			         $listaPost.= 'id="Button'. $singlePost['idm'] .'" type="button" onclick="like('. $singlePost['idm'] . ')" >Mi Piace</button><span id="Like'. $singlePost['idm'] .'">' . $singlePost['mipiace'] . '</span>';
+               $listaPost.='<button';
+               if ($connessione->checkReport($_SESSION['usrid'], $singlePost['idm'])){
+                     $listaPost.=' class="repactv"';
+               }else{
+				             $listaPost.=' class="repnotactv"';
+			         }
+               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')">Report</button>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input type="submit" name="commenti" value="commenti"></form>';
 		       }
          }else{
            $listaPost="<p> Non ci sono post da vedere...riprova più tardi.</p>";

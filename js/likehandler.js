@@ -1,5 +1,8 @@
 function like(idm) {
 var idcount ="Like"+idm;
+var idbutton="Button"+idm;
+var button=document.getElementById(idbutton);
+
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function(){
   if (this.readyState == 4 && this.status == 200){
@@ -7,16 +10,16 @@ xmlhttp.onreadystatechange = function(){
     var response = this.responseText;
     switch(response){
       case "true":
-        //TODO : modifca bottone
         var aux = parseInt((document.getElementById(idcount)).innerHTML);
         aux --;
         document.getElementById(idcount).textContent=aux;
+        button.className="notactv";
         break;
       case "false":
-        //TODO : Modifica bottone
         var aux = parseInt((document.getElementById(idcount)).innerHTML);
         aux ++;
         document.getElementById(idcount).textContent=aux;
+        button.className="actv";
         break;
       case "NL":
         break;
@@ -30,6 +33,9 @@ xmlhttp.send();
 };
 
 function report(idm) {
+var idreport="Report"+idm;
+var report=document.getElementById(idreport);
+
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function(){
   if (this.readyState == 4 && this.status == 200){
@@ -37,10 +43,10 @@ xmlhttp.onreadystatechange = function(){
     var response = this.responseText;
     switch(response){
       case "true":
-        // TODO : modifca bottone
+        report.className="repnotactv";
         break;
       case "false":
-        // TODO : modifica bottone
+        report.className="repact";
         break;
       case "NL":
         break;
