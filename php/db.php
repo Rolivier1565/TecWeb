@@ -86,14 +86,17 @@ class DBAccess{
 	public function checkForUser($usr){
 		$query="SELECT idr FROM Registrati WHERE idr='$usr'";
 		$queryResult = mysqli_query($this->connection, $query) or die("Errore in checkUser" . mysqli_error($this->connection));
-		if ($queryResult==FALSE){
+		$aux = mysqli_num_rows($queryResult);
+    $queryResult->free();
+	return $aux;
+	/*	if ($queryResult==FALSE){
 			$queryResult->free();
 			return FALSE;
 		}
 		else{
 			$queryResult->free();
 			return TRUE;
-		}
+		}*/
 	}
 	
 	public function insertUser($usr, $psw, $mail){

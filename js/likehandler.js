@@ -10,12 +10,14 @@ xmlhttp.onreadystatechange = function(){
         var aux = parseInt((document.getElementById(idm)).innerHTML);
         aux --;
         document.getElementById(idm).textContent=aux;
+		document.getElementById(idm).className="notactv"
         break;
       case "false":
         //TODO : Modifica bottone
         var aux = parseInt((document.getElementById(idm)).innerHTML);
         aux ++;
         document.getElementById(idm).textContent=aux;
+		document.getElementById(idm).className="actv"
         break;
       case "NL":
         break;

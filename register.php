@@ -8,8 +8,7 @@
 		$input=htmlspecialchars($input);
 		return $input;
 	}
-
-  session_start();
+	
   $paginaHTML=file_get_contents("templates/register.txt");
   $errMsg=$usr=$psw=$mail="";
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
