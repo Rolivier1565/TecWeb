@@ -46,7 +46,7 @@ xmlhttp.onreadystatechange = function(){
         report.className="repnotactv";
         break;
       case "false":
-        report.className="repact";
+        report.className="repactv";
         break;
       case "NL":
         break;
