@@ -55,6 +55,15 @@
   }else{
     $listaPost="<p>Ci scusiamo ma i sistemi non sono al momento disponibili riprova più tardi.</p>";
   }
-    $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"><input type="submit" id="prev" name="prev" value="prev"/><input type="submit" id="next" name="next" value="next"/>';
+  if(end($_SESSION['maxidm'])==$_SESSION['max']){
+      $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"><input type="submit" id="next" name="next" value="next"/>';
+  }
+  else{
+      if($lastpost==1){
+        $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"><input type="submit" id="prev" name="prev" value="prev"/>';
+      }else{
+        $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"><input type="submit" id="prev" name="prev" value="prev"/><input type="submit" id="next" name="next" value="next"/>';
+    }
+  }
     echo str_replace("<listaPost/>",$listaPost, $paginaHTML);
 ?>
