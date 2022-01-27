@@ -22,8 +22,20 @@ class DBAccess{
     mysqli_close($this->connection);
   }
 
-  public function getPostList(){
-    $query="SELECT Registrati.idr, Scrive.data, Scrive.ora, Messaggi.descrizione, Messaggi.argomento, Messaggi.mipiace, Messaggi.report, Messaggi.idm FROM Registrati, Scrive, Messaggi WHERE Registrati.idr=Scrive.idr AND Scrive.idm=Messaggi.idm ORDER BY Scrive.idm DESC";
+  public function getMaxIdm(){
+    $query="SELECT max(idm) as maxidm FROM Messaggi";
+    $queryResult = mysqli_query($this->connection, $query) or die("Errore in getMaxIdm" . mysqli_error($this->connection));
+    if(mysqli_num_rows($queryResult)==0){
+      return null;
+    }else{
+      $row=mysqli_fetch_assoc($queryResult);
+      $queryResult->free();
+      return $row['maxidm'];
+    }
+  }
+
+  public function getPostList($maxidm){
+    $query="SELECT Registrati.idr, Scrive.data, Scrive.ora, Messaggi.descrizione, Messaggi.argomento, Messaggi.mipiace, Messaggi.report, Messaggi.idm FROM Registrati, Scrive, Messaggi WHERE Registrati.idr=Scrive.idr AND Scrive.idm=Messaggi.idm AND Messaggi.idm<='$maxidm' ORDER BY Scrive.idm DESC LIMIT 10";
     $queryResult = mysqli_query($this->connection, $query) or die("Errore in getPostList" . mysqli_error($this->connection));
     if(mysqli_num_rows($queryResult)==0){
       return null;
@@ -36,7 +48,7 @@ class DBAccess{
       return $result;
     }
   }
-  
+
   public function getLikedPosts($usr){
 	  $query="SELECT idm FROM Piace WHERE idr='$usr' ORDER BY idm";
     $queryResult = mysqli_query($this->connection, $query) or die("Errore in getPostList" . mysqli_error($this->connection));
@@ -82,7 +94,7 @@ class DBAccess{
     $queryResult->free();
 		return $aux;
 	}
-	
+
 	public function checkForUser($usr){
 		$query="SELECT idr FROM Registrati WHERE idr='$usr'";
 		$queryResult = mysqli_query($this->connection, $query) or die("Errore in checkUser" . mysqli_error($this->connection));
@@ -98,7 +110,7 @@ class DBAccess{
 			return TRUE;
 		}*/
 	}
-	
+
 	public function insertUser($usr, $psw, $mail){
 		$query="INSERT INTO Registrati (idr,password,mail,accesso) VALUES ('$usr','$psw','$mail',1);";
 		mysqli_query($this->connection, $query) or die("Errore in insertLike1" . mysqli_error($this->connection));

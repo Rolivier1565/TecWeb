@@ -6,11 +6,21 @@
   $paginaHTML=file_get_contents("forum.html");
   $connessione = new DBAccess();
   $connessioneOK= $connessione->openDBConnection();
+  	if ($_SERVER["REQUEST_METHOD"] == "POST"){
+      if ($_POST['next']=='next'){
+        $_SESSION['maxidm']= $_POST['ultimopost'] -1;
+    }else{
 
+    }
+  }
   $post="";  //dati grezzi dal db
   $listaPost = ""; //codice html da dare in output
   if($connessioneOK){
-    $post= $connessione->getPostList();
+    if(!(isset($_SESSION['maxidm']))){
+      $_SESSION['maxidm'] = array();
+      array_push($_SESSION['maxidm'],$connessione->getMaxIdm());
+    }
+    $post= $connessione->getPostList($_SESSION['maxidm']);
 	  if (isset($_SESSION['usrid'])){
       if($post!=null){
 		      foreach ($post as $singlePost) {
@@ -30,9 +40,12 @@
 				             $listaPost.=' class="repnotactv"';
 			         }
                $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input type="submit" name="commenti" value="commenti"></form>';
-		       }
+               $lastpost = $singlePost['idm'];
+               $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"><input type="submit" id="prev" name="prev" value="prev"/><input type="submit" id="next" name="next" value="next"/>';
+           }
          }else{
-           $listaPost="<p> Non ci sono post da vedere...riprova più tardi.</p>";
+           $listaPost="<p>Non ci sono altri post da vedere torna indietro o più tardi...</p>";
+            $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="ultimopost" value=""/><input type="submit" id="prev" name="prev" value="prev"/>';
          }
        }else{
          //TODO: cliente non loggato chiudere connessione prima possibile
