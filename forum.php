@@ -3,7 +3,6 @@
   use DB\DBAccess;
 
   session_start();
-  unset($_SESSION['maxidm']);
   $paginaHTML=file_get_contents("forum.html");
   $connessione = new DBAccess();
   $connessioneOK= $connessione->openDBConnection();
@@ -11,7 +10,9 @@
       if (isset($_POST['next'])){
         array_push($_SESSION['maxidm'],($_POST['ultimopost'] -1));
       }else{
-          array_pop($_SESSION['maxidm']);
+          if(end($_SESSION['maxidm'])!=$_SESSION['max']){
+            array_pop($_SESSION['maxidm']);
+          }
       }
   }
   $post="";  //dati grezzi dal db
@@ -19,7 +20,9 @@
   if($connessioneOK){
     if(!(isset($_SESSION['maxidm']))){
       $_SESSION['maxidm'] = array();
+      array_push($_SESSION['maxidm'],0);
       array_push($_SESSION['maxidm'],$connessione->getMaxIdm());
+      $_SESSION['max']=$connessione->getMaxIdm();
     }
     $post= $connessione->getPostList(end($_SESSION['maxidm']));
 	  if (isset($_SESSION['usrid'])){
