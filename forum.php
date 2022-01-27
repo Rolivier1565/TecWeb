@@ -3,15 +3,16 @@
   use DB\DBAccess;
 
   session_start();
+  unset($_SESSION['maxidm']);
   $paginaHTML=file_get_contents("forum.html");
   $connessione = new DBAccess();
   $connessioneOK= $connessione->openDBConnection();
   	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-      if ($_POST['next']=='next'){
-        $_SESSION['maxidm']= $_POST['ultimopost'] -1;
-    }else{
-
-    }
+      if (isset($_POST['next'])){
+        array_push($_SESSION['maxidm'],($_POST['ultimopost'] -1));
+      }else{
+          array_pop($_SESSION['maxidm']);
+      }
   }
   $post="";  //dati grezzi dal db
   $listaPost = ""; //codice html da dare in output
@@ -20,7 +21,7 @@
       $_SESSION['maxidm'] = array();
       array_push($_SESSION['maxidm'],$connessione->getMaxIdm());
     }
-    $post= $connessione->getPostList($_SESSION['maxidm']);
+    $post= $connessione->getPostList(end($_SESSION['maxidm']));
 	  if (isset($_SESSION['usrid'])){
       if($post!=null){
 		      foreach ($post as $singlePost) {
@@ -41,11 +42,9 @@
 			         }
                $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input type="submit" name="commenti" value="commenti"></form>';
                $lastpost = $singlePost['idm'];
-               $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"><input type="submit" id="prev" name="prev" value="prev"/><input type="submit" id="next" name="next" value="next"/>';
            }
          }else{
            $listaPost="<p>Non ci sono altri post da vedere torna indietro o più tardi...</p>";
-            $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="ultimopost" value=""/><input type="submit" id="prev" name="prev" value="prev"/>';
          }
        }else{
          //TODO: cliente non loggato chiudere connessione prima possibile
@@ -53,5 +52,6 @@
   }else{
     $listaPost="<p>Ci scusiamo ma i sistemi non sono al momento disponibili riprova più tardi.</p>";
   }
+    $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"><input type="submit" id="prev" name="prev" value="prev"/><input type="submit" id="next" name="next" value="next"/>';
     echo str_replace("<listaPost/>",$listaPost, $paginaHTML);
 ?>
