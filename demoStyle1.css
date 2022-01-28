@@ -187,6 +187,15 @@ header h2{
   font-size: 1em;
 }
 
+#content a{
+  color: #F38121;
+}
+
+#content a:visited{
+  color: #C9A4DB;
+    /*#6BCE50 #C9A4DB*/
+}
+
 #content .up{
 	position: relative;
   left: 80%;
@@ -194,6 +203,14 @@ header h2{
   margin-right: 10%;
 }
 
+#content .up:visited{
+  color: #000066;
+  background-color: #F39151;
+}
+
+#content .up:hover{
+  background-color: #FFF;
+}
 
 /*
   impostazioni di stile footer
@@ -244,9 +261,15 @@ footer p{
   padding: 0.5em 1em;
   margin: 1em 0.1em 0.2em 0.1em;
   font-size: 1em;
+    color: #000;
   background-color: #F38121;
   border: 2px solid #000;
   border-radius: 25px;
+}
+
+.up:visited{
+  color: #000066;
+  background-color: #F39151;
 }
 
 .up:hover{
@@ -258,14 +281,7 @@ footer p{
   border-radius: 25px;
 }
 
-.up{
-  color: #000;
-  text-decoration: none;
-}
 
-.up:visited{
-  color:#000;
-}
 
 .valid{
   vertical-align: middle;
@@ -281,10 +297,6 @@ footer p{
 /*
   home
 */
-
-#content a{
-  color: #F38121;
-}
 
 .flexhome{
   display: flex;
@@ -383,7 +395,8 @@ footer p{
 }
 
 #banlistTable a:visited{
-	color: #000;
+  color: #000066;
+  background-color: #F39151;
 }
 
 #banlistTable a{
@@ -615,6 +628,12 @@ caption{
     "pendulum testoPendulum testoPendulum";
   }
 
+#extradeck img{
+    width: 14rem;
+    margin: 0 43%;
+    margin: min(0em, 10em);
+}
+
   #subt{
     grid-area: subt;
     text-align: center;
@@ -690,7 +709,6 @@ caption{
     padding: 1em 0em 0.7em 0em;
   }
 
-
   #subt4{
     grid-area: subt4;
     text-align: center;
@@ -761,6 +779,20 @@ pagina regole base - inizio
     margin-right: 5%;
     margin-left: 5%;
     margin-bottom: 1em;
+}
+
+#turno{
+    border: 5px #F38121 solid;
+}
+
+#content #turno h3{
+    color: #000;
+    background-color: #F38121;
+    margin: 0em;
+}
+
+#turno p{
+    padding: 0.5em 0.2em;
 }
 /*
 pagina regole base - fine
@@ -853,11 +885,13 @@ pagina strumenti
 	font-family: monospace;
 	width:3em;
 	margin-left:0.2em;
+    font-weight: bold;
 }
 
 #d6{
 	margin-right:0.2em;
 	margin-left:0.2em;
+    font-weight: bold;
 }
 
 /*

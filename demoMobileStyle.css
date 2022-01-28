@@ -50,8 +50,8 @@ header h2{
 
 .open{
     display:block;
-    animation-name: fadein;
-    animation-duration: 1s;
+    animation-name: none;
+    margin-top: 2em;
 }
 
 .burger{
@@ -69,6 +69,9 @@ header h2{
     background-color: #F38121;
 }
 
+#menu #currentNestLink{
+    font-size: 1em;
+}
 
 #mobilebar{
     display: inline;
@@ -85,13 +88,14 @@ transform: translateX(-2em);
 
 #menu li{
   display: inline-block;
-  padding: 0.5em 35%;
-  margin: 5% 0%;
+  padding: 0.75em 35%;
+  margin: 2.5% 0%;
   font-size: 2em;
     border: none;
 }
 #menu li:hover{
   background-color: #FFF;
+    padding: 1em 35%;
 }
 #menu a{
   color: #000;
@@ -122,15 +126,10 @@ transform: translateX(-2em);
     background-color: #F38121;
 }
 
-#menu #menunested li a:visited{
+#menu #menunested li a: hover {
   color: #000066;
   text-decoration: none;
-    background-color: #F39151;
-}
-#menu #menunested li a: hover visited{
-  color: #000066;
-  text-decoration: none;
-    background-color: #FFF
+    background-color: #FFF;
 }
 
 
@@ -142,8 +141,22 @@ transform: translateX(-2em);
     border-radius:0px;
 }
 
+#menu #nested a:visited{
+  color: #000066;
+    background-color: #F39151;
+}
+
+#menu #nested a:hover{
+    background-color: #FFF;
+    padding: 0em;
+}
+
 #menu #nested{
     background-color: #F38121;
+    position: relative;
+    width: 150%;
+    right: 3em;
+    border: none;
 }
 
 #menu #nested li{
@@ -152,18 +165,17 @@ transform: translateX(-2em);
 }
 
 #menu #nested li a{
-    display: inline;
+    display: block;
 	padding:0em;
-    margin:0em;
-  background-color: #FFF;
-  font-size:0.8em;
+    margin:0.5em;
+  font-size:0.6em;
 }
 
-/*
-.nestHead:hover #nested{
-	display:block;
+
+#menu .nestHead:hover{
+    background-color: #F38121;
 }
-*/
+
 
 
 /*
@@ -313,6 +325,11 @@ footer p{
   padding-bottom: 0em;
 }
 
+#banlistTable a:visited{
+  color: #000066;
+  background-color: #F39151;
+}
+
 #banlistTable{
     display: inline;
     width: 90%;
@@ -341,6 +358,20 @@ caption{
 .immagine{
     width: 100%;
     max-width: 20cm;
+}
+
+#turno{
+    border: 5px #F38121 solid;
+}
+
+#content #turno h3{
+    color: #000;
+    background-color: #F38121;
+    margin: 0em;
+}
+
+#turno p{
+    padding: 0.5em 0.2em;
 }
 
 /*FINE REGOLE BASE*/
@@ -416,3 +447,34 @@ caption{
     margin: auto;
 }
 /*FINE REGOLE EXTRA DECK*/
+
+/*INIZIO STRUMENTI*/
+
+.player{
+    flex-basis: 97%;
+    margin: 1em 0em;
+}
+
+.instrBtn{
+	padding: 0.2em 1em;
+    font-size: 1.1em;
+}
+
+#cambia1, #cambia2, #imposta1, #imposta2{
+    font-size: 1em;
+}
+
+.contenitoreStrumenti > p{
+    font-size: 0.8em;
+}
+
+.errBox{
+    font-size: 117%;
+}
+
+.instrBtn.smlBtn{
+	font-size:2em;
+	font-family: monospace;
+	padding: 0 0.25em;
+    margin: 0.2em 0.4em;
+}
