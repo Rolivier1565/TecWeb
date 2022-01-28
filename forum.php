@@ -31,17 +31,17 @@
 			         $listaPost.='<h3>'. $singlePost['idr'] . '</h3>' .'<span>'. $singlePost['data'] .'</span>'. '<span>'. $singlePost['ora'].'</span>'. '<span>' . $singlePost['argomento'] . '</span>';
 			         $listaPost.='<p>'. $singlePost['descrizione'] . '</p>'  . '<button';
 			         if ($connessione->checkLike($_SESSION['usrid'], $singlePost['idm'])){
-				             $listaPost.=' class="actv"';
+				             $listaPost.=' class="actv" aria-label="togli mi piace" ';
 			         }
 			         else{
-				             $listaPost.=' class="notactv"';
+				             $listaPost.=' class="notactv" aria-label="metti mi piace" ';
 			         }
 			         $listaPost.= 'id="Button'. $singlePost['idm'] .'" type="button" onclick="like('. $singlePost['idm'] . ')" ></button><span id="Like'. $singlePost['idm'] .'">' . $singlePost['mipiace'] . '</span>';
                $listaPost.='<button';
                if ($connessione->checkReport($_SESSION['usrid'], $singlePost['idm'])){
-                     $listaPost.=' class="repactv"';
+                     $listaPost.=' class="repactv" aria-label="rimuovi segnalazione" ';
                }else{
-				             $listaPost.=' class="repnotactv"';
+				             $listaPost.=' class="repnotactv" aria-label="segnala il post" ';
 			         }
                $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input type="submit" name="commenti" value="commenti"></form>';
                $lastpost = $singlePost['idm'];

@@ -14,12 +14,14 @@ xmlhttp.onreadystatechange = function(){
         aux --;
         document.getElementById(idcount).textContent=aux;
         button.className="notactv";
+        button.ariaLabel="metti mi piace";
         break;
       case "false":
         var aux = parseInt((document.getElementById(idcount)).innerHTML);
         aux ++;
         document.getElementById(idcount).textContent=aux;
         button.className="actv";
+        button.ariaLabel="togli mi piace";
         break;
       case "NL":
         break;
@@ -44,9 +46,11 @@ xmlhttp.onreadystatechange = function(){
     switch(response){
       case "true":
         report.className="repnotactv";
+        report.ariaLabel="segnala il post";
         break;
       case "false":
         report.className="repactv";
+        report.ariaLabel="rimuovi segnalazione";
         break;
       case "NL":
         break;
