@@ -873,6 +873,11 @@ pagina strumenti
 	background: url("images/bucoNero.jpg") no-repeat center;
 }
 
+#noJs{
+	min-height: 400px;
+	text-indent: -9999em;
+	background: url("images/angeloO7.jpg") no-repeat center;
+}
 
 /*
 	STILE FORUM - inizio

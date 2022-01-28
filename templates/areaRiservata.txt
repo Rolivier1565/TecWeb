@@ -5,7 +5,7 @@
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Registrati - Yu-Gi-Basics</title>
+		<title>Area Personale - Yu-Gi-Basics</title>
 		<meta name="keywords" content="Banlist, proibite, limitate, semi-limitate, cambiamenti, Yu-Gi-Basics" />
 		<meta name="description" content="" />
 		<meta name="author" content="" />
@@ -41,20 +41,18 @@
 		</nav>
 
 		<nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.php">Forum</a></span> &gt; &gt; Registrati</p>
+            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.php">Forum</a></span> &gt; &gt; Area Personale</p>
 		</nav>
 		
 		<div id="content">
-			<errorMsg/>
-			<form name="regForm" action="register.php" method="post" onsubmit="return checkValid()">
-				<span lang="en">Username:</span>: <input type="text" name="username" required>
-				<span lang="en">Password:</span>: <input type="password" name="password" required>
-				<span class="errBox" id="wrongConf" aria-live="assertive"></span>
-				<span>Conferma <span lang="en">Password:</span></span><input type="password" name="passwordRe" required>
-				<span class="errBox" id="invEmail" aria-live="assertive"></span>
-				<span lang="en">Email:</span><input type="text" name="email" required>
-				<input type="submit">
-			</form>
+			<h2>Ciao, <currUser/></h2>
+			<h3>Curiosità del giorno</h3>
+				<p><motd/></p>
+			<h3>Crea un <span lang="en">Post</span></h3>
+				<form>
+				</form>
+			<h3>I tuoi <span lang="en">Post</span></h3>
+				<listaPost/>
 		</div>
 		
 		<footer>
