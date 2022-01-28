@@ -35,7 +35,7 @@ class DBAccess{
   }
 
   public function getPostList($maxidm){
-    $query="SELECT Registrati.idr, Scrive.data, Scrive.ora, Messaggi.descrizione, Messaggi.argomento, Messaggi.mipiace, Messaggi.report, Messaggi.idm FROM Registrati, Scrive, Messaggi WHERE Registrati.idr=Scrive.idr AND Scrive.idm=Messaggi.idm AND Messaggi.idm<='$maxidm' ORDER BY Scrive.idm DESC LIMIT 10";
+    $query="SELECT Registrati.idr, Scrive.data, Scrive.ora, Messaggi.descrizione, Messaggi.argomento, Messaggi.mipiace, Messaggi.report, Messaggi.idm FROM Registrati, Scrive, Messaggi WHERE Registrati.idr=Scrive.idr AND Scrive.idm=Messaggi.idm AND Messaggi.idm<='$maxidm' ORDER BY Scrive.idm DESC LIMIT 7";
     $queryResult = mysqli_query($this->connection, $query) or die("Errore in getPostList" . mysqli_error($this->connection));
     if(mysqli_num_rows($queryResult)==0){
       return null;
@@ -49,7 +49,7 @@ class DBAccess{
     }
   }
 
-  
+
   public function getWrittenPosts($usr){
     $query="SELECT Registrati.idr, Scrive.data, Scrive.ora, Messaggi.descrizione, Messaggi.argomento, Messaggi.mipiace, Messaggi.report, Messaggi.idm FROM Registrati, Scrive, Messaggi WHERE Registrati.idr=Scrive.idr AND Registrati.idr='$usr' AND Scrive.idm=Messaggi.idm ORDER BY Scrive.idm DESC";
     $queryResult = mysqli_query($this->connection, $query) or die("Errore in getPostList" . mysqli_error($this->connection));
