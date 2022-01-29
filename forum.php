@@ -28,7 +28,7 @@
 	  if (isset($_SESSION['usrid'])){
       if($post!=null){
 		      foreach ($post as $singlePost) {
-			         $listaPost.='<span class="usrname">'. $singlePost['idr'] . '</span>' .'<span class="datetime">'. $singlePost['data'] .'</span>'. '<span class="datetime">'. $singlePost['ora'].'</span>'. '<span class="argomento">' . $singlePost['argomento'] . '</span>';
+			         $listaPost.='<div class="posthead"><span class="usrname">'. $singlePost['idr'] . ':</span>' .'<span class="argomento">'. $singlePost['argomento'] .'</span>'. '<span class="datetime">'. $singlePost['data'].'</span>'. '<span class="datetime">' . $singlePost['ora'] . '</span></div>';
 			         $listaPost.='<p class="post">'. $singlePost['descrizione'] . '</p>'  . '<div class="cont_bottoni"><button';
 			         if ($connessione->checkLike($_SESSION['usrid'], $singlePost['idm'])){
 				             $listaPost.=' class="actv" aria-label="togli mi piace" ';

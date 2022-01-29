@@ -944,6 +944,41 @@ pagina strumenti
 
 .cont_bottoni{
 	display: flex;
+	border:4px solid #F38121;
+	border-top: none;
+	background-color: #2B2D2F;
+}
+
+.usrname{
+	color:#F38121;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.argomento{
+	padding:0em 1em 0em 0.5em;
+}
+
+.datetime{
+	font-size: 0.8em;
+	font-weight: lighter;
+}
+
+.post{
+	background-color: #2B2D2F;
+	font-size: 1.1em;
+	border:4px solid #F38121;
+	border-top: 2px solid #F38121;
+	border-bottom: 2px solid #F38121;
+	padding: 0.7em 0.5em 0.7em 0.5em;
+}
+
+.posthead{
+	background-color: #2B2D2F;
+	border: 4px solid #F38121;
+	border-bottom: none;
+	margin-top: 2em;
+	padding: 0.5em 0.5em 0.5em 0.5em;
 }
 /*
 	STILE FORUM -fusione
