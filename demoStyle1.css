@@ -960,8 +960,10 @@ pagina strumenti
 }
 
 .datetime{
+	display: inline-block;
 	font-size: 0.8em;
 	font-weight: lighter;
+	padding-left:0.5em;
 }
 
 .post{
@@ -980,6 +982,39 @@ pagina strumenti
 	margin-top: 2em;
 	padding: 0.5em 0.5em 0.5em 0.5em;
 }
+
+#next{
+	border:none;
+	background-color: inherit;
+	width: 50px;
+ 	height: 50px;
+ 	background-image: url('images/successivo_bottone.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center center;
+}
+
+#prev{
+	border:none;
+	background-color: inherit;
+	width: 50px;
+	height: 50px;
+	background-image: url('images/precedente_bottone.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#piepagina{
+	display: flex;
+	justify-content: center;
+	padding-top: 2em;
+}
+
+#numpag{
+	display: inline-flex;
+	align-items: center;
+}
+
+
 /*
 	STILE FORUM -fusione
 */

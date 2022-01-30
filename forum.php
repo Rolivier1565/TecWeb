@@ -1,7 +1,8 @@
 <?php
   require_once "php/db.php";
   use DB\DBAccess;
-
+  header('Cache-Control: no cache');
+  session_cache_limiter('private_no_expires');
   session_start();
   $paginaHTML=file_get_contents("forum.html");
   $connessione = new DBAccess();
@@ -43,7 +44,7 @@
                }else{
 				             $listaPost.=' class="repnotactv" aria-label="segnala il post" ';
 			         }
-               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input class="commenti" type="submit" name="commenti" value=""></form></div>';
+               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input class="commenti" type="submit" name="commenti" value="" aria-label="apri pagina commenti del post"></form></div>';
                $lastpost = $singlePost['idm'];
            }
          }else{
@@ -57,13 +58,13 @@
   }
   $pag=count($_SESSION['maxidm'])-1;
   if(end($_SESSION['maxidm'])==$_SESSION['max']){
-      $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"><span>'.$pag .'</span><input type="submit" id="next" name="next" value="next"/>';
+      $listaPost.='<form id="piepagina" method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"/><span id="numpag">'.$pag .'</span><input type="submit" id="next" name="next" value="" aria-label="apri pagina successiva"/>';
   }
   else{
       if($lastpost==1){
-        $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"><input type="submit" id="prev" name="prev" value="prev"/><span>'.$pag .'</span>';
+        $listaPost.='<form id="piepagina" method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"/><input type="submit" id="prev" name="prev" value="" aria-label="apri pagina precedente"/><span id="numpag">'.$pag .'</span>';
       }else{
-        $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"><input type="submit" id="prev" name="prev" value="prev"/><span>'.$pag .'</span><input type="submit" id="next" name="next" value="next"/>';
+        $listaPost.='<form id="piepagina" method="post" action="forum.php"><input type="hidden" name="ultimopost" value="'. $lastpost .'"/><input type="submit" id="prev" name="prev" value="" aria-label="apri pagina successiva"/><span id="numpag">'.$pag .'</span><input type="submit" id="next" name="next" value="" aria-label="apri pagina successiva"/>';
     }
   }
     echo str_replace("<listaPost/>",$listaPost, $paginaHTML);

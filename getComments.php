@@ -13,10 +13,10 @@
     $connessione=$connessione->closeConnection();
 
     if($commenti!=null){
-    $listaCommenti.='<h3>'. $post['idr'] . '</h3>' .'<span>'. $post['data'] .'</span>'. '<span>'. $post['ora'].'</span>'. '<span>' . $post['argomento'] . '</span>';
-    $listaCommenti.='<p>'. $post['descrizione'] . '</p>' . '<span> Mi piace ' . $post['mipiace'] . '</span>'. '<span> Report ' . $post['report'];
+    $listaCommenti.='<h3>'. $post['idr'] . '</h3>' .'<span>'. $post['argomento'] .'</span>'. '<span>'. $post['data'].'</span>'. '<span>' . $post['ora'] . '</span>';
+    $listaCommenti.='<p>'. $post['descrizione'] . '</p>' . '<span> Mi piace ' . $post['mipiace'];
         foreach ($commenti as $singleCommenti) {
-          $listaCommenti.="<h4>". $singleCommenti['idr'] . "</h4> <span>" . $singleCommenti['data']."</span>" ."<p>". $singleCommenti['descrizione'] . "</p>" . "<span> mi piace " . $singleCommenti['mipiace'] . "</span><span> report " . $singleCommenti['report'] . "</span>";
+          $listaCommenti.="<h4>". $singleCommenti['idr'] . "</h4> <span>" . $singleCommenti['data']."</span>" ."<p>". $singleCommenti['descrizione'] . "</p>";
     }
     }else{
         $listaCommenti="<p>Non ci sono ancora commenti .... inizia tu la discussione !!</p>";

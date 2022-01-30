@@ -74,7 +74,7 @@ class DBAccess{
     }
 
       public function getCommentsPost($idPost){
-        $query="SELECT Commenta.idr,Commenta.data, Commenti.descrizione, Commenti.mipiace, Commenti.report FROM Commenta, Commenti WHERE Commenti.idc=Commenta.idc AND Commenti.messaggio='$idPost'";
+        $query="SELECT Commenta.idr,Commenta.data, Commenti.descrizione FROM Commenta, Commenti WHERE Commenti.idc=Commenta.idc AND Commenti.messaggio='$idPost' ORDER BY Commenti.idc DESC";
         $queryResult = mysqli_query($this->connection, $query) or die("Errore in getCommentsPost" . mysqli_error($this->connection));
         if(mysqli_num_rows($queryResult)==0){
           return null;
