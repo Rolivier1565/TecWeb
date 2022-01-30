@@ -1075,8 +1075,12 @@ pagina strumenti
 	width: 10em;
 }
 
-#contenuto{
+#contenuto, #testo{
 	height: 30em;
 	width: 50em;
 	padding: 0.5em;
+}
+
+.modPost{
+	margin-top: 1em;
 }

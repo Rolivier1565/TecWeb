@@ -5,14 +5,15 @@
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Area Personale - Yu-Gi-Basics</title>
-		<meta name="robots" content="noindex, nofollow">
+		<title>Registrati - Yu-Gi-Basics</title>
+		<meta name="keywords" content="Banlist, proibite, limitate, semi-limitate, cambiamenti, Yu-Gi-Basics" />
+		<meta name="description" content="" />
 		<meta name="author" content="" />
 		<link rel="stylesheet" href="demoStyle1.css" />
 		<link rel="stylesheet" media="screen and (max-width:1500px), only screen and (max-width:1500px)" href="demoStyleMini.css" />
 		<link rel="shortcut icon" href="images/logo.ico" />
 		<script type="text/javascript" src="js/automagia.js"></script>
-		<script type="text/javascript" src="js/likehandler.js"></script>
+		<script type="text/javascript" src="js/register.js"></script>
 	</head>
 	
 
@@ -40,21 +41,16 @@
 		</nav>
 
 		<nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.php">Forum</a></span> &gt; &gt; Area Personale</p>
+            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.php">Forum</a></span> &gt; &gt; <a href="areaRiservata.php">Area Personale</a> &gt; &gt; Modifica <span lang="en">Post</span></p>
 		</nav>
 		
 		<div id="content">
-			<h2>Ciao, <currUser/></h2>
-			<h3>Curiosità del giorno</h3>
-				<p id="motd"><motd/></p>
-			<h3>Crea un <span lang="en">Post</span></h3>
-				<form class="inputForm" action="areaRiservata.php" method="post">
-					<label for="argomento">Titolo</label>: <textarea id="argomento" class="inputField" name="argomento" required></textarea>
-					<label for="contenuto">Testo</label>: <textarea id="contenuto" class="inputField" name="contenuto" required></textarea>
-					<input type="submit" class="instrBtn" value="Pubblica">
-				</form>
-			<h3>I tuoi <span lang="en">Post</span></h3>
-				<listaPost/>
+			<form class="inputForm" name="editForm" action="editPost.php" method="post" onsubmit="return checkValid()">
+				<label for="testo" lang="en">Modifica il tuo <span lang="en">Post</span>:</label>
+				<textarea id="testo" class="inputField" name="testo" required><testo/></textarea>
+				<input type="hidden" name="idm" value="<idm/>">
+				<input type="submit" class="instrBtn" name="modifica" value="Modifica">
+			</form>
 		</div>
 		
 		<footer>
