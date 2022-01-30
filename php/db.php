@@ -64,6 +64,18 @@ class DBAccess{
       return $result;
     }
   }
+  
+  public function addPost($usr, $ttl, $txt){
+		$query="INSERT INTO Messaggi (argomento,descrizione,mipiace,report) VALUES ('$ttl','$txt',0,0);";
+		mysqli_query($this->connection, $query) or die("Errore nell'aggiungere Post a Messaggi" . mysqli_error($this->connection));
+		$query="SELECT MAX(idm) from Messaggi;";
+		$result=mysqli_query($this->connection, $query) or die("Errore in addScrive" . mysqli_error($this->connection));
+		$result=$result->fetch_array()[0] ?? '';
+		$anno=date("Y-m-d");
+		$ora=date("h:i:s");
+		$query="INSERT INTO Scrive (idr, idm, data, ora) VAlUES ('$usr', '$result', '$anno', '$ora');";
+		mysqli_query($this->connection, $query) or die("Errore nell'aggiungere Post a Messaggi" . mysqli_error($this->connection));
+	}
 
   public function getPost($idPost){
     $query="SELECT Registrati.idr, Scrive.data, Scrive.ora, Messaggi.descrizione, Messaggi.argomento, Messaggi.mipiace, Messaggi.report, Messaggi.idm FROM Registrati, Scrive, Messaggi WHERE Registrati.idr=Scrive.idr AND Scrive.idm=Messaggi.idm AND Messaggi.idm='$idPost'";
@@ -102,14 +114,6 @@ class DBAccess{
 		$aux = mysqli_num_rows($queryResult);
     $queryResult->free();
 	return $aux;
-	/*	if ($queryResult==FALSE){
-			$queryResult->free();
-			return FALSE;
-		}
-		else{
-			$queryResult->free();
-			return TRUE;
-		}*/
 	}
 
 	public function insertUser($usr, $psw, $mail){

@@ -5,36 +5,49 @@
 	session_start();
 	$connessione = new DBAccess();
   $connessioneOK= $connessione->openDBConnection();
+  
+  function inputTrim($input){
+		$input=trim($input);
+		$input=stripslashes($input);
+		$input=htmlspecialchars($input);
+		return $input;
+	}
 
   $post="";  //dati grezzi dal db
   $listaPost = ""; //codice html da dare in output
   if($connessioneOK){
 	  if (isset($_SESSION['usrid'])){
-		  $post= $connessione->getWrittenPosts($_SESSION['usrid']);
+		  if ($_SERVER["REQUEST_METHOD"] == "POST"){	//è stato chiesto di aggiungere un post
+				$arg=inputTrim($_POST["argomento"]);
+				$testo=inputTrim($_POST["contenuto"]);
+				$connessione->addPost($_SESSION['usrid'], $arg, $testo);
+		  }
+		  $post= $connessione->getWrittenPosts($_SESSION['usrid']); 
 		if($post!=null){
 		      foreach ($post as $singlePost) {
-			         $listaPost.='<h3>'. $singlePost['idr'] . '</h3>' .'<span>'. $singlePost['data'] .'</span>'. '<span>'. $singlePost['ora'].'</span>'. '<span>' . $singlePost['argomento'] . '</span>';
-			         $listaPost.='<p>'. $singlePost['descrizione'] . '</p>'  . '<button';
+			         $listaPost.='<div class="posthead">' .'<span class="argomento">'. $singlePost['argomento'] .'</span>'. '<span class="datetime">'. $singlePost['data'].'</span>'. '<span class="datetime">' . $singlePost['ora'] . '</span></div>';
+			         $listaPost.='<p class="post">'. $singlePost['descrizione'] . '</p>'  . '<div class="cont_bottoni"><button';
 			         if ($connessione->checkLike($_SESSION['usrid'], $singlePost['idm'])){
-				             $listaPost.=' class="actv"';
+				             $listaPost.=' class="actv" aria-label="togli mi piace" ';
 			         }
 			         else{
-				             $listaPost.=' class="notactv"';
+				             $listaPost.=' class="notactv" aria-label="metti mi piace" ';
 			         }
-			         $listaPost.= 'id="Button'. $singlePost['idm'] .'" type="button" onclick="like('. $singlePost['idm'] . ')" ></button><span id="Like'. $singlePost['idm'] .'">' . $singlePost['mipiace'] . '</span>';
+			         $listaPost.= 'id="Button'. $singlePost['idm'] .'" type="button" onclick="like('. $singlePost['idm'] . ')" ></button><span class="numeroLike" id="Like'. $singlePost['idm'] .'">' . $singlePost['mipiace'] . '</span>';
                $listaPost.='<button';
                if ($connessione->checkReport($_SESSION['usrid'], $singlePost['idm'])){
-                     $listaPost.=' class="repactv"';
+                     $listaPost.=' class="repactv" aria-label="rimuovi segnalazione" ';
                }else{
-				             $listaPost.=' class="repnotactv"';
+				             $listaPost.=' class="repnotactv" aria-label="segnala il post" ';
 			         }
-               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input type="submit" name="commenti" value="commenti"></form>';
+               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input class="commenti" type="submit" name="commenti" value=""></form></div>';
+               $lastpost = $singlePost['idm'];
 		       }
          }else{
            $listaPost=file_get_contents("templates/noPostScritti.txt");
          }
        }else{
-         //TODO: cliente non loggato chiudere connessione prima possibile
+         header("Location: login.php",TRUE,301);
        }
   }else{
     header("Location: noDb.html",TRUE,301);

@@ -40,9 +40,11 @@
 		<div id="content">
 			<errorMsg/>
 			<form action="login.php" method="post">
-				<span lang="en">Username</span>: <input type="text" name="username" required>
-				<span lang="en">Password</span>: <input type="text" name="password" required>
-			<input type="submit">
+				<label for="username" lang="en">Username</label>: <input id="username" class="inputField" type="text" name="username" required>
+				<label for="password" lang="en">Password</label>: <input id="password" class="inputField" type="password" name="password" required>
+			<input class="instrBtn" type="submit" value="Accedi">
+			</form>
+			Non hai ancora un account? <a href="register.php">Registrati!</a>
 		</div>
 		
 		<footer>

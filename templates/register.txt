@@ -47,13 +47,13 @@
 		<div id="content">
 			<errorMsg/>
 			<form name="regForm" action="register.php" method="post" onsubmit="return checkValid()">
-				<span lang="en">Username:</span>: <input type="text" name="username" required>
-				<span lang="en">Password:</span>: <input type="password" name="password" required>
+				<label for="username" lang="en">Username:</label>: <input id="username" class="inputField" type="text" name="username" required>
+				<label for="password" lang="en">Password:</label>: <input id="password" class="inputField" type="password" name="password" required>
 				<span class="errBox" id="wrongConf" aria-live="assertive"></span>
-				<span>Conferma <span lang="en">Password:</span></span><input type="password" name="passwordRe" required>
+				<label for="passwordRe">Conferma <span lang="en">Password:</span></label><input id="passwordRe" class="inputField" type="password" name="passwordRe" required>
 				<span class="errBox" id="invEmail" aria-live="assertive"></span>
-				<span lang="en">Email:</span><input type="text" name="email" required>
-				<input type="submit">
+				<label for="email" lang="en">Email:</label><input id="email" class="inputField" type="text" name="email" required>
+				<input type="submit" class="instrBtn" value="Invia">
 			</form>
 		</div>
 		

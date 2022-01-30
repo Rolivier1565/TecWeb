@@ -1018,3 +1018,37 @@ pagina strumenti
 /*
 	STILE FORUM -fusione
 */
+
+
+/*
+	Caselle di input
+*/
+
+.inputField{
+	padding: 0.2em;
+	color: white;
+	background-color: #2B2D2F;
+	border: 2px solid #F38121;
+	border-radius: 25px;
+}
+
+form{
+	margin-bottom: 1em;
+	display:block;
+	text-align:left;
+}
+form input, form textarea{
+	display: block;
+	margin-bottom: 1em;
+}
+
+#argomento{
+	height: 1.2em;
+	width: 10em;
+}
+
+#contenuto{
+	height: 30em;
+	width: 50em;
+	padding: 0.5em;
+}
