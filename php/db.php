@@ -68,8 +68,8 @@ class DBAccess{
   public function addPost($usr, $ttl, $txt){
 		$query="INSERT INTO Messaggi (argomento,descrizione,mipiace,report) VALUES ('$ttl','$txt',0,0);";
 		mysqli_query($this->connection, $query) or die("Errore nell'aggiungere Post a Messaggi" . mysqli_error($this->connection));
-		$query="SELECT MAX(idm) from Messaggi;";
-		$result=mysqli_query($this->connection, $query) or die("Errore in addScrive" . mysqli_error($this->connection));
+		$query="SELECT MAX(idm) FROM Messaggi";
+		$result = mysqli_query($this->connection, $query) or die("Errore in getMaxIdm" . mysqli_error($this->connection));
 		$result=$result->fetch_array()[0] ?? '';
 		$anno=date("Y-m-d");
 		$ora=date("h:i:s");

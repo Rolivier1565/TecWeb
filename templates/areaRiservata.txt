@@ -48,9 +48,9 @@
 			<h3>Curiosità del giorno</h3>
 				<p id="motd"><motd/></p>
 			<h3>Crea un <span lang="en">Post</span></h3>
-				<form id="creaPost" action="areaRiservata.php" method="post">
-					<label for="argomento">Titolo</label>: <textarea id="argomento" class="inputField" type="text" name="argomento"></textarea>
-					<label for="contenuto">Testo</label>: <textarea id="contenuto" class="inputField" name="contenuto"></textarea>
+				<form class="inputForm" action="areaRiservata.php" method="post">
+					<label for="argomento">Titolo</label>: <textarea id="argomento" class="inputField" type="text" name="argomento" required></textarea>
+					<label for="contenuto">Testo</label>: <textarea id="contenuto" class="inputField" name="contenuto" required></textarea>
 					<input type="submit" class="instrBtn" value="Pubblica">
 				</form>
 			<h3>I tuoi <span lang="en">Post</span></h3>

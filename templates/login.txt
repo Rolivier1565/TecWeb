@@ -39,7 +39,7 @@
 		
 		<div id="content">
 			<errorMsg/>
-			<form action="login.php" method="post">
+			<form class="inputForm" action="login.php" method="post">
 				<label for="username" lang="en">Username</label>: <input id="username" class="inputField" type="text" name="username" required>
 				<label for="password" lang="en">Password</label>: <input id="password" class="inputField" type="password" name="password" required>
 			<input class="instrBtn" type="submit" value="Accedi">

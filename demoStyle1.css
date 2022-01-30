@@ -1032,15 +1032,16 @@ pagina strumenti
 	border-radius: 25px;
 }
 
-form{
+.inputForm{
 	margin-bottom: 1em;
 	display:block;
 	text-align:left;
 }
-form input, form textarea{
+.inputForm input, .inputForm textarea{
 	display: block;
 	margin-bottom: 1em;
 }
+
 
 #argomento{
 	height: 1.2em;

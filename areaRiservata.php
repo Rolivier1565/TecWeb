@@ -21,6 +21,7 @@
 				$arg=inputTrim($_POST["argomento"]);
 				$testo=inputTrim($_POST["contenuto"]);
 				$connessione->addPost($_SESSION['usrid'], $arg, $testo);
+				header("Location: areaRiservata.php");
 		  }
 		  $post= $connessione->getWrittenPosts($_SESSION['usrid']); 
 		if($post!=null){
