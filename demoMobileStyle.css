@@ -194,6 +194,10 @@ transform: translateX(-2em);
     width: 100%;
     font-size: 2.7em;
 }
+
+#breadcrumb a{
+    color: #C9A4DB;
+}
 /*fine breadcrumb*/
 
 #content{
@@ -243,9 +247,11 @@ footer p{
   color:#F38121;
 }
 .valid{
+    display: block;
+    min-width: 5cm;
   vertical-align: middle;
-  margin-left: 8em;
-	margin-right: 8em;
+  margin-left: auto;
+	margin-right: auto;
 	margin-bottom: 0.7em;
 }
 #valid{
@@ -388,7 +394,7 @@ caption{
 #evocazioni img{
     display: block;
     width: 50%;
-    padding: 0.5em 7em;;
+    padding: 0.5em 24.4%;
     margin-left: auto;
     margin-right: auto;
 }

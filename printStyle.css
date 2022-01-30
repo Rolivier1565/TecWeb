@@ -120,78 +120,29 @@ footer{
   text-align: center;
   font-family: "Hanalei Fill";
   font-size: 2em;
-  padding-bottom: 1em;
+    margin: none;
 }
 
 #banlistTable{
-  padding-top: 1em;
-  text-align: center;
-  list-style-type: none;
-  font-size: 1.2em;
-  display:flex;
-  justify-content: center;
-  width: 50%;
-  margin: auto;
+    display: none;
 }
 
-#banlistTable li{
-	flex: 1 1 auto;
+#content #bantabs .up{
+    display: none;
 }
 
-#banlistTable a:visited{
-	color: #000;
+thead{
+    padding: 10em;
+    margin: 10em;
 }
 
-#banlistTable a{
-
-	padding:0.4em;
-	margin:0.3em;
-	color: #000;
-  text-decoration: none;
-  background-color: #F38121;
-  border: 2px solid #000;
-  border-radius: 25px;
-  font-size:0.8em;
+.bannate tr{
+    color: #000;
+    border: 2px solid #000;
 }
 
-#banlistTable a:hover{
-	padding:0.5em;
-	margin:0.2em;
-  background-color: #FFF;
-  border: 2px solid #000;
-  border-radius: 25px;
-  font-size:0.8em;
-}
-
-caption{
-  margin: auto;
-  font-family: "Hanalei Fill";
-  font-size: 1.7em;
-  padding-top: 2em;
-  padding-bottom: 0.5em;
-  color: #FFF;
-}
-
-.bannate{
-  margin: auto;
-  border-collapse: collapse;
-  text-align: center;
-  color: #F38121;
-  padding-bottom: 1em;
-}
-
-.bannate th{
-  background-color: #F38121;
-  color: #000;
-  font-size: 1.5em;
-  padding: 0.3em;
-}
-
-.bannate td{
-  border: 1px solid #FFF;
-  text-align: center;
-  font-size: 1.2em;
-  padding: 0.3em 0.5em;
+.bannate caption{
+    color: #000;
 }
 
 .mostro{
@@ -302,8 +253,18 @@ pagina regole base
 /*regole extra deck*/
 
 #extradeck{
+    display: block;
     font-size: 0.9em;
 }
+
+#extradeck img{
+    display: none;
+}
+
+#extradeck h2{
+    margin: 0em;
+}
+
   #spellSpeed{
     font-size: 1.3em;
   }
@@ -374,18 +335,6 @@ pagina regole base
 /*fine regole base*/
 
 /*banlist*/
-#banlistTable{
-    display: none;
-}
-
-.bannate tr{
-    color: #000;
-    border: 2px solid #000;
-}
-
-.bannate caption{
-    color: #000;
-}
 /*fine banlist*/
 
 /*strumenti*/

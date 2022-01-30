@@ -173,6 +173,10 @@ header h2{
   background-color: #F38121;
 }
 
+#breadcrumb a{
+    color: #000066;
+}
+
 
 /*
   impostazoni di stile contenuto
@@ -198,6 +202,7 @@ header h2{
 
 #content .up{
 	position: relative;
+    color: #000;
   left: 80%;
   display: inline-block;
   margin-right: 10%;
@@ -242,11 +247,11 @@ footer dd{
 }
 
 footer a:visited{
-  color:#F38121;
+  color: #C9A4DB;
 }
 
 footer a{
-  color:#FFF;
+  color:#F38121;
 }
 
 footer p{
@@ -419,6 +424,21 @@ footer p{
   font-size:0.8em;
 }
 
+#content #bantabs .up{
+	position: relative;
+  display: inline-block;
+  margin-right: 10%;
+}
+
+#content #bantabs .up:visited{
+  color: #000066;
+  background-color: #F39151;
+}
+
+#content #bantabs.up:hover{
+  background-color: #FFF;
+}
+
 caption{
   margin: auto;
   font-family: "Hanalei Fill";
@@ -528,6 +548,8 @@ caption{
   }
   #evocNormale{
     grid-area: evocn;
+    margin: 0 37%;
+    margin: min(0em, 10em);
   }
   #tevocn{
     grid-area: tevocn;
@@ -541,15 +563,20 @@ caption{
     grid-area: tevocp;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     font-size: 1.2em;
     padding-bottom: 0.7em;
+      margin-top: 2em;
   }
   #evocPosizionamento{
       grid-area: evocp;
+    margin: 0 0 0 60%;
+    margin: min(0em, 10em);
   }
   #evocTributo{
       grid-area: evoct;
+    margin: 0 0 0 10%;
+    margin: min(0em, 10em);
   }
   #tevoct{
     grid-area: tevoct;
@@ -562,6 +589,8 @@ caption{
   #phases{
     float:left;
     padding: 0em 2em 1em 1em;
+    margin: 0 43%;
+    margin: min(0em, 10em);
   }
   ol{
     font-size: 1.2em;
