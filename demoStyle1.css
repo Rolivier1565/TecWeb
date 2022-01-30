@@ -1014,6 +1014,33 @@ pagina strumenti
 	align-items: center;
 }
 
+#creacommento{
+	padding-top:2em;
+}
+
+#boxcommento{
+	display: inline;
+	height: 12.5em;
+	width: 70em;
+	padding: 0.5em;
+}
+
+#agg{
+	margin-left: 1em;
+}
+
+#lc{
+	margin-left: 1em;
+}
+
+.commenthead{
+	background-color: #2B2D2F;
+	font-size: 1.1em;
+	border:4px solid #F38121;
+	padding: 0.7em 0.5em 0.7em 0.5em;
+	border-radius: 25px;
+	margin-top: 1em;
+}
 
 /*
 	STILE FORUM -fine

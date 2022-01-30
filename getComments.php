@@ -30,9 +30,9 @@
             $listaCommenti.=' class="repnotactv" aria-label="segnala il post" ';
       }
       $listaCommenti.= 'id="Report'. $post['idm'] .'" type="button" onclick="report('. $post['idm'] . ')"></button></div>';
-      $listaCommenti.='<form method="post" action="php/addcommento.php"><input id="boxcommento" class="inputField" type="text" name="commento" placeholder="Inserisci il tuo commento"/><input class="instrBtn" type="submit" name="aggiungi" value="aggiungi"/></form>';
+      $listaCommenti.='<form method="post" action="php/addcommento.php" id="creacommento"><label for="commento" id="lc">Inserisci il commento:</label><textarea id="boxcommento" class="inputField" name="commento" required></textarea><input class="instrBtn" id="agg" type="submit" name="aggiungi" value="aggiungi"/></form>';
         foreach ($commenti as $singleCommenti) {
-          $listaCommenti.='<span class="usrname">'. $singleCommenti['idr'] . '</span> <span class="datetime">' . $singleCommenti['data']."</span>" .'<p calss="post">'. $singleCommenti['descrizione'] . "</p>";
+          $listaCommenti.='<div class="commenthead"><span class="usrname">'. $singleCommenti['idr'] . '</span> <span class="datetime">' . $singleCommenti['data']."</span>" .'<p class="descrizionecomm">'. $singleCommenti['descrizione'] . "</p></div>";
     }
     }else{
         $listaCommenti="<p>Non ci sono ancora commenti .... inizia tu la discussione !!</p>";
