@@ -44,7 +44,7 @@
                }else{
 				             $listaPost.=' class="repnotactv" aria-label="segnala il post" ';
 			         }
-               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input class="commenti" type="submit" name="commenti" value="" aria-label="apri pagina commenti del post"></form></div>';
+               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php?id='.$singlePost['idm'].'"><input class="commenti" type="submit" name="commenti" value="" aria-label="apri pagina commenti del post"></form></div>';
                $lastpost = $singlePost['idm'];
            }
          }else{

@@ -64,7 +64,7 @@ class DBAccess{
       return $result;
     }
   }
-  
+
   public function addPost($usr, $ttl, $txt){
 		$query="INSERT INTO Messaggi (argomento,descrizione,mipiace,report) VALUES ('$ttl','$txt',0,0);";
 		mysqli_query($this->connection, $query) or die("Errore nell'aggiungere Post a Messaggi" . mysqli_error($this->connection));
@@ -163,6 +163,18 @@ class DBAccess{
     mysqli_query($this->connection, $query) or die("Errore in insertLike1" . mysqli_error($this->connection));
     $query="UPDATE Messaggi SET report=report+1 WHERE idm='$idm'";
     mysqli_query($this->connection, $query) or die("Errore in insertLike2" . mysqli_error($this->connection));
+  }
+
+  public function addcomment($usrid, $idm, $new, $anno, $ora){
+    $query="INSERT INTO Commenti (descrizione, messaggio) VALUES (". '"' . $new . '"'. ", $idm)";
+    mysqli_query($this->connection, $query) or die("Errore in addcomment1" . mysqli_error($this->connection));
+    $query="SELECT max(idc) AS maxidc FROM Commenti";
+    $queryResult=mysqli_query($this->connection, $query) or die("Errore in addcomment2" . mysqli_error($this->connection));
+    $row=mysqli_fetch_assoc($queryResult);
+    $queryResult->free();
+    $idc =$row['maxidc'];
+    $query="INSERT INTO Commenta (idr, idc, idm, data, ora) VALUES (". "'" . $usrid . "'". ", $idc, $idm,". "'". $anno . "'". ","."'". $ora."'".")";
+    mysqli_query($this->connection, $query) or die("Errore in addcomment3" . mysqli_error($this->connection));
   }
 }
 ?>
