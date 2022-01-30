@@ -51,7 +51,12 @@
            $listaPost="<p>Non ci sono altri post da vedere torna indietro o più tardi...</p>";
          }
        }else{
-         //TODO: cliente non loggato chiudere connessione prima possibile
+         $listaPost.='<p>Effettua subito il <a href="login.php" lang="en" xml:lang="en">login</a> per poter interagire con la nostra comunità! </p>';
+         foreach($post as $singlePost){
+           $listaPost.='<div class="posthead"><span class="usrname">'. $singlePost['idr'] . ':</span>' .'<span class="argomento">'. $singlePost['argomento'] .'</span>'. '<span class="datetime">'. $singlePost['data'].'</span>'. '<span class="datetime">' . $singlePost['ora'] . '</span></div>';
+           $listaPost.='<p class="post">'. $singlePost['descrizione'] . '</p>';
+         }
+         $lastpost = $singlePost['idm'];
        }
   }else{
     $listaPost="<p>Ci scusiamo ma i sistemi non sono al momento disponibili riprova più tardi.</p>";
