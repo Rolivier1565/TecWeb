@@ -1,0 +1,344 @@
+/*
+  animazioni
+*/
+
+@keyframes fadein{
+	from {opacity: 0};
+	to {opacity: 1};
+}
+
+
+/*
+  impostazioni di stile generali
+*/
+*{
+  margin: 0;
+  padding: 0;
+}
+html, body{
+    background: none;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+body{
+    width: 100%;
+  display: grid;
+    grid-template-columns: 4fr;
+  grid-template-areas:
+  " header "
+  " breadcrumb "
+  " content ";
+}
+
+
+/*
+  impostazioni di stile header
+*/
+header{
+  grid-area: header;
+  color: #000;
+  text-align: center;
+  padding: 1em;
+  padding-top: 0.8em;
+    background-color: #FFF;
+}
+header h1{
+    display: none;
+}
+header h2{
+    color: black;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+}
+
+
+/*
+  impostazoni di stile navigazione
+*/
+#menu{
+    display: none;
+}
+
+
+/*
+  impostazioni di stile breadcrumb
+*/
+#breadcrumb{
+  grid-area: breadcrumb;
+  padding:0.2em 0em 0.2em 0.2em;
+  font-size: 1em;
+  color: #000;
+    text-align: center;
+}
+
+#breadcrumb a{
+    color: #000;
+}
+
+/*
+  impostazoni di stile contenuto
+*/
+#content{
+    background-color: #FFF;
+  grid-area: content;
+  color: #000;
+  padding: 2em;
+  font-size: 1em;
+}
+
+#content h1, #content h2, #content h3{
+    color: #000;
+}
+
+#content .up{
+    display: none;
+}
+
+
+/*
+  impostazioni di stile footer
+*/
+footer{
+    display: none;
+}
+
+.valid{
+  vertical-align: middle;
+  margin-left: 8em;
+	margin-right: 8em;
+	margin-bottom: 0.7em;
+}
+#valid{
+  padding:4em 0em 0.2em 0em;
+}
+
+/*
+  pagina banlist
+*/
+
+#banlistTitle{
+  text-align: center;
+  font-family: "Hanalei Fill";
+  font-size: 2em;
+    margin: none;
+}
+
+#banlistTable{
+    display: none;
+}
+
+#content #bantabs .up{
+    display: none;
+}
+
+thead{
+    padding: 10em;
+    margin: 10em;
+}
+
+.bannate tr{
+    color: #000;
+    border: 2px solid #000;
+}
+
+.bannate caption{
+    color: #000;
+}
+
+.mostro{
+  color: #000;
+}
+
+.magia{
+  color: #000;
+}
+
+.trappola{
+  color: #000;
+}
+
+.fusione{
+  color: #000;
+}
+
+.link{
+  color: #000;
+}
+
+.pendulum{
+  color: #000;
+}
+
+.xyz{
+  color: #000;
+}
+
+.rituale{
+  color: #000;
+}
+
+.synchro{
+  color: #000;
+}
+
+/*
+pagina regole base
+*/
+
+.immagine
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 50%
+}
+
+#content
+{
+    font-size: 1.2em;
+}
+
+#content h1, #content h2, #content h3
+{
+    font-family: "Hanalei Fill";
+    text-align: center;
+    margin: 1em;
+}
+
+#content a{
+    color: #000;
+}
+
+#content ul{
+    margin-top: 1em;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 1em;
+    list-style-type: circle;
+}
+
+#content ol{
+    margin-top: 1em;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 1em;
+}
+
+#turno{
+    border: 2px #000 solid;
+    margin-top: 3em;
+}
+
+#content #turno h3{
+    margin: 0em;
+}
+/*fine regole base*/
+
+/*regole main deck*/
+
+  #magieParticolari dt, #trappoleParticolari dt{
+    color: #000;
+    background-color: #FFF;
+     border: 2px solid #000;
+      border-bottom: none;
+  }
+  #magieParticolari dd, #trappoleParticolari dd{
+     border: 2px solid #000;
+      border-top: none;
+  }
+/*fine regole main deck*/
+
+/*regole extra deck*/
+
+#extradeck{
+    display: block;
+    font-size: 0.9em;
+}
+
+#extradeck img{
+    display: none;
+}
+
+#extradeck h2{
+    margin: 0em;
+}
+
+  #spellSpeed{
+    font-size: 1.3em;
+  }
+  .aedTextP{
+    font-size: 1.3em;
+  }
+  .aedSubT{
+    font-size: 1.7em;
+  }
+
+/*fine regole extra deck*/
+
+/*
+  home
+*/
+
+.flexhome{
+  display: flex;
+  flex-direction: column;
+}
+
+.flexhome p{
+  align-self: flex-end;
+}
+
+.flexhome h3{
+  margin-left: 2em;
+}
+
+#gioco img{
+    display: none;
+}
+
+#gioco p{
+  width: 100%;
+}
+
+#manga img{
+    display: none;
+}
+
+#manga p{
+  width: 100%;
+}
+
+#anime img{
+    display: none;
+}
+
+#anime p{
+  width: 100%;
+}
+
+#videogiochi img{
+    display: none;
+}
+
+#videogiochi p{
+  width: 100%;
+}
+
+/*fine home*/
+
+/*regole base*/
+.immagine{
+    margin-bottom: 2.6em;
+}
+/*fine regole base*/
+
+/*banlist*/
+/*fine banlist*/
+
+/*strumenti*/
+.player{
+	border: 5px solid #000;
+}
+/*fine strumenti*/

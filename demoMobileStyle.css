@@ -1,0 +1,486 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html, body{
+  font-size: 100%;
+  font-family: sans-serif;
+    background-image: none;
+    background-color: #1D1F21;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    grid-template-areas: 
+        "header breadcrumb"
+        "menu menu"
+        "content content"
+        "footer footer";
+}
+
+header{
+    grid-area: header;
+  color: #F38121;
+  background-color: #1D1F21;
+  text-align: center;
+  padding: 1em;
+  padding-top: 0.8em;
+}
+header h1{
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+    font-size: 10em;
+  text-indent: -9999em;
+  background-size: 40%;
+    padding: 0em;
+}
+header h2{
+  display: none;
+}
+
+
+/*
+  impostazoni di stile navigazione
+*/
+
+.close{
+    display: none;
+}
+
+.open{
+    display:block;
+    animation-name: none;
+    margin-top: 2em;
+}
+
+.burger{
+    display: none;
+}
+
+#menu{
+    grid-area: menu;
+  background-color: #F38121;
+  text-align: center;
+    min-height: 3em;
+}
+
+#menu #currentLink:hover{       
+    background-color: #F38121;
+}
+
+#menu #currentNestLink{
+    font-size: 1em;
+}
+
+#mobilebar{
+    display: inline;
+position: absolute;
+background-color: #F38121;
+border: none;
+padding: 1.5em 2em 1.5em 2em;
+background-image: url(images/burger.png);
+background-repeat: no-repeat;
+background-size: 5em;
+background-position: center;
+transform: translateX(-2em);
+}
+
+#menu li{
+  display: inline-block;
+  padding: 0.75em 35%;
+  margin: 2.5% 0%;
+  font-size: 2em;
+    border: none;
+}
+#menu li:hover{
+  background-color: #FFF;
+    padding: 1em 35%;
+}
+#menu a{
+  color: #000;
+  text-decoration: none;
+}
+#menu a:visited{
+  color: #003B54;
+  text-decoration: none;
+}
+
+#disBut{
+  background-color: #F38121;
+    border: none;
+    font-size: 1em;
+}
+
+#disBut:hover{
+    background-color: #FFF;
+}
+
+
+.nestHead
+{
+    width: 250px;
+}
+
+#menunested{
+    background-color: #F38121;
+}
+
+#menu #menunested li a: hover {
+  color: #000066;
+  text-decoration: none;
+    background-color: #FFF;
+}
+
+
+#menu #menunested li a{
+    display: inline;
+    margin:0.3em;
+  font-size:1.2em;
+    border: none;
+    border-radius:0px;
+}
+
+#menu #nested a:visited{
+  color: #000066;
+    background-color: #F39151;
+}
+
+#menu #nested a:hover{
+    background-color: #FFF;
+    padding: 0em;
+}
+
+#menu #nested{
+    background-color: #F38121;
+    position: relative;
+    width: 150%;
+    right: 3em;
+    border: none;
+}
+
+#menu #nested li{
+    padding: 0em;
+    margin: 0em;
+}
+
+#menu #nested li a{
+    display: block;
+	padding:0em;
+    margin:0.5em;
+  font-size:0.6em;
+}
+
+
+#menu .nestHead:hover{
+    background-color: #F38121;
+}
+
+
+
+/*
+  impostazioni di stile breadcrumb
+*/
+#breadcrumb{
+    grid-area: breadcrumb;
+    text-align: center;
+  padding:2em 0%;
+  color: #FFF;
+    background-color: #1D1F21;
+    width: 100%;
+}
+
+#breadcrumb p{
+    width: 100%;
+    font-size: 2.7em;
+}
+
+#breadcrumb a{
+    color: #C9A4DB;
+}
+/*fine breadcrumb*/
+
+#content{
+    grid-area: content;
+  color: #FFF;
+  background-color: #1D1F21;
+  font-size: 2em;
+    padding: 1em;
+}
+
+footer{
+  grid-area: footer;
+  color: #FFF;
+  background-color: #000;
+  background-image: url("images/logo.png");
+  background-position: 7% 50%;
+  background-repeat: no-repeat;
+  background-size: 15%;
+  text-align: center;
+  border-top: 1px solid #F38121;
+
+}
+footer dt{
+  font-size: 1.3em;
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+}
+footer dd{
+  font-size: 1em;
+  padding-top:0.5em;
+}
+footer a:visited{
+  color:#F38121;
+}
+footer a{
+  color:#FFF;
+}
+footer p{
+  display: inline;
+  font-style:italic;
+}
+.up a{
+  color: #FFF;
+}
+.up a:visited{
+  color:#F38121;
+}
+.valid{
+    display: block;
+    min-width: 5cm;
+  vertical-align: middle;
+  margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0.7em;
+}
+#valid{
+  padding:4em 0em 0.2em 0em;
+}
+/*INIZIO HOME*/
+#gioco{
+    margin: 1em;
+}
+
+#gioco img{
+    display: block;
+    margin: 1em auto;
+  float:  none;
+  width: 50%;
+}
+
+#gioco p{
+    float: none;
+    width: 100%;
+}
+
+#manga{
+    margin: 1em;
+}
+
+#manga img{
+    display: block;
+  float:  none;
+  width: 30%;
+  margin: 1em auto;
+}
+
+#manga p{
+    margin: 0em;
+  float: none;
+  width: 100%;
+}
+
+#amime{
+    margin: 1em;
+}
+
+#anime img{
+    display: block;
+  float:  none;
+    margin: 1em auto;
+  width: 40%;
+}
+
+#anime p{
+  float: none;
+  width: 100%;
+  margin: 0em;
+}
+
+#videogiochi{
+    margin: 1em;
+}
+
+#videogiochi img{
+    display: block;
+  float:  none;
+  width: 40%;
+  margin: 1em auto;
+}
+
+#videogiochi p{
+  float: none;
+  width: 100%;
+  margin: 0em;
+}
+/*FINE HOME*/
+
+/*INIZIO BANLIST*/
+#banlistTitle{
+  padding-bottom: 0em;
+}
+
+#banlistTable a:visited{
+  color: #000066;
+  background-color: #F39151;
+}
+
+#banlistTable{
+    display: inline;
+    width: 90%;
+    font-size: 1em;
+}
+
+#banlistTable li{
+    margin: 1em;
+}
+
+#banlistTable a{
+    border-radius: 50px;
+}
+
+caption{
+    padding-top: 1em;
+}
+
+#content .up{
+    left: 45%;
+}
+
+/*FINE BANLINST*/
+
+/*INIZIO REGOLE BASE*/
+.immagine{
+    width: 100%;
+    max-width: 20cm;
+}
+
+#turno{
+    border: 5px #F38121 solid;
+}
+
+#content #turno h3{
+    color: #000;
+    background-color: #F38121;
+    margin: 0em;
+}
+
+#turno p{
+    padding: 0.5em 0.2em;
+}
+
+/*FINE REGOLE BASE*/
+
+/*INIZIO REGOLE MAIN DECK*/
+#amdtitle{
+    padding: 0em;
+}
+
+#evocazioni{
+    display: block;
+}
+
+#evocazioni img{
+    display: block;
+    width: 50%;
+    padding: 0.5em 24.4%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tevocn{
+    border: 5px #F38121 solid;
+    border-top: 0em;
+}
+
+#evocNormale{
+    border: 5px #F38121 solid;
+    border-bottom: 0em;
+}
+
+#tevocp{
+    margin-top: 2em;
+    border: 5px #F38121 solid;
+    border-bottom: 0em;
+}
+
+#evocPosizionamento{
+    border: 5px #F38121 solid;
+    border-top: 0em;
+}
+
+#tevoct{
+    border: 5px #F38121 solid;
+    border-top: 0em;
+}
+
+#evocTributo{
+    margin-top: 2em;
+    border: 5px #F38121 solid;
+    border-bottom: 0em;
+}
+
+#phases{
+    float: none;
+    display: block;
+    width: 50%;
+    padding: 0.5em 7em;;
+    margin:auto;
+}
+
+/*FINE REGOLE MAIN DECK*/
+
+
+/*INIZIO REGOLE EXTRA DECK*/
+#extradeck{
+    display: inline;
+}
+
+#extradeck img{
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+/*FINE REGOLE EXTRA DECK*/
+
+/*INIZIO STRUMENTI*/
+
+.player{
+    flex-basis: 97%;
+    margin: 1em 0em;
+}
+
+.instrBtn{
+	padding: 0.2em 1em;
+    font-size: 1.1em;
+}
+
+#cambia1, #cambia2, #imposta1, #imposta2{
+    font-size: 1em;
+}
+
+.contenitoreStrumenti > p{
+    font-size: 0.8em;
+}
+
+.errBox{
+    font-size: 117%;
+}
+
+.instrBtn.smlBtn{
+	font-size:2em;
+	font-family: monospace;
+	padding: 0 0.25em;
+    margin: 0.2em 0.4em;
+}

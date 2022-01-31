@@ -3,8 +3,8 @@
 */
 
 @keyframes fadein{
-	from {opacity: 0}
-	to {opacity: 1}
+	from {opacity: 0};
+	to {opacity: 1};
 }
 
 
@@ -59,9 +59,23 @@ header h2{
   margin-top: 0.5em;
 }
 
+
 /*
   impostazoni di stile navigazione
 */
+.close{
+    display: none;
+}
+
+.open{
+    display:block;
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+
+.burger{
+    display: block;
+}
 
 #menu{
   grid-area: menu;
@@ -73,6 +87,10 @@ header h2{
 
 #menu li{
   display: inline-block;
+}
+
+#mobilebar{
+    display: none;
 }
 
 #menu li a, #disBut, #currentLink{
@@ -106,17 +124,9 @@ header h2{
 	border: 1px solid white;
 	border-top:none;
 	position: absolute;
-	margin-left: 1em;
-}
-
-.close{
-	display:none;
-}
-
-.open{
-	display:block;
 	animation-name: fadein;
 	animation-duration: 1s;
+	margin-left: 1em;
 }
 
 #menu #nested li{
@@ -164,6 +174,10 @@ header h2{
   background-color: #F38121;
 }
 
+#breadcrumb a{
+    color: #000066;
+}
+
 
 /*
   impostazoni di stile contenuto
@@ -178,13 +192,31 @@ header h2{
   font-size: 1em;
 }
 
+#content a{
+  color: #F38121;
+}
+
+#content a:visited{
+  color: #C9A4DB;
+    /*#6BCE50 #C9A4DB*/
+}
+
 #content .up{
 	position: relative;
+    color: #000;
   left: 80%;
   display: inline-block;
   margin-right: 10%;
 }
 
+#content .up:visited{
+  color: #000066;
+  background-color: #F39151;
+}
+
+#content .up:hover{
+  background-color: #FFF;
+}
 
 /*
   impostazioni di stile footer
@@ -216,11 +248,11 @@ footer dd{
 }
 
 footer a:visited{
-  color:#F38121;
+  color: #C9A4DB;
 }
 
 footer a{
-  color:#FFF;
+  color:#F38121;
 }
 
 footer p{
@@ -235,9 +267,15 @@ footer p{
   padding: 0.5em 1em;
   margin: 1em 0.1em 0.2em 0.1em;
   font-size: 1em;
+    color: #000;
   background-color: #F38121;
   border: 2px solid #000;
   border-radius: 25px;
+}
+
+.up:visited{
+  color: #000066;
+  background-color: #F39151;
 }
 
 .up:hover{
@@ -249,14 +287,7 @@ footer p{
   border-radius: 25px;
 }
 
-.up{
-  color: #000;
-  text-decoration: none;
-}
 
-.up:visited{
-  color:#000;
-}
 
 .valid{
   vertical-align: middle;
@@ -272,10 +303,6 @@ footer p{
 /*
   home
 */
-
-#content a{
-  color: #F38121;
-}
 
 .flexhome{
   display: flex;
@@ -374,7 +401,8 @@ footer p{
 }
 
 #banlistTable a:visited{
-	color: #000;
+  color: #000066;
+  background-color: #F39151;
 }
 
 #banlistTable a{
@@ -395,6 +423,21 @@ footer p{
   border: 2px solid #000;
   border-radius: 25px;
   font-size:0.8em;
+}
+
+#content #bantabs .up{
+	position: relative;
+  display: inline-block;
+  margin-right: 10%;
+}
+
+#content #bantabs .up:visited{
+  color: #000066;
+  background-color: #F39151;
+}
+
+#content #bantabs.up:hover{
+  background-color: #FFF;
 }
 
 caption{
@@ -506,6 +549,8 @@ caption{
   }
   #evocNormale{
     grid-area: evocn;
+    margin: 0 37%;
+    margin: min(0em, 10em);
   }
   #tevocn{
     grid-area: tevocn;
@@ -519,15 +564,20 @@ caption{
     grid-area: tevocp;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     font-size: 1.2em;
     padding-bottom: 0.7em;
+      margin-top: 2em;
   }
   #evocPosizionamento{
       grid-area: evocp;
+    margin: 0 0 0 60%;
+    margin: min(0em, 10em);
   }
   #evocTributo{
       grid-area: evoct;
+    margin: 0 0 0 10%;
+    margin: min(0em, 10em);
   }
   #tevoct{
     grid-area: tevoct;
@@ -540,6 +590,8 @@ caption{
   #phases{
     float:left;
     padding: 0em 2em 1em 1em;
+    margin: 0 43%;
+    margin: min(0em, 10em);
   }
   ol{
     font-size: 1.2em;
@@ -589,6 +641,7 @@ caption{
     font-size: 2em;
     padding: 1em 0em 0.7em 0em;
   }
+
   #extradeck{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -604,6 +657,12 @@ caption{
     ". subt4 ."
     "pendulum testoPendulum testoPendulum";
   }
+
+#extradeck img{
+    width: 14rem;
+    margin: 0 43%;
+    margin: min(0em, 10em);
+}
 
   #subt{
     grid-area: subt;
@@ -663,6 +722,7 @@ caption{
     width: 90%;
   }
 
+
   #subt3{
     grid-area: subt3;
     text-align: center;
@@ -678,7 +738,6 @@ caption{
     font-size: 1.3em;
     padding: 1em 0em 0.7em 0em;
   }
-
 
   #subt4{
     grid-area: subt4;
@@ -743,7 +802,6 @@ pagina regole base - inizio
     margin-right: 5%;
     margin-left: 5%;
     margin-bottom: 1em;
-    list-style-type: circle;
 }
 
 #content ol{
@@ -752,10 +810,23 @@ pagina regole base - inizio
     margin-left: 5%;
     margin-bottom: 1em;
 }
+
+#turno{
+    border: 5px #F38121 solid;
+}
+
+#content #turno h3{
+    color: #000;
+    background-color: #F38121;
+    margin: 0em;
+}
+
+#turno p{
+    padding: 0.5em 0.2em;
+}
 /*
 pagina regole base - fine
 */
-
 
 /*
 pagina esempi - inizo
@@ -844,11 +915,13 @@ pagina strumenti
 	font-family: monospace;
 	width:3em;
 	margin-left:0.2em;
+    font-weight: bold;
 }
 
 #d6{
 	margin-right:0.2em;
 	margin-left:0.2em;
+    font-weight: bold;
 }
 
 /*

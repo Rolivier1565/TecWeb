@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="it">
+<html xml:lang="it" lang="it">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Strumenti - Yu-Gi-Basics</title>
 		<meta name="keywords" content="Banlist, Yu-Gi-Oh, proibite, limitate, semi-limitate, cambiamenti, Yu-Gi-Basics" />
-		<meta name="description" content="" />
-		<meta name="author" content="" />
+		<meta name="description" content=">Tieni traccia dei dati del tuo duello qui! Qui trovi conta life points, conta segnalini, dadi e monete" />
+		<meta name="author" content="Basics-staff" />
 		<link rel="stylesheet" href="demoStyle1.css" />
 		<link rel="stylesheet" media="screen and (max-width:1500px), only screen and (max-width:1500px)" href="demoStyleMini.css" />
+		<link rel="stylesheet" media="screen and (max-width:1220px), only screen and (max-width:1220px)" href="demoMobileStyle.css" />
+        <link rel="stylesheet" media="print" href="printStyle.css"/>
 		<link rel="shortcut icon" href="images/logo.ico" />
 		<script type="text/javascript" src="js/automagia.js"></script>
 		<noscript>
@@ -17,35 +19,36 @@
 	
 	<body>
 		<header id="top">
-			<h1 lang="en">Yu-Gi-Basics</h1>
-			<h2><span lang="en">Yu-Gi-Oh</span> per principianti</h2>
+			<h1 xml:lang="en" lang="en">Yu-Gi-Basics</h1>
+			<h2><span xml:lang="en" lang="en">Yu-Gi-Oh</span> per principianti</h2>
 		</header>
 		<nav id="menu">
-			<ul>
-				<li lang="en"> <a href="home.html"> Home </a></li>
+			<a id="mobilebar" href=""></a>
+			<ul id="menunested" class="burger">
+				<li xml:lang="en" lang="en"> <a href="home.html"> Home </a></li>
 				<li class="nestHead" >  <a id="disBut" href="">Regole ▼</a>
 										<ul id="nested" class="close">
 											<li><a href="regolebase.html">Regole base</a></li>
-											<li lang="en"><a href="amd.html">Main Deck</a></li>
-											<li lang="en"><a href="aed.html">Extra Deck</a></li>
+											<li xml:lang="en" lang="en"><a href="amd.html">Main Deck</a></li>
+											<li xml:lang="en" lang="en"><a href="aed.html">Extra Deck</a></li>
 											<li><a href="esempi.html">Esempi</a></li>
 										</ul>
 				</li>
-				<li lang="en"><a href="banlist.html">Banlist</a></li>
-				<li lang="en"><a href="forum.html">Forum</a></li>
+				<li xml:lang="en" lang="en"><a href="banlist.html">Banlist</a></li>
+				<li xml:lang="en" lang="en"><a href="forum.html">Forum</a></li>
 				<li  id="currentLink">Strumenti</li>
 			</ul>
 		</nav>
 
 		<nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; Strumenti</p>
+            <p>Ti trovi in: <span xml:lang="en" lang="en"><a href="home.html">Home</a></span> &gt; &gt; Strumenti</p>
 		</nav>
 		
 		<div id="content" class="contenitoreStrumenti">
 				<h2>Strumenti</h2>
 				<p>
-					Qui puoi trovare una selezione di strumenti che possono aiutarti nelle tue partitde di <span lang="en">Yu-Gi-Oh</span>. 
-					Hai la possibilità di tracciare i <span lang="en">Life Points</span> e i <span lang="en">token</span> di due giocatori, inoltre puoi simulare il lancio di un dado o una moneta.
+					Qui puoi trovare una selezione di strumenti che possono aiutarti nelle tue partitde di <span xml:lang="en" lang="en">Yu-Gi-Oh</span>. 
+					Hai la possibilità di tracciare i <span xml:lang="en" lang="en">Life Points</span> e i <span xml:lang="en" lang="en">token</span> di due giocatori, inoltre puoi simulare il lancio di un dado o una moneta.
 				</p>
 				<nav class="invisNav">
 					<a href="#P1">Vai a: giocatore 1</a>
@@ -53,21 +56,21 @@
 					<a href="#navAnchorDice">Vai a: simulatori dadi</a>
 				</nav>
 				<div class="player" id="P1"><h2 tabindex="0">Giocatore 1</h2>
-					<div tabindex="0" lang="en">Life Points:<span id="LP1" lang="it">8000</span></div>
-					<p>Cambia <span lang="en">Life Points</span></p>
+					<div tabindex="0" xml:lang="en" lang="en">Life Points:<span id="LP1" xml:lang="it" lang="it">8000</span></div>
+					<p>Cambia <span xml:lang="en" lang="en">Life Points</span></p>
 					<div>
 						<span class="errBox" id="modErr1" aria-live="assertive"></span>
 						<input aria-label="Quantità Life Points da cambiare" type="number" id="cambia1" class="inputField" name="cambia1" min="1">
 						<button aria-label="Rimuovi Life Points" class="instrBtn smlBtn" onclick="subLP(1)">-</button>
 						<button aria-label="Aggiungi Life Points" class="instrBtn smlBtn" onclick="addLP(1)">+</button>
 					</div>
-					<p>Imposta <span lang="en">Life Points</span></p>
+					<p>Imposta <span xml:lang="en" lang="en">Life Points</span></p>
 					<div>
 						<span class="errBox" id="setErr1" aria-live="assertive"></span>
 						<input aria-label="Quantità Life Points da impostare" type="number" id="imposta1" class="inputField" name="imposta1">
 						<button class="instrBtn" onclick="setLP(1)">Imposta</button>
 					</div>
-					<div class="tknSctn"><span tabindex="0" lang="en">Token:<span id="T1" aria-live="assertive">0</span></span>
+					<div class="tknSctn"><span tabindex="0" xml:lang="en" lang="en">Token:<span id="T1" aria-live="assertive">0</span></span>
 						<button aria-label="Rimuovi token" class="instrBtn smlBtn" onclick="modT(1, -1)">-</button>
 						<button aria-label="Aggiungi token" class="instrBtn smlBtn" onclick="modT(1, 1)">+</button>
 					</div>
@@ -78,21 +81,21 @@
 					</nav>
 				</div>
 				<div class="player" id="P2"><h2 tabindex="0">Giocatore 2</h2>
-					<div tabindex="0" lang="en">Life Points:<span id="LP2" lang="it">8000</span></div>
-					<p>Cambia <span lang="en">Life Points</span></p>
+					<div tabindex="0" xml:lang="en" lang="en">Life Points:<span id="LP2" xml:lang="it" lang="it">8000</span></div>
+					<p>Cambia <span xml:lang="en" lang="en">Life Points</span></p>
 					<div>
 						<span class="errBox" id="modErr2" aria-live="assertive"></span>
 						<input aria-label="Quantità Life Points da cambiare" class="inputField" type="number" id="cambia2" name="cambia2" min="1">
 						<button  aria-label="Rimuovi Life Points" class="instrBtn smlBtn" onclick="subLP(2)">-</button>
 						<button  aria-label="Aggiungi Life Points" class="instrBtn smlBtn" onclick="addLP(2)">+</button>
 					</div>
-					<p>Imposta <span lang="en">Life Points</span></p>
+					<p>Imposta <span xml:lang="en" lang="en">Life Points</span></p>
 					<div>
 						<span class="errBox" id="setErr2" aria-live="assertive"></span>
 						<input aria-label="Quantità Life Points da impostare" class="inputField" type="number" id="imposta2" name="imposta2">
 						<button class="instrBtn" onclick="setLP(2)">Imposta</button>
 					</div>
-					<div class="tknSctn"><span tabindex="0" lang="en">Token:<span aria-live="assertive" id="T2">0</span></span>
+					<div class="tknSctn"><span tabindex="0" xml:lang="en" lang="en">Token:<span aria-live="assertive" id="T2">0</span></span>
 						<button aria-label="Rimuovi token" class="instrBtn smlBtn" onclick="modT(2, -1)">-</button>
 						<button aria-label="Aggiungi token" class="instrBtn smlBtn" onclick="modT(2, 1)">+</button>
 					</div>
@@ -119,14 +122,14 @@
 				<dd>tel: 5559683061</dd>
 				<dd>email: yugibasics@konami.com</dd>
 				<dt>Social:</dt>
-				<dd><a href="">Instagram</a></dd>
-				<dd><a href="">Youtubbo</a></dd>
+				<dd><a href="https://instagram.com/yugibasics?utm_medium=copy_link">Instagram</a></dd>
+				<dd><a href="https://www.youtube.com/channel/UCxZBH3-Ho6DELIdQeBIE-5w/featured">Youtubbo</a></dd>
 			</dl>
 			<a class="up" href="#top">Torna su</a>
 			<div id="valid">
 				<img src="images/htmlValid.png" alt="HTML5 Valido"  class="valid"/>
-				<p>Tutti i diritti sono riservati a NOI</p>
-				<img src="images/vcss-blue_1.gif" alt="CSS Valido"  class="valid"/>
+				<p>Tutti i diritti sono riservati a Basics-staff</p>
+				<img src="images/css3valido.png" alt="CSS Valido"  class="valid"/>
 			</div>
 		</footer>
 	</body>

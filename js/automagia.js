@@ -4,8 +4,22 @@ document.addEventListener("DOMContentLoaded", function(){
 	if (obj.outerHTML){
 		obj.outerHTML=str;
 	}
+    var str2="<button id=\"mobilebar\" aria-label=\"Mostra elenco menù\" title=\"Mostra elenco menù\" onclick=\"displayMenu()\"></button>";
+    var obj2=document.getElementById('mobilebar');
+	if (obj2.outerHTML){
+		obj2.outerHTML=str2;
+	}
 });
 
+function displayMenu(){
+	var head=document.getElementById("menunested");
+	if(head.className=="open"){
+		head.className="burger";
+	}
+	else{
+		head.className="open";
+	}
+}
 
 function displayRegole(){
 	var head=document.getElementById("nested");
