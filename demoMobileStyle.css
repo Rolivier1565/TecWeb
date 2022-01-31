@@ -230,21 +230,9 @@ footer dd{
   font-size: 1em;
   padding-top:0.5em;
 }
-footer a:visited{
-  color:#F38121;
-}
-footer a{
-  color:#FFF;
-}
 footer p{
   display: inline;
   font-style:italic;
-}
-.up a{
-  color: #FFF;
-}
-.up a:visited{
-  color:#F38121;
 }
 .valid{
     display: block;

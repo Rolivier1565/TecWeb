@@ -131,9 +131,9 @@ footer{
     display: none;
 }
 
-thead{
-    padding: 10em;
-    margin: 10em;
+#content th{
+    padding: 2em;
+    margin: 0em;
 }
 
 .bannate tr{
