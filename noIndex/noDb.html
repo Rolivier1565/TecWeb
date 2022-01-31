@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
-
-
-
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Area Personale - Yu-Gi-Basics</title>
+		<title>Errore - Yu-Gi-Basics</title>
 		<meta name="robots" content="noindex, nofollow">
-		<meta name="author" content="" />
 		<link rel="stylesheet" href="demoStyle1.css" />
 		<link rel="stylesheet" media="screen and (max-width:1500px), only screen and (max-width:1500px)" href="demoStyleMini.css" />
-		<link rel="shortcut icon" href="images/logo.ico" />
+		<link rel="icon" href="images/logo.ico" />
 		<script type="text/javascript" src="js/automagia.js"></script>
-		<script type="text/javascript" src="js/likehandler.js"></script>
 	</head>
-	
-
-
 	<body>
 		<header id="top">
 			<h1 lang="en">Yu-Gi-Basics</h1>
@@ -25,7 +17,7 @@
 		<nav id="menu">
 			<ul>
 				<li lang="en"> <a href="home.html"> Home </a></li>
-				<li class="nestHead" >  <a id="disBut" href="">Regole ▼</a>
+				<li class="nestHead"><a id="disBut" href="regoleindex.html">Regole ▼</a>
 										<ul id="nested" class="close">
 											<li><a href="regolebase.html">Regole base</a></li>
 											<li lang="en"><a href="amd.html">Main Deck</a></li>
@@ -40,22 +32,13 @@
 		</nav>
 
 		<nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.php">Forum</a></span> &gt; &gt; Area Personale</p>
+            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; Errore</p>
 		</nav>
 		
-		<div id="content">
-			<div id="logout"><a href="logout.php">Disconnettiti</a></div>
-			<h2>Ciao, <currUser/></h2>
-			<h3>Curiosità del giorno</h3>
-				<p id="motd"><motd/></p>
-			<h3>Crea un <span lang="en">Post</span></h3>
-				<form class="inputForm" action="areaRiservata.php" method="post">
-					<label for="argomento">Titolo</label>: <textarea id="argomento" class="inputField" name="argomento" required></textarea>
-					<label for="contenuto">Testo</label>: <textarea id="contenuto" class="inputField" name="contenuto" required></textarea>
-					<input type="submit" class="instrBtn" value="Pubblica">
-				</form>
-			<h3>I tuoi <span lang="en">Post</span></h3>
-				<listaPost/>
+		<div id="content" class="contenitoreErrori">
+			<h2>Oh no...</h2>
+			<p id="noDb">Carta magia: Buco Nero. Descrizione: Distruggi tutti i mostri sul terreno</p>
+			<p class="textErr">Qualcuno ha giocato Buco Nero sui nostri server. Stiamo controllando se la carta è ammessa. Dai un'occhiata alla <a href="banlist.html" lang="en">banlist</a> se vuoi darci una mano, altrimenti guarda le ultime notizie sui nostri canali <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="blank_" lang="en">Youtube</a> ed <a href="" target="blank_" lang="en">Instagram</a></p>
 		</div>
 		
 		<footer>
@@ -65,7 +48,7 @@
 				<dd>email: yugibasics@konami.com</dd>
 				<dt>Social:</dt>
 				<dd><a href="">Instagram</a></dd>
-				<dd><a href="https://www.youtube.com/channel/UCxZBH3-Ho6DELIdQeBIE-5w">Youtube</a></dd>
+				<dd><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">Youtube</a></dd>
 			</dl>
 			<a class="up" href="#top">Torna su</a>
 			<div id="valid">

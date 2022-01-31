@@ -81,6 +81,11 @@ class DBAccess{
 		$query="UPDATE Messaggi SET descrizione='$testo' WHERE idm='$idPost';";
 		mysqli_query($this->connection, $query) or die("Errore nell'aggiungere Post a Messaggi" . mysqli_error($this->connection));
 	}
+	
+	public function deletePost($idPost){
+		$query="DELETE FROM Messaggi WHERE idm='$idPost';";
+		mysqli_query($this->connection, $query) or die("Errore nell'eliminare Post" . mysqli_error($this->connection));
+	}
 
   public function getPost($idPost){
     $query="SELECT Registrati.idr, Scrive.data, Scrive.ora, Messaggi.descrizione, Messaggi.argomento, Messaggi.mipiace, Messaggi.report, Messaggi.idm FROM Registrati, Scrive, Messaggi WHERE Registrati.idr=Scrive.idr AND Scrive.idm=Messaggi.idm AND Messaggi.idm='$idPost'";

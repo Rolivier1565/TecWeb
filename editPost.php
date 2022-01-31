@@ -4,7 +4,6 @@
 	$paginaHTML=file_get_contents("templates/editPost.txt");
 	session_start();
 	$connessione = new DBAccess();
-	$connessioneOK= $connessione->openDBConnection();
   
   function inputTrim($input){
 		$input=trim($input);
