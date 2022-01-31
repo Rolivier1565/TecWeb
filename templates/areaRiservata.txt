@@ -7,9 +7,11 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Area Personale - Yu-Gi-Basics</title>
 		<meta name="robots" content="noindex, nofollow">
-		<meta name="author" content="" />
+		<meta name="author" content="Basics-staff" />
 		<link rel="stylesheet" href="demoStyle1.css" />
-		<link rel="stylesheet" media="screen and (max-width:1500px), only screen and (max-width:1500px)" href="demoStyleMini.css" />
+		<link rel="stylesheet" media="screen and (max-width:1660px), only screen and (max-width:1660px)" href="demoStyleMini.css" />
+		<link rel="stylesheet" media="screen and (max-width:1024px), only screen and (max-width:1024px)" href="demoMobileStyle.css" />
+        <link rel="stylesheet" media="print" href="printStyle.css"/>
 		<link rel="shortcut icon" href="images/logo.ico" />
 		<script type="text/javascript" src="js/automagia.js"></script>
 		<script type="text/javascript" src="js/likehandler.js"></script>
@@ -19,28 +21,29 @@
 
 	<body>
 		<header id="top">
-			<h1 lang="en">Yu-Gi-Basics</h1>
-			<h2><span lang="en">Yu-Gi-Oh</span> per principianti</h2>
-		</header>
+			<h1 xml:lang="en" lang="en">Yu-Gi-Basics</h1>
+			<h2><span xml:lang="en" lang="en">Yu-Gi-Oh</span> per principianti</h2>
+        </header>
 		<nav id="menu">
-			<ul>
-				<li lang="en"> <a href="home.html"> Home </a></li>
+			<a id="mobilebar" href=""></a>
+			<ul id="menunested" class="burger">
+				<li xml:lang="en" lang="en"> <a href="home.html"> Home </a></li>
 				<li class="nestHead" >  <a id="disBut" href="">Regole ▼</a>
 										<ul id="nested" class="close">
 											<li><a href="regolebase.html">Regole base</a></li>
-											<li lang="en"><a href="amd.html">Main Deck</a></li>
-											<li lang="en"><a href="aed.html">Extra Deck</a></li>
+											<li xml:lang="en" lang="en"><a href="amd.html">Main Deck</a></li>
+											<li xml:lang="en" lang="en"><a href="aed.html">Extra Deck</a></li>
 											<li><a href="esempi.html">Esempi</a></li>
 										</ul>
 				</li>
-				<li lang="en"><a href="banlist.html">Banlist</a></li>
-				<li lang="en"><a href="forum.html" >Forum</a></li>
-				<li><a href="strumenti.html">Strumenti</a></li>
+				<li xml:lang="en" lang="en"><a href="banlist.html">Banlist</a></li>
+				<li id="currentLink" xml:lang="en" lang="en">Forum</li>
+                <li> <a href="Strumenti.html">Strumenti</a></li>
 			</ul>
 		</nav>
 
 		<nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.php">Forum</a></span> &gt; &gt; Area Personale</p>
+            <p>Ti trovi in: <span xml:lang="en" lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span xml:lang="en" lang="en"><a href="forum.php">Forum</a></span> &gt; &gt; Area Personale</p>
 		</nav>
 		
 		<div id="content">
@@ -48,33 +51,32 @@
 			<h2>Ciao, <currUser/></h2>
 			<h3>Curiosità del giorno</h3>
 				<p id="motd"><motd/></p>
-			<h3>Crea un <span lang="en">Post</span></h3>
+			<h3>Crea un <span xml:lang="en" lang="en">Post</span></h3>
 				<form class="inputForm" action="areaRiservata.php" method="post">
 					<label for="argomento">Titolo</label>: <textarea id="argomento" class="inputField" name="argomento" required></textarea>
 					<label for="contenuto">Testo</label>: <textarea id="contenuto" class="inputField" name="contenuto" required></textarea>
 					<input type="submit" class="instrBtn" value="Pubblica">
 				</form>
-			<h3>I tuoi <span lang="en">Post</span></h3>
+			<h3>I tuoi <span xml:lang="en" lang="en">Post</span></h3>
 				<listaPost/>
 		</div>
-		
 		<footer>
 			<dl>
 				<dt>Contatti:</dt>
 				<dd>tel: 5559683061</dd>
 				<dd>email: yugibasics@konami.com</dd>
 				<dt>Social:</dt>
-				<dd><a href="">Instagram</a></dd>
-				<dd><a href="https://www.youtube.com/channel/UCxZBH3-Ho6DELIdQeBIE-5w">Youtube</a></dd>
+				<dd><a href="https://instagram.com/yugibasics?utm_medium=copy_link">Instagram</a></dd>
+				<dd><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Youtube</a></dd>
 			</dl>
 			<a class="up" href="#top">Torna su</a>
 			<div id="valid">
 				<img src="images/htmlValid.png" alt="HTML5 Valido"  class="valid"/>
-				<p>Tutti i diritti sono riservati a NOI</p>
-				<img src="images/vcss-blue_1.gif" alt="CSS Valido"  class="valid"/>
+				<p>Tutti i diritti sono riservati a Basics-staff</p>
+				<img src="images/css3valido.png" alt="CSS Valido"  class="valid"/>
 			</div>
 		</footer>
 	</body>
-	
-	
+
+
 </html>
