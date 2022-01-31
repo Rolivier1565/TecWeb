@@ -5,16 +5,17 @@
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Forum - Yu-Gi-Basics</title>
+		<title>Registrati - Yu-Gi-Basics</title>
 		<meta name="keywords" content="Banlist, proibite, limitate, semi-limitate, cambiamenti, Yu-Gi-Basics" />
 		<meta name="description" content="" />
 		<meta name="author" content="" />
 		<link rel="stylesheet" href="demoStyle1.css" />
+		<link rel="stylesheet" media="screen and (max-width:1500px), only screen and (max-width:1500px)" href="demoStyleMini.css" />
 		<link rel="shortcut icon" href="images/logo.ico" />
 		<script type="text/javascript" src="js/automagia.js"></script>
-		<script type="text/javascript" src="js/likehandler.js"></script>
+		<script type="text/javascript" src="js/register.js"></script>
 	</head>
-
+	
 
 
 	<body>
@@ -34,19 +35,24 @@
 										</ul>
 				</li>
 				<li lang="en"><a href="banlist.html">Banlist</a></li>
-				<li id="currentLink" lang="en">Forum</li>
+				<li lang="en"><a href="forum.html" >Forum</a></li>
 				<li><a href="strumenti.html">Strumenti</a></li>
 			</ul>
 		</nav>
 
 		<nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; Forum </p>
+            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.php">Forum</a></span> &gt; &gt; <a href="areaRiservata.php">Area Personale</a> &gt; &gt; Modifica <span lang="en">Post</span></p>
 		</nav>
-    <div id="content">
-      <listaPost/>
-    </div>
-
-
+		
+		<div id="content">
+			<form class="inputForm" name="editForm" action="editPost.php" method="post" onsubmit="return checkValid()">
+				<label for="testo" lang="en">Modifica il tuo <span lang="en">Post</span>:</label>
+				<textarea id="testo" class="inputField" name="testo" required><testo/></textarea>
+				<input type="hidden" name="idm" value="<idm/>">
+				<input type="submit" class="instrBtn" name="modifica" value="Modifica">
+			</form>
+		</div>
+		
 		<footer>
 			<dl>
 				<dt>Contatti:</dt>
@@ -54,7 +60,7 @@
 				<dd>email: yugibasics@konami.com</dd>
 				<dt>Social:</dt>
 				<dd><a href="">Instagram</a></dd>
-				<dd><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Youtubbo</a></dd>
+				<dd><a href="https://www.youtube.com/channel/UCxZBH3-Ho6DELIdQeBIE-5w">Youtube</a></dd>
 			</dl>
 			<a class="up" href="#top">Torna su</a>
 			<div id="valid">
@@ -64,6 +70,6 @@
 			</div>
 		</footer>
 	</body>
-
-
+	
+	
 </html>

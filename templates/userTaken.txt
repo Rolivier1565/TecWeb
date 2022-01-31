@@ -1,0 +1,1 @@
+<p class="errBox" aria-live="assertive">Attenzione: Il nome utente che hai inserito è già registrato. Inserisci un nuovo nome utente</p>

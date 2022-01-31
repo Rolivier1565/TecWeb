@@ -31,6 +31,8 @@ function displayRegole(){
 	}
 }
 
+//parte di strumentistica - da spostare
+
 function modT(trgt, val){
 	if (trgt==1){
 		if (val>0){
@@ -135,49 +137,59 @@ function addLP(trgt){
 
 function subLP(trgt){
 		if(trgt==2){
-			var val=parseInt(document.getElementById("cambia2").value);
-			//imposta check e racchiudi il resto dentro
-			var temp=document.getElementById("LP2");
-			var initval=parseInt(temp.innerHTML);
-			var finalval=initval-val;
-			if (finalval<0){
-				finalval=0;
-				val=initval;
+			var val=parseInt(document.getElementById("cambia2").value || 0);
+			if ((val=="")||(val<0))
+				document.getElementById("modErr2").textContent="Il valore inserito non è un numero positivo";
+			else{
+				document.getElementById("modErr2").textContent="";
+				var temp=document.getElementById("LP2");
+				var initval=parseInt(temp.innerHTML);
+				var finalval=initval-val;
+				if (finalval<0){
+					finalval=0;
+					val=initval;
+				}
+				var incdelay=1000/val;		//calcola ogni quanto aggiornare il contatore
+				var subam=parseInt(val/250);
+				if (subam<1){subam=1;}
+				var countDown=setInterval(function() {
+					initval-=subam;
+					temp.textContent=initval;
+				}, incdelay);
+				var stopCount=setInterval(function(){
+					clearInterval(countDown); 
+					temp.textContent=finalval; //imposta valore finale
+					clearInterval(stopCount);
+				}, 1010);
 			}
-			var incdelay=1000/val;		//calcola ogni quanto aggiornare il contatore
-			var subam=parseInt(val/250);
-			if (subam<1){subam=1;}
-			var countDown=setInterval(function() {
-				initval-=subam;
-				temp.textContent=initval;
-			}, incdelay);
-			var stopCount=setInterval(function(){
-				clearInterval(countDown); 
-				temp.textContent=finalval; //imposta valore finale
-				clearInterval(stopCount);
-			}, 1010);
 		}
 		else{
-			var val=parseInt(document.getElementById("cambia1").value);
-			var temp=document.getElementById("LP1");
-			var initval=parseInt(temp.innerHTML);
-			var finalval=initval-val;
-			if (finalval<0){
-				finalval=0;
-				val=initval;
+			var val=parseInt(document.getElementById("cambia1").value || 0);
+			if ((val=="")||(val<0))
+				document.getElementById("modErr1").textContent="Il valore inserito non è un numero positivo";
+			else{
+				document.getElementById("modErr1").textContent="";
+				var val=parseInt(document.getElementById("cambia1").value);
+				var temp=document.getElementById("LP1");
+				var initval=parseInt(temp.innerHTML);
+				var finalval=initval-val;
+				if (finalval<0){
+					finalval=0;
+					val=initval;
+				}
+				var incdelay=1000/val;		//calcola ogni quanto aggiornare il contatore
+				var subam=parseInt(val/250);
+				if (subam<1){subam=1;}
+				var countDown=setInterval(function() {
+					initval-=subam;
+					temp.textContent=initval;
+				}, incdelay);
+				var stopCount=setInterval(function(){
+					clearInterval(countDown); 
+					temp.textContent=finalval; //imposta valore finale
+					clearInterval(stopCount);
+				}, 1010);
 			}
-			var incdelay=1000/val;		//calcola ogni quanto aggiornare il contatore
-			var subam=parseInt(val/250);
-			if (subam<1){subam=1;}
-			var countDown=setInterval(function() {
-				initval-=subam;
-				temp.textContent=initval;
-			}, incdelay);
-			var stopCount=setInterval(function(){
-				clearInterval(countDown); 
-				temp.textContent=finalval; //imposta valore finale
-				clearInterval(stopCount);
-			}, 1010);
 		}
 }
 

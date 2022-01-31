@@ -1,0 +1,4 @@
+﻿Il limite di 60 carte è stato introdotto dopo che un giocatore partecipò ad un torneo con un mazzo con più di 2000 carte
+3 curiosità su 4 sono inventate
+Mondo <span lang="en">Toon</span> è l'unica carta con un costo di evocazione, ma senza effetti
+Il miglior duellante è <currUser/>

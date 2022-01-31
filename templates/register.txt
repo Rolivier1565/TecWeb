@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
+
+
+
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Login - Yu-Gi-Basics</title>
+		<title>Registrati - Yu-Gi-Basics</title>
 		<meta name="keywords" content="Banlist, proibite, limitate, semi-limitate, cambiamenti, Yu-Gi-Basics" />
 		<meta name="description" content="" />
 		<meta name="author" content="" />
@@ -10,7 +13,11 @@
 		<link rel="stylesheet" media="screen and (max-width:1500px), only screen and (max-width:1500px)" href="demoStyleMini.css" />
 		<link rel="shortcut icon" href="images/logo.ico" />
 		<script type="text/javascript" src="js/automagia.js"></script>
+		<script type="text/javascript" src="js/register.js"></script>
 	</head>
+	
+
+
 	<body>
 		<header id="top">
 			<h1 lang="en">Yu-Gi-Basics</h1>
@@ -19,7 +26,7 @@
 		<nav id="menu">
 			<ul>
 				<li lang="en"> <a href="home.html"> Home </a></li>
-				<li class="nestHead"><a id="disBut" href="regoleindex.html">Regole ▼</a>
+				<li class="nestHead" >  <a id="disBut" href="">Regole ▼</a>
 										<ul id="nested" class="close">
 											<li><a href="regolebase.html">Regole base</a></li>
 											<li lang="en"><a href="amd.html">Main Deck</a></li>
@@ -34,15 +41,20 @@
 		</nav>
 
 		<nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.html">Forum</a></span> &gt; &gt; <span lang="en">Login</span></p>
+            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.php">Forum</a></span> &gt; &gt; Registrati</p>
 		</nav>
 		
 		<div id="content">
 			<errorMsg/>
-			<form action="login.php" method="post">
-				<span lang="en">Username</span>: <input type="text" name="username">
-				<span lang="en">Password</span>: <input type="text" name="password">
-			<input type="submit">
+			<form class="inputForm" name="regForm" action="register.php" method="post" onsubmit="return checkValid()">
+				<label for="username" lang="en">Username:</label>: <input id="username" class="inputField" type="text" name="username" required>
+				<label for="password" lang="en">Password:</label>: <input id="password" class="inputField" type="password" name="password" required>
+				<span class="errBox" id="wrongConf" aria-live="assertive"></span>
+				<label for="passwordRe">Conferma <span lang="en">Password:</span></label><input id="passwordRe" class="inputField" type="password" name="passwordRe" required>
+				<span class="errBox" id="invEmail" aria-live="assertive"></span>
+				<label for="email" lang="en">Email:</label><input id="email" class="inputField" type="text" name="email" required>
+				<input type="submit" class="instrBtn" value="Invia">
+			</form>
 		</div>
 		
 		<footer>
@@ -52,7 +64,7 @@
 				<dd>email: yugibasics@konami.com</dd>
 				<dt>Social:</dt>
 				<dd><a href="">Instagram</a></dd>
-				<dd><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">Youtube</a></dd>
+				<dd><a href="https://www.youtube.com/channel/UCxZBH3-Ho6DELIdQeBIE-5w">Youtube</a></dd>
 			</dl>
 			<a class="up" href="#top">Torna su</a>
 			<div id="valid">

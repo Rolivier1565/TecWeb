@@ -15,6 +15,7 @@
 *{
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 html, body{
   background: url("images/drago%20piedi%20cut.png") center left no-repeat, url("images/magoNero.png") right no-repeat;
@@ -943,5 +944,225 @@ pagina strumenti
 #noDb{
 	min-height: 400px;
 	text-indent: -9999em;
-    background: url("images/bucoNero.jpg") no-repeat center;
+	background: url("images/bucoNero.jpg") no-repeat center;
+}
+
+#noJs{
+	min-height: 400px;
+	text-indent: -9999em;
+	background: url("images/angeloO7.jpg") no-repeat center;
+}
+
+/*
+	STILE FORUM - inizio
+*/
+
+.notactv{
+	border:none;
+	background-color: inherit;
+	width: 50px;
+ 	height: 50px;
+ 	background-image: url('images/heart.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center center;
+}
+
+.actv{
+	border:none;
+	background-color: inherit;
+	width: 50px;
+ 	height: 50px;
+ 	background-image: url('images/heart_active.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center center;
+}
+.repnotactv{
+	border:none;
+	background-color: inherit;
+	width: 50px;
+ 	height: 50px;
+ 	background-image: url('images/report.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center center;
+}
+
+.repactv{
+	border:none;
+	background-color: inherit;
+	width: 50px;
+ 	height: 50px;
+ 	background-image: url('images/report_active.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center center;
+}
+
+.form_commenti{
+	display: inline;
+	justify-content: center;
+	align-content: center;
+}
+.commenti{
+	border:none;
+	background-color: inherit;
+	width: 50px;
+ 	height: 50px;
+ 	background-image: url('images/commenti_button.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center center;
+}
+
+.numeroLike{
+	display: inline-flex;
+	align-items: center;
+}
+
+.cont_bottoni{
+	display: flex;
+	border:4px solid #F38121;
+	border-top: none;
+	background-color: #2B2D2F;
+}
+
+.usrname{
+	color:#F38121;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.argomento{
+	padding:0em 1em 0em 0.5em;
+}
+
+.datetime{
+	display: inline-block;
+	font-size: 0.8em;
+	font-weight: lighter;
+	padding-left:0.5em;
+}
+
+.post{
+	background-color: #2B2D2F;
+	font-size: 1.1em;
+	border:4px solid #F38121;
+	border-top: 2px solid #F38121;
+	border-bottom: 2px solid #F38121;
+	padding: 0.7em 0.5em 0.7em 0.5em;
+}
+
+.posthead{
+	background-color: #2B2D2F;
+	border: 4px solid #F38121;
+	border-bottom: none;
+	margin-top: 2em;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+#next{
+	border:none;
+	background-color: inherit;
+	width: 50px;
+ 	height: 50px;
+ 	background-image: url('images/successivo_bottone.png');
+ 	background-repeat: no-repeat;
+ 	background-position: center center;
+}
+
+#prev{
+	border:none;
+	background-color: inherit;
+	width: 50px;
+	height: 50px;
+	background-image: url('images/precedente_bottone.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#piepagina{
+	display: flex;
+	justify-content: center;
+	padding-top: 2em;
+}
+
+#numpag{
+	display: inline-flex;
+	align-items: center;
+}
+
+#creacommento{
+	padding-top:2em;
+}
+
+#boxcommento{
+	display: inline;
+	height: 12.5em;
+	width: 70em;
+	padding: 0.5em;
+}
+
+#agg{
+	margin-left: 1em;
+}
+
+#lc{
+	margin-left: 1em;
+}
+
+.commenthead{
+	background-color: #2B2D2F;
+	font-size: 1.1em;
+	border:4px solid #F38121;
+	padding: 0.7em 0.5em 0.7em 0.5em;
+	border-radius: 25px;
+	margin-top: 1em;
+}
+
+/*
+	STILE FORUM -fine
+*/
+
+
+/*
+	Caselle di input
+*/
+
+.inputField{
+	padding: 0.2em;
+	color: white;
+	background-color: #2B2D2F;
+	border: 2px solid #F38121;
+	border-radius: 25px;
+}
+
+.inputForm{
+	margin-bottom: 1em;
+	display:block;
+	text-align:left;
+}
+.inputForm input, .inputForm textarea{
+	display: block;
+	margin-bottom: 1em;
+}
+
+
+#argomento{
+	height: 1.2em;
+	width: 10em;
+}
+
+#contenuto, #testo{
+	height: 30em;
+	width: 50em;
+	padding: 0.5em;
+}
+
+.modPost{
+	margin-top: 1em;
+}
+
+#motd{
+	text-align: center;
+}
+
+#logout{
+	text-align: right;
 }
