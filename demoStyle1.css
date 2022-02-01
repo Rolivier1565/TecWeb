@@ -1166,3 +1166,37 @@ pagina strumenti
 #logout{
 	text-align: right;
 }
+
+#ruleIndex{
+	text-align: center;
+	list-style-type: none;
+}
+
+#ruleIndex li a{
+	display: inline-block;
+	padding: 0.5em 1em;
+  margin: 0.2em 1em;
+  background-color: #F38121;
+  border: 2px solid #000;
+  border-radius: 25px;
+}
+
+#ruleIndex li a:hover{
+	background-color: #FFF;
+  padding: 0.7em 1.2em;
+  margin: 0 0.8em;
+  background-color: #FFF;
+  padding: 0.7em 1.2em;
+  margin: 0 0.8em;
+}
+
+#ruleIndex a{
+  color: #000;
+  text-decoration: none;
+}
+
+#ruleIndex a:visited{
+  color: #000066;
+  text-decoration: none;
+  background-color: #F39151;
+}
