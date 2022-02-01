@@ -25,6 +25,11 @@
       array_push($_SESSION['maxidm'],$connessione->getMaxIdm());
       $_SESSION['max']=$connessione->getMaxIdm();
     }
+	if(isset($_POST['delete'])){					//è stato chiesto di cancellare un post
+					$connessione->deletePost($_POST['idm']);
+					$connessione->closeConnection();
+					header("Location: forum.php");
+				}
     $post= $connessione->getPostList(end($_SESSION['maxidm']));
 	  if (isset($_SESSION['usrid'])){
       if($post!=null){
@@ -44,7 +49,13 @@
                }else{
 				             $listaPost.=' class="repnotactv" aria-label="segnala il post" ';
 			         }
-               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php?id='.$singlePost['idm'].'"><input class="commenti" type="submit" name="commenti" value="" aria-label="apri pagina commenti del post"></form></div>';
+               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php?id='.$singlePost['idm'].'"><input class="commenti" type="submit" name="commenti" value="" aria-label="apri pagina commenti del post"></form>';
+			   if ($_SESSION['usrid']=="admin"){
+				   $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="idm" value="'. $singlePost['idm'] .'"><input class="instrBtn modPost" type="submit" name="delete" value="Elimina Post"></form></div>';
+			   }
+			   else{
+				   $listaPost.='</div>';
+			   }
                $lastpost = $singlePost['idm'];
            }
          }else{

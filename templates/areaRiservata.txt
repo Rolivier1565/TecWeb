@@ -38,7 +38,7 @@
 										</ul>
 				</li>
 				<li xml:lang="en" lang="en"><a href="banlist.html">Banlist</a></li>
-				<li id="currentLink" xml:lang="en" lang="en">Forum</li>
+				<li xml:lang="en" lang="en"><a href="forum.php">Forum</a></li>
                 <li> <a href="Strumenti.html">Strumenti</a></li>
 			</ul>
 		</nav>
