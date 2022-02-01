@@ -334,11 +334,127 @@ pagina regole base
 }
 /*fine regole base*/
 
-/*banlist*/
-/*fine banlist*/
 
 /*strumenti*/
 .player{
 	border: 5px solid #000;
 }
 /*fine strumenti*/
+
+/*
+	STILE FORUM - inizio
+*/
+
+.notactv{
+    display: none;
+}
+
+.actv{
+    display: none;
+}
+.repnotactv{
+    display: none;
+}
+
+.repactv{
+    display: none;
+}
+
+.form_commenti{
+	display: inline;
+	justify-content: center;
+	align-content: center;
+}
+.commenti{
+    display: none;
+}
+
+.numeroLike{
+    display: none;
+}
+
+.cont_bottoni{
+    display: none;
+}
+
+.usrname{
+	color:#000;
+}
+
+.post{
+	background-color: #FFF;
+	border:4px solid #000;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+}
+
+.posthead{
+	background-color: #FFF;
+	border: 4px solid #000;
+}
+
+#next{
+    display: none;
+}
+
+#prev{
+    display: none;
+}
+
+#numpag{
+    display: none;
+}
+
+#creacommento{
+    display: none;
+}
+.commenthead{
+	background-color: #FFF;
+	border:4px solid #000;
+}
+
+/*
+	STILE FORUM -fine
+*/
+
+
+/*
+	Caselle di input
+*/
+
+    
+.inputField{
+    display: none;
+    border: solid #000 5px;
+}
+
+.inputForm{
+    display: none;
+}
+.inputForm input, .inputForm textarea{
+	display: none;
+}
+
+
+#argomento{
+	height: 1.2em;
+	width: 10em;
+}
+
+#contenuto, #testo{
+	height: 30em;
+	width: 50em;
+	padding: 0.5em;
+}
+
+.modPost{
+	margin-top: 1em;
+}
+
+#motd{
+	text-align: center;
+}
+
+#logout{
+	text-align: right;
+}
