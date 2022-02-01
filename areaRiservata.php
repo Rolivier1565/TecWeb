@@ -49,7 +49,7 @@
                }else{
 				             $listaPost.=' class="repnotactv" aria-label="segnala il post" ';
 			         }
-               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input class="commenti" type="submit" name="commenti" value=""></form>' . '<form method="post" action="editPost.php"><input type="hidden" name="idm" value="'. $singlePost['idm'] .'"><input class="instrBtn modPost" type="submit" name="edit" value="Modifica Post"></form><form method="post" action="areaRiservata.php"><input type="hidden" name="idm" value="'. $singlePost['idm'] .'"><input class="instrBtn modPost" type="submit" name="delete" value="Elimina Post"></form></div>';
+               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button><span class="numeroLike" id="ReportCount'. $singlePost['idm'] .'">' . $singlePost['report'] . '</span>' . '<form method="post" action="getComments.php"><input type="hidden" name="id" value="'. $singlePost['idm'] .'"><input class="commenti" type="submit" name="commenti" value=""></form>' . '<form method="post" action="editPost.php"><input type="hidden" name="idm" value="'. $singlePost['idm'] .'"><input class="instrBtn modPost" type="submit" name="edit" value="Modifica Post"></form><form method="post" action="areaRiservata.php"><input type="hidden" name="idm" value="'. $singlePost['idm'] .'"><input class="instrBtn modPost" type="submit" name="delete" value="Elimina Post"></form></div>';
                $lastpost = $singlePost['idm'];
 		       }
          }else{

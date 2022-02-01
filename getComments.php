@@ -30,7 +30,7 @@
       }else{
             $listaCommenti.=' class="repnotactv" aria-label="segnala il post" ';
       }
-      $listaCommenti.= 'id="Report'. $post['idm'] .'" type="button" onclick="report('. $post['idm'] . ')"></button></div>';
+      $listaCommenti.= 'id="Report'. $post['idm'] .'" type="button" onclick="report('. $post['idm'] . ')"></button><span class="numeroLike" id="ReportCount'. $post['idm'] .'">' . $post['report'] . '</span></div>';
       $listaCommenti.='<form method="post" action="addcommento.php" id="creacommento"><input type="hidden" name="idm" value="'. $post['idm'] .'"><label for="commento" id="lc">Inserisci il commento:</label><textarea id="boxcommento" class="inputField" name="commento" required></textarea><input class="instrBtn" id="agg" type="submit" name="aggiungi" value="aggiungi"/></form>';
         foreach ($commenti as $singleCommenti) {
           $listaCommenti.='<div class="commenthead"><span class="usrname">'. $singleCommenti['idr'] . '</span> <span class="datetime">' . $singleCommenti['data']."</span>" .'<p class="descrizionecomm">'. $singleCommenti['descrizione'] . "</p></div>";
