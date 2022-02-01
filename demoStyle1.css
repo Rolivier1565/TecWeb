@@ -1143,15 +1143,14 @@ pagina strumenti
 	margin-bottom: 1em;
 }
 
-
 #argomento{
-	height: 1.2em;
-	width: 10em;
+	height: 1.6em;
+	width: 25em;
 }
 
 #contenuto, #testo{
 	height: 30em;
-	width: 50em;
+	width: 90%;
 	padding: 0.5em;
 }
 
