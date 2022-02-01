@@ -33,6 +33,7 @@
     $post= $connessione->getPostList(end($_SESSION['maxidm']));
 	  if (isset($_SESSION['usrid'])){
       if($post!=null){
+		  $listaPost.='<p>Vai alla tua <a href="areaRiservata.php">Area Personale!</a></p>';
 		      foreach ($post as $singlePost) {
 			         $listaPost.='<div class="posthead"><span class="usrname">'. $singlePost['idr'] . ':</span>' .'<span class="argomento">'. $singlePost['argomento'] .'</span>'. '<span class="datetime">'. $singlePost['data'].'</span>'. '<span class="datetime">' . $singlePost['ora'] . '</span></div>';
 			         $listaPost.='<p class="post">'. $singlePost['descrizione'] . '</p>'  . '<div class="cont_bottoni"><button';
@@ -49,7 +50,7 @@
                }else{
 				             $listaPost.=' class="repnotactv" aria-label="segnala il post" ';
 			         }
-               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button>' . '<form method="post" action="getComments.php?id='.$singlePost['idm'].'"><input class="commenti" type="submit" name="commenti" value="" aria-label="apri pagina commenti del post"></form>';
+               $listaPost.= 'id="Report'. $singlePost['idm'] .'" type="button" onclick="report('. $singlePost['idm'] . ')"></button><span class="numeroLike" id="ReportCount'. $singlePost['idm'] .'">' . $singlePost['report'] . '</span>' . '<form method="post" action="getComments.php?id='.$singlePost['idm'].'"><input class="commenti" type="submit" name="commenti" value="" aria-label="apri pagina commenti del post"></form>';
 			   if ($_SESSION['usrid']=="admin"){
 				   $listaPost.='<form method="post" action="forum.php"><input type="hidden" name="idm" value="'. $singlePost['idm'] .'"><input class="instrBtn modPost" type="submit" name="delete" value="Elimina Post"></form></div>';
 			   }

@@ -14,6 +14,7 @@
     $commenti = $connessione->getCommentsPost($_REQUEST['id']);
 
     if($commenti!=null){
+	  $listaCommenti.='<p>Vai alla tua <a href="areaRiservata.php">Area Personale!</a></p>';
       $listaCommenti.='<div class="posthead"><span class="usrname">'. $post['idr'] . ':</span>' .'<span class="argomento">'. $post['argomento'] .'</span>'. '<span class="datetime">'. $post['data'].'</span>'. '<span class="datetime">' . $post['ora'] . '</span></div>';
       $listaCommenti.='<p class="post">'. $post['descrizione'] . '</p>'  . '<div class="cont_bottoni"><button';
       if ($connessione->checkLike($_SESSION['usrid'], $post['idm'])){
