@@ -1,0 +1,9 @@
+.actv, .repactv, .notactv, .repnotactv, .numeroLike{
+	display:none;
+}
+
+.noJsErr{
+	color: red;
+	display: block;
+	font-size: 2em;
+}

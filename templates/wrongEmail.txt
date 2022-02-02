@@ -1,0 +1,1 @@
+<span class="errBox" id="invEmail" aria-live="assertive">Attenzione: l'indirizzo <span lang="en">mail</span> inserito non è valido</span>

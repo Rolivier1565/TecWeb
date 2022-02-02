@@ -1199,3 +1199,7 @@ pagina strumenti
   text-decoration: none;
   background-color: #F39151;
 }
+
+.noJsErr{
+	display:none;
+}

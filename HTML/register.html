@@ -15,7 +15,6 @@
         <link rel="stylesheet" media="print" href="../css/printStyle.css"/>
 		<link rel="icon" href="../images/logo.ico" />
 		<script type="text/javascript" src="../js/automagia.js"></script>
-		<script type="text/javascript" src="../js/register.js"></script>
 	</head>
 	
 
@@ -40,7 +39,7 @@
 				</li>
 				<li xml:lang="en" lang="en"><a href="../HTML/banlist.html">Banlist</a></li>
 				<li xml:lang="en" lang="en"><a href="forum.php">Forum</a></li>
-                <li> <a href="../HTML/Strumenti.html">Strumenti</a></li>
+                <li> <a href="../HTML/strumenti.html">Strumenti</a></li>
 			</ul>
 		</nav>
 
@@ -49,13 +48,13 @@
 		</nav>
 		
 		<div id="content">
-			<errorMsg/>
-			<form class="inputForm" name="regForm" action="register.php" method="post" onsubmit="return checkValid()">
+			<usrTkn/>
+			<form class="inputForm" name="regForm" action="register.php" method="post">
 				<label for="username" lang="en">Username:</label>: <input id="username" class="inputField" type="text" name="username" maxlength="40" required />
 				<label for="password" lang="en">Password:</label>: <input id="password" class="inputField" type="password" name="password" maxlength="20" required />
-				<span class="errBox" id="wrongConf" aria-live="assertive"></span>
+				<wrongConfirm/>
 				<label for="passwordRe">Conferma <span lang="en">Password:</span></label><input id="passwordRe" class="inputField" type="password" name="passwordRe" required>
-				<span class="errBox" id="invEmail" aria-live="assertive"></span>
+				<wrongEmail/>
 				<label for="email" lang="en">Email:</label><input id="email" class="inputField" type="text" name="email" maxlength="40" required>
 				<input type="submit" class="instrBtn" value="Invia" />
 			</form>

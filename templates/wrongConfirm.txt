@@ -1,0 +1,1 @@
+<span class="errBox" id="wrongConf" aria-live="assertive">Attenzione: le due <span lang="en">password</span> non sono uguali</span>
