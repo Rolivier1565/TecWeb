@@ -45,7 +45,7 @@
 		</nav>
 
 		<nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.php">Forum</a></span> &gt; &gt; Registrati</p>
+            <p><span class="trovi">Ti trovi in: </span><span lang="en"><a href="home.html">Home</a></span> &gt; &gt; <span lang="en"><a href="forum.php">Forum</a></span> &gt; &gt; Registrati</p>
 		</nav>
 		
 		<div id="content">
