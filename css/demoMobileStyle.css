@@ -326,7 +326,7 @@ footer p{
   background-color: #F39151;
 }
 
-#banlistTable{
+#content #banlistTable{
     display: inline;
     width: 90%;
     font-size: 1em;
