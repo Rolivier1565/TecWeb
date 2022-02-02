@@ -3,8 +3,8 @@
 */
 
 @keyframes fadein{
-	from {opacity: 0};
-	to {opacity: 1};
+	from {opacity: 0;}
+	to {opacity: 1;}
 }
 
 
@@ -1133,10 +1133,19 @@ pagina strumenti
 }
 
 .inputForm{
+	display: block;
+	width:50%;
+	margin:auto;
 	margin-bottom: 1em;
-	display:block;
-	text-align:left;
 }
+
+.inputForm #username, .inputForm #password{
+	font-size: 1em;
+	display: block;
+	width:50%;
+	margin:auto;
+}
+
 .inputForm input, .inputForm textarea{
 	display: block;
 	margin-bottom: 1em;
