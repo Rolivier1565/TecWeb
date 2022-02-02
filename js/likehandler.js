@@ -30,7 +30,7 @@ xmlhttp.onreadystatechange = function(){
     }
   }
 };
-xmlhttp.open("GET","php/addlike.php?idm="+idm, true);
+xmlhttp.open("GET","backend/addlike.php?idm="+idm, true);
 xmlhttp.send();
 };
 
@@ -65,6 +65,6 @@ xmlhttp.onreadystatechange = function(){
     }
   }
 };
-xmlhttp.open("GET","php/addreport.php?idm="+idm, true);
+xmlhttp.open("GET","backend/addreport.php?idm="+idm, true);
 xmlhttp.send();
 };
