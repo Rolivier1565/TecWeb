@@ -1,5 +1,5 @@
 <?php
-  require_once "php/db.php";
+  require_once "backend/db.php";
   use DB\DBAccess;
 
   session_start();
@@ -20,7 +20,7 @@
     $url="Location: getComments.php?id=".$_POST['idm'];
     header($url, TRUE, 308);
 }else{
-  echo "errore conessione DB";
+  header("Location: ../HTML/noDb.html",TRUE,301);
 }
 
 

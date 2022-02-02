@@ -1,10 +1,10 @@
 <?php
 //TODO: chiudere connessione
-  require_once "php/db.php";
+  require_once "backend/db.php";
   use DB\DBAccess;
 
   session_start();
-  $paginaHTML=file_get_contents("forum_commenti.html");
+  $paginaHTML=file_get_contents("../HTML/forum_commenti.html");
   $connessione = new DBAccess();
   $connessioneOK= $connessione->openDBConnection();
 
@@ -56,7 +56,7 @@
       $listaCommenti.="<p>Non ci sono ancora commenti ... Inizia tu la discussione!!</p>";
     }
   }else{
-    $listaCommenti="<p>Ci scusiamo ma i sistemi non sono al momento disponibili riprova più tardi.</p>";
+    header("Location: ../HTML/noDb.html",TRUE,301);
   }
    echo str_replace("<listaCommenti/>",$listaCommenti, $paginaHTML);
  ?>

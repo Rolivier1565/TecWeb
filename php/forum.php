@@ -1,10 +1,10 @@
 <?php
-  require_once "php/db.php";
+  require_once "backend/db.php";
   use DB\DBAccess;
   header('Cache-Control: no cache');
   session_cache_limiter('private_no_expires');
   session_start();
-  $paginaHTML=file_get_contents("forum.html");
+  $paginaHTML=file_get_contents("../HTML/forum.html");
   $connessione = new DBAccess();
   $connessioneOK= $connessione->openDBConnection();
   	if ($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -71,7 +71,7 @@
          $lastpost = $singlePost['idm'];
        }
   }else{
-    $listaPost="<p>Ci scusiamo ma i sistemi non sono al momento disponibili riprova più tardi.</p>";
+    header("Location: ../HTML/noDb.html",TRUE,301);
   }
   $pag=count($_SESSION['maxidm'])-1;
   if(end($_SESSION['maxidm'])==$_SESSION['max']){

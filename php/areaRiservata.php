@@ -1,7 +1,7 @@
 <?php
-	require_once "php/db.php";
+	require_once "backend/db.php";
 	use DB\DBAccess;
-	$paginaHTML=file_get_contents("templates/areaRiservata.txt");
+	$paginaHTML=file_get_contents("../HTML/areaRiservata.html");
 	session_start();
 	$connessione = new DBAccess();
   $connessioneOK= $connessione->openDBConnection();
@@ -53,15 +53,15 @@
                $lastpost = $singlePost['idm'];
 		       }
          }else{
-           $listaPost=file_get_contents("templates/noPostScritti.txt");
+           $listaPost=file_get_contents("../templates/noPostScritti.txt");
          }
        }else{
          header("Location: login.php",TRUE,301);
        }
   }else{
-    header("Location: noDb.html",TRUE,301);
+    header("Location: ../HTML/noDb.html",TRUE,301);
   }
-	$handle=fopen("templates/motd.txt", "r");
+	$handle=fopen("../templates/motd.txt", "r");
 	if ($handle){
 		$line=fgets($handle);
 		$random=date("z")%4;

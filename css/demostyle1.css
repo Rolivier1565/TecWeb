@@ -18,7 +18,7 @@
   line-height: 1.6;
 }
 html, body{
-  background: url("images/drago%20piedi%20cut.png") center left no-repeat, url("images/magoNero.png") right no-repeat;
+  background: url("../images/drago%20piedi%20cut.png") center left no-repeat, url("../images/magoNero.png") right no-repeat;
   background-color: #000;
   background-attachment: fixed;
   font-size: 100%;
@@ -47,7 +47,7 @@ header{
   padding-top: 0.8em;
 }
 header h1{
-  background-image: url("images/logo.png");
+  background-image: url("../images/logo.png");
   background-repeat: no-repeat;
   background-position: center;
   font-size: 10em;
@@ -227,7 +227,7 @@ footer{
   grid-area: footer;
   color: #FFF;
   background-color: #000;
-  background-image: url("images/logo.png");
+  background-image: url("../images/logo.png");
   background-position: 7% 20%;
   background-repeat: no-repeat;
   background-size: 15%;
@@ -944,13 +944,13 @@ pagina strumenti
 #noDb{
 	min-height: 400px;
 	text-indent: -9999em;
-	background: url("images/bucoNero.jpg") no-repeat center;
+	background: url("../images/bucoNero.jpg") no-repeat center;
 }
 
 #noJs{
 	min-height: 400px;
 	text-indent: -9999em;
-	background: url("images/angeloO7.jpg") no-repeat center;
+	background: url("../images/angeloO7.jpg") no-repeat center;
 }
 
 /*
@@ -962,7 +962,7 @@ pagina strumenti
 	background-color: inherit;
 	width: 50px;
  	height: 50px;
- 	background-image: url('images/heart.png');
+ 	background-image: url('../images/heart.png');
  	background-repeat: no-repeat;
  	background-position: center center;
 }
@@ -972,7 +972,7 @@ pagina strumenti
 	background-color: inherit;
 	width: 50px;
  	height: 50px;
- 	background-image: url('images/heart_active.png');
+ 	background-image: url('../images/heart_active.png');
  	background-repeat: no-repeat;
  	background-position: center center;
 }
@@ -981,7 +981,7 @@ pagina strumenti
 	background-color: inherit;
 	width: 50px;
  	height: 50px;
- 	background-image: url('images/report.png');
+ 	background-image: url('../images/report.png');
  	background-repeat: no-repeat;
  	background-position: center center;
 }
@@ -991,7 +991,7 @@ pagina strumenti
 	background-color: inherit;
 	width: 50px;
  	height: 50px;
- 	background-image: url('images/report_active.png');
+ 	background-image: url('../images/report_active.png');
  	background-repeat: no-repeat;
  	background-position: center center;
 }
@@ -1006,7 +1006,7 @@ pagina strumenti
 	background-color: inherit;
 	width: 50px;
  	height: 50px;
- 	background-image: url('images/commenti_button.png');
+ 	background-image: url('../images/commenti_button.png');
  	background-repeat: no-repeat;
  	background-position: center center;
 }
@@ -1062,7 +1062,7 @@ pagina strumenti
 	background-color: inherit;
 	width: 50px;
  	height: 50px;
- 	background-image: url('images/successivo_bottone.png');
+ 	background-image: url('../images/successivo_bottone.png');
  	background-repeat: no-repeat;
  	background-position: center center;
 }
@@ -1072,7 +1072,7 @@ pagina strumenti
 	background-color: inherit;
 	width: 50px;
 	height: 50px;
-	background-image: url('images/precedente_bottone.png');
+	background-image: url('../images/precedente_bottone.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 }

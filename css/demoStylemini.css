@@ -5,7 +5,7 @@
 html, body{
   font-size: 100%;
   font-family: sans-serif;
-  background: url(images/drago%20piedi%20cut.png) left no-repeat;
+  background: url(../images/drago%20piedi%20cut.png) left no-repeat;
   background-color: #000;
   background-attachment: fixed;
 }
@@ -24,7 +24,7 @@ body{
 html, body{
   font-size: 100%;
   font-family: sans-serif;
-  background: url(images/geroglifici.jpg);
+  background: url(../images/geroglifici.jpg);
   background-color: #000;
   background-attachment: fixed;
 }

@@ -1,5 +1,5 @@
 <?php
-  require_once "php/db.php";
+  require_once "backend/db.php";
   use DB\DBAccess;
 
 	function inputTrim($input){
@@ -9,17 +9,25 @@
 		return $input;
 	}
 	
-  $paginaHTML=file_get_contents("templates/register.txt");
-  $errMsg=$usr=$psw=$mail="";
+	
+	/*Workflow
+		Controlla se siamo stati chiamati col post	ok
+			+Controlla se il server c'è				ok
+				+Controlla che siano giusti i dati di login	ok
+					+Redirect ad area Personale		ok
+					-Imposta messaggio di login sbagliato
+				-Redirect a pagina di errore
+		Crea pagina
+	*/
+	$errMsg=$usr=$psw="";
+	$paginaHTML=file_get_contents("../HTML/login.html");
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$connessione = new DBAccess();
 		$connessioneOK= $connessione->openDBConnection();
 		if ($connessioneOK){
 			$usr=inputTrim($_POST["username"]);
 			$psw=inputTrim($_POST["password"]);
-			$mail=inputTrim($_POST["email"]);
-			if(!$connessione->checkForUser($usr)){
-				$connessione->insertUser($usr, $psw, $mail);
+			if($connessione->checkLogin($usr, $psw)){
 				$connessione=$connessione->closeConnection();
 				session_start();
 				$_SESSION["usrid"]=$usr;
@@ -27,8 +35,7 @@
 				die();
 			}
 			else{
-				$connessione=$connessione->closeConnection();
-				$errMsg=file_get_contents("templates/userTaken.txt");
+				$errMsg=file_get_contents("../templates/errorMsg.txt");
 			}
 		}
 		else{
@@ -37,5 +44,4 @@
 	}
   //Crea pagina
   echo str_replace("<errorMsg/>",$errMsg, $paginaHTML);
-  
   ?>

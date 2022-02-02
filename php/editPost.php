@@ -1,7 +1,7 @@
 <?php
-	require_once "php/db.php";
+	require_once "backend/db.php";
 	use DB\DBAccess;
-	$paginaHTML=file_get_contents("templates/editPost.txt");
+	$paginaHTML=file_get_contents("../HTML/editPost.html");
 	session_start();
 	$connessione = new DBAccess();
   
@@ -28,7 +28,7 @@
 			echo $paginaHTML;
 		}
 		else{
-			header("Location: noDb.html",TRUE,301);
+			header("Location: ../HTML/noDb.html",TRUE,301);
 		}
 		
 	}

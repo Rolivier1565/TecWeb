@@ -28,7 +28,7 @@ header{
   padding-top: 0.8em;
 }
 header h1{
-  background-image: url("images/logo.png");
+  background-image: url("../images/logo.png");
   background-repeat: no-repeat;
     font-size: 10em;
   text-indent: -9999em;
@@ -79,7 +79,7 @@ position: absolute;
 background-color: #F38121;
 border: none;
 padding: 1.5em 2em 1.5em 2em;
-background-image: url(images/burger.png);
+background-image: url(../images/burger.png);
 background-repeat: no-repeat;
 background-size: 5em;
 background-position: center;
@@ -212,7 +212,7 @@ footer{
   grid-area: footer;
   color: #FFF;
   background-color: #000;
-  background-image: url("images/logo.png");
+  background-image: url("../images/logo.png");
   background-position: 7% 50%;
   background-repeat: no-repeat;
   background-size: 15%;
