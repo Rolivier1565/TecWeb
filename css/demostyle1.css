@@ -790,7 +790,6 @@ pagina regole base - inizio
 
 #content h1, #content h2, #content h3
 {
-    font-family: "Hanalei Fill";
     text-align: center;
     margin: 1em;
     color: #F38121;
@@ -1139,7 +1138,15 @@ pagina strumenti
 	margin-bottom: 1em;
 }
 
-.inputForm #username, .inputForm #password{
+.inputForm label{
+	display: block;
+	width:50%;
+	margin:auto;
+	margin-top: 1em;
+	margin-bottom: 0em;
+}
+
+.inputForm #username, .inputForm #password, .inputForm #email, .inputForm #passwordRe{
 	font-size: 1em;
 	display: block;
 	width:50%;
