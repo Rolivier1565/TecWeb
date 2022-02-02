@@ -1,25 +1,6 @@
 /*
   impostazioni di stile generali
 */
-/*
-html, body{
-  font-size: 100%;
-  font-family: sans-serif;
-  background: url(../images/drago%20piedi%20cut.png) left no-repeat;
-  background-color: #000;
-  background-attachment: fixed;
-}
-
-body{
-  display: grid;
-  grid-template-columns: 1fr 1024px;
-  grid-template-areas:
-  ". header "
-  ". menu "
-  ". breadcrumb "
-  ". content "
-  "footer footer ";
-}*/
 
 html, body{
   font-size: 100%;
