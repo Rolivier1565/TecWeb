@@ -380,12 +380,11 @@ footer p{
 
 #banlistTitle{
   text-align: center;
-  font-family: "Hanalei Fill";
   font-size: 2em;
   padding-bottom: 1em;
 }
 
-#banlistTable{
+#content    #banlistTable{
   padding-top: 1em;
   text-align: center;
   list-style-type: none;
